@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/caerwyn.iml" filepath="$PROJECT_DIR$/.idea/caerwyn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pco-pmi.iml" filepath="$PROJECT_DIR$/.idea/pco-pmi.iml" />
     </modules>
   </component>
 </project>
