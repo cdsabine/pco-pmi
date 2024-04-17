@@ -1,7 +1,6 @@
 package com.pco.pco.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.pco.pco.repository.CountryRepository;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -18,6 +17,11 @@ public class Country {
     @JsonIgnoreProperties("appuser")
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "country")
     private List<AppUser> appUserList;
+
+    public Country(){}
+    public Country(String countryName){
+        this.countryName = countryName;
+    }
 
     public Long getCountryCode() {
         return countryCode;

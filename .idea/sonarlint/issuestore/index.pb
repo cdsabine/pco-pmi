@@ -35,3 +35,5 @@ S
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 B
 front/angular.json,5\1\5142faa9c92272919b2bacccb2c5ac2ced91cd2b
+D
+dataCSV/appusers.csv,3\6\369a9f674ced36ece7cc8090594061ec90bcb4f7

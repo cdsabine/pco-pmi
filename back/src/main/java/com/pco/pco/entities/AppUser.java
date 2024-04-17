@@ -13,18 +13,21 @@ public class AppUser {
     private String appUsername;
     private String emailAddress;
     private String address;
+
+    @Transient
+    private String countryName;
     @JsonIgnoreProperties("appUserList")
     @ManyToOne()
     @JoinColumn(name = "countryCode")
     private Country country;
 
     public AppUser(){}
-    public AppUser(Long userCode, String appUsername, String emailAddress, String address, Country country) {
-        this.userCode = userCode;
+    public AppUser(String appUsername, String emailAddress, String address, String country) {
+        //this.userCode = userCode;
         this.appUsername = appUsername;
         this.emailAddress = emailAddress;
         this.address = address;
-        this.country = country;
+        this.countryName = country;
     }
 
     public Long getUserCode() {
@@ -66,4 +69,7 @@ public class AppUser {
     public void setCountry(Country country){
         this.country = country;
     }
+
+    public String getCountryName(){ return countryName; }
+    public void setCountryName(String countryName){ this.countryName = countryName; }
 }

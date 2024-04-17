@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,19 +21,16 @@ public class CountryController {
         Country c = new Country();
         c.setCountryName(countryName);
         countryRepository.save(c);
-        //return "Saved";
         return c;
     }
 
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Country> getAllCountries() {
-        // This returns a JSON or XML with the users
         return countryRepository.findAll();
     }
 
     @GetMapping(path="/findCountry")
     public @ResponseBody Country returnCountry(@RequestParam String countryName) {
-        // This returns a JSON or XML with the users
         return findCountry(countryName).get();
     }
 

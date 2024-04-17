@@ -16,7 +16,8 @@ import java.util.List;
 public class CSVHelperAppUser {
 
     public static String TYPE = "text/csv";
-    static String[] HEADERs = { "userCode", "appUsername", "emailAddress", "address", "country" };
+    //static String[] HEADERs = { "userCode", "appUsername", "emailAddress", "address", "country" }; Removed user code from CSV. Assigned automatically
+    static String[] HEADERs = {"appUsername", "emailAddress", "address", "country" };
 
     public static boolean hasCSVFormat(MultipartFile file) {
         if (!TYPE.equals(file.getContentType())) {
@@ -29,13 +30,13 @@ public class CSVHelperAppUser {
              CSVParser csvParser = new CSVParser(fileReader,
                      CSVFormat.DEFAULT.withFirstRecordAsHeader().withIgnoreHeaderCase().withTrim());) {
 
-            List<AppUser> appusers = new ArrayList<AppUser>();
+            List<AppUser> appusers = new ArrayList<>();
 
             Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 
             for (CSVRecord csvRecord : csvRecords) {
                 AppUser appuser = new AppUser(
-                        Long.parseLong(csvRecord.get("userCode")),
+                        //Long.parseLong(csvRecord.get("userCode")),
                         csvRecord.get("appUsername"),
                         csvRecord.get("emailAddress"),
                         csvRecord.get("address"),
