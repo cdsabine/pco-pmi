@@ -1,7 +1,8 @@
-package com.pco.pco.controller;
+package com.pco.pco.controller.csv;
 
 import com.pco.pco.helper.CSVHelperAppUser;
-import com.pco.pco.service.CSVServiceAppUser;
+import com.pco.pco.helper.CSVHelperProducts;
+import com.pco.pco.service.CSVServiceProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,16 +13,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
-@RequestMapping(path="/csvAppUser")
-public class CSVAppUserController {
+@RequestMapping(path="/csvProduct")
+public class CSVProductController {
     @Autowired
-    CSVServiceAppUser csvServiceAppUser;
+    CSVServiceProduct csvServiceProduct;
 
     @PostMapping("/upload")
-    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
-        if (CSVHelperAppUser.hasCSVFormat(file)) {
+    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file, @RequestParam String teamName) {
+        if (CSVHelperProducts.hasCSVFormat(file)) {
             try {
-                csvServiceAppUser.save(file);
+                csvServiceProduct.save(file, teamName);
                 return ResponseEntity.status(HttpStatus.OK).body("File uploaded");
             } catch (Exception e) {
                 return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("Could not upload file");

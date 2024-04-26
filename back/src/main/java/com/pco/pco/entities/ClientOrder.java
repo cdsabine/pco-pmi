@@ -10,7 +10,7 @@ import java.util.List;
 public class ClientOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long clientOrderCode;
+    private Long coCode;
 
     private String dateOfOrder;
     private boolean shipped;
@@ -19,10 +19,10 @@ public class ClientOrder {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "clientOrder")
     private List<Product> productList;
     public Long getClientOrderCode() {
-        return clientOrderCode;
+        return coCode;
     }
-    public void setClientOrderCode(Long clientOrderCode) {
-        this.clientOrderCode = clientOrderCode;
+    public void setClientOrderCode(Long coCode) {
+        this.coCode = coCode;
     }
     public String getDateOfOrder() {
         return dateOfOrder;

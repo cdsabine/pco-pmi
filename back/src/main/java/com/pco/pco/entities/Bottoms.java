@@ -10,6 +10,14 @@ public class Bottoms extends Product{
     private boolean thermal;
     private boolean aero;
 
+    public Bottoms(){}
+    public Bottoms(String SKU, String title, double price, boolean activeProduct, String colour, String size, boolean chamois, boolean thermal, boolean aero){
+        super(SKU,title,price,activeProduct,colour,size);
+        this.chamois = chamois;
+        this.thermal = thermal;
+        this.aero = aero;
+    }
+
     public boolean getChamois() {
         return chamois;
     }

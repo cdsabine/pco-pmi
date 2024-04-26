@@ -9,10 +9,11 @@ import jakarta.persistence.*;
 public abstract class Product {
     @Id
     private String SKU;
-
+    private String title;
     private double price;
     private boolean activeProduct;
     private String colour;
+    private String size;
 
     @JsonIgnoreProperties("productList")
     @ManyToOne()
@@ -29,16 +30,30 @@ public abstract class Product {
 
     @JsonIgnoreProperties("productList")
     @ManyToOne()
-    @JoinColumn(name = "clientOrderCode")
+    @JoinColumn(name = "coCode")
     private ClientOrder clientOrder;
 
     public Product(){}
+    public Product(String SKU, String title, double price, boolean activeProduct, String colour, String size){
+        this.SKU = SKU;
+        this.title = title;
+        this.price = price;
+        this.activeProduct = activeProduct;
+        this.colour = colour;
+        this.size = size;
+    }
 
     public String getSKU() {
         return SKU;
     }
     public void setSKU(String SKU) {
         this.SKU = SKU;
+    }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String Title) {
+        this.title = title;
     }
     public double getPrice() {
         return price;
@@ -58,13 +73,19 @@ public abstract class Product {
     public void setColour(String colour) {
         this.colour = colour;
     }
+    public String getSize() {
+        return size;
+    }
+    public void setSize(String size) {
+        this.size = size;
+    }
     public Brand getBrand() {
         return brand;
     }
     public void setBrand(Brand brand) {
         this.brand = brand;
     }
-    public String setBrandName() {
+    public String getBrandName() {
         return brandName;
     }
     public void setBrandName(String brandName) {
@@ -76,7 +97,7 @@ public abstract class Product {
     public void setTeam(Team team) {
         this.team = team;
     }
-    public String setTeamName() {
+    public String getTeamName() {
         return teamName;
     }
     public void setTeamName(String teamName) {

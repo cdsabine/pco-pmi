@@ -23,7 +23,7 @@ public class ClientOrderController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<ClientOrder> getAllBrands() {
+    public @ResponseBody Iterable<ClientOrder> getAllClientOrders() {
         return clientOrderRepository.findAll();
     }
 }

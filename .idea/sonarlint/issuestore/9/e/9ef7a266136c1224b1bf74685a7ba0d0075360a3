@@ -1,0 +1,15 @@
+
+m	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™à¬ô8šâğ1
+l	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìê‡l8ÜÁ½æğ1
+m	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¡Ú8šâğ1
+€
+java:S41658"cRemove this useless assignment; "title" already holds the assigned value along all execution paths.(¦Ó×8àÁ½æğ1
+j	java:S116"NRename this field "SKU" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¥ú†8 âğ1
+V
+java:S5993$"9Change the visibility of this constructor to "protected".(İ»Ğ¼8¡âğ1
+V
+java:S5993%"9Change the visibility of this constructor to "protected".(™à¬ô8°ğºæğ1
+I
+java:S11727",Remove this unused method parameter "Title".(³¡Ú8¤âğ1
+L
+java:S16568"/Remove or correct this useless self-assignment.(¦Ó×8¦âğ1

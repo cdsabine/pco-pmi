@@ -1,6 +1,10 @@
-package com.pco.pco.controller;
+package com.pco.pco.controller.subclassproduct;
 
 
+import com.pco.pco.controller.BrandController;
+import com.pco.pco.controller.ClientOrderController;
+import com.pco.pco.controller.ProductController;
+import com.pco.pco.controller.TeamController;
 import com.pco.pco.entities.Product;
 import com.pco.pco.entities.Tops;
 import com.pco.pco.repository.ProductRepository;
@@ -17,44 +21,43 @@ public class TopsController {
     @Autowired
     private TopsRepository topsRepository;
     @Autowired
+    private ProductController productController;
+    @Autowired
     private BrandController bc;
     @Autowired
     private TeamController tc;
     @Autowired
     private ClientOrderController coc;
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody String addTop (@RequestParam String SKU, @RequestParam String brandName, @RequestParam String teamName, @RequestParam long clientOrderCode,
-                                        @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour,
+    public @ResponseBody String addTop (@RequestParam String SKU, @RequestParam String title, @RequestParam String brandName, @RequestParam String teamName, @RequestParam long coCode,
+                                        @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour, @RequestParam String size,
                                         @RequestParam String sleeves, @RequestParam boolean thermal, @RequestParam boolean aero) {
-        Tops t = new Tops();
-        t.setSKU(SKU);
-        t.setPrice(price);
-        t.setActiveProduct(activeProduct);
-        t.setColour(colour);
-        t.setSleeves(sleeves);
-        t.setThermal(thermal);
-        t.setAero(aero);
 
+        Tops t = new Tops(SKU,title,price,activeProduct,colour,size,sleeves,thermal,aero);
+        productController.decideBrand(t, brandName);
+        productController.decideTeam(t, teamName);
+        productController.decideCoC(t, coCode);
+
+        /*
         if(!bc.findBrand(brandName).isPresent()){
             t.setBrand(bc.addNewBrand(brandName, "Undefined"));
         }
         else{
             t.setBrand(bc.findBrand(brandName).get());
         }
-
-        if(!tc.findTeam(teamName).isPresent()){
+       if(!tc.findTeam(teamName).isPresent()){
             t.setTeam(tc.addNewTeam(teamName, "Undefined"));
         }
         else{
             t.setTeam(tc.findTeam(teamName).get());
         }
-
-        if(clientOrderCode == -1) {
+        if(coCode == -1) {
             t.setClientOrder(null);
         }
         else{
-            t.setClientOrder(coc.addNewClientOrder(clientOrderCode,"",false));
+            t.setClientOrder(coc.addNewClientOrder(coCode,"",false));
         }
+        */
 
         productRepository.save(t);
         topsRepository.save(t);

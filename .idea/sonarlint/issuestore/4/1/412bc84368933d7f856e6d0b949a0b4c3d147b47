@@ -1,0 +1,13 @@
+
+r
+java:S3655,"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¾Èû±úÿÿÿÿ8®ˆ­Àî1
+r
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(…‘ü¤úÿÿÿÿ8€êÇêî1
+m
+java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(÷›ÄÕ8®ˆ­Àî1
+‡
+java:S6833	"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¯ˆ­Àî1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8°ˆ­Àî1
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8°ˆ­Àî1

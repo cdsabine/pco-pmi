@@ -9,6 +9,13 @@ public class Tops extends Product{
     private String sleeves;
     private boolean thermal;
     private boolean aero;
+    public Tops(){}
+    public Tops(String SKU, String title, double price, boolean activeProduct, String colour, String size, String sleeves, boolean thermal, boolean aero){
+        super(SKU,title,price,activeProduct,colour,size);
+        this.sleeves = sleeves;
+        this.thermal = thermal;
+        this.aero = aero;
+    }
 
     public String getSleeves() {
         return sleeves;

@@ -36,7 +36,7 @@ public class CSVServiceAppUser {
         }
     }
 
-    public Iterable<AppUser> getAllTutorials() {
+    public Iterable<AppUser> getAllAppUsers() {
         return appUserRepository.findAll();
     }
 }
