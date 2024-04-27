@@ -27,8 +27,6 @@ k
 ;back/src/main/java/com/pco/pco/helper/CSVHelperAppUser.java,2\3\23b241ba663fb53274a6ba3e7685eda563f12fd5
 m
 =back/src/main/java/com/pco/pco/service/CSVServiceAppUser.java,7\9\79cbcb384cab99730c176bca2d610ba595260b2d
-s
-Cback/src/main/java/com/pco/pco/controller/CSVAppUserController.java,a\c\ac0a40bbdd36f7e59c76b6560a142c2165973205
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
@@ -55,8 +53,6 @@ m
 =back/src/main/java/com/pco/pco/repository/TopsRepository.java,3\6\3698e63f124c20a8d9946a0d8da2c5827c5fedf3
 p
 @back/src/main/java/com/pco/pco/repository/ProductRepository.java,1\c\1c81f8279d9e608348250f6b3a4453f78eedfe7b
-m
-=back/src/main/java/com/pco/pco/controller/TopsController.java,8\3\83ebc96101646c5c5c938630c9bd01357bb864ef
 n
 >back/src/main/java/com/pco/pco/controller/BrandController.java,a\8\a8b607cd7ae7a49a68b0ff0d0af40604d69f4d21
 n
@@ -70,15 +66,11 @@ Dback/src/main/java/com/pco/pco/controller/ClientOrderController.java,4\d\4d569
 t
 Dback/src/main/java/com/pco/pco/repository/ClientOrderRepository.java,7\5\7560e5502662427695834a246dfa71564ecdf68a
 p
-@back/src/main/java/com/pco/pco/controller/BottomsController.java,1\f\1f42a2131ade04f980e9c025c1386e8cbc7bf244
-p
 @back/src/main/java/com/pco/pco/repository/BottomsRepository.java,f\8\f830a6e881db39077e01627d4e774f72fe6b694c
 m
 =back/src/main/java/com/pco/pco/service/CSVServiceProduct.java,6\a\6aefb140f3ec161a25fa1374f0a122ab7390ffdd
 l
 <back/src/main/java/com/pco/pco/helper/CSVHelperProducts.java,6\a\6a78087cffa1d063feaeedf951ff5b02fac8c2d0
-s
-Cback/src/main/java/com/pco/pco/controller/CSVProductController.java,0\b\0b6d3df37583d4b422a633a2e85e84d47a434ea9
 w
 Gback/src/main/java/com/pco/pco/controller/csv/CSVAppUserController.java,6\3\63db67f457fee24e7f999f7e138a19ca055f1a31
 w
