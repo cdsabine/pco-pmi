@@ -1,10 +1,10 @@
 
 Q
 java:S3740:"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8”ÒìÙñ1
-r
-java:S3655""PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ãƒ¥Åûÿÿÿÿ8ƒ¤ÁÚñ1
 m
 java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ëáÉÖ8Ò¦õÚñ1
+r
+java:S3655""PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ãƒ¥Åûÿÿÿÿ8ƒ¤ÁÚñ1
 ‡
 java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ÒìÙñ1
 _

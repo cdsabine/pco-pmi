@@ -1,7 +1,13 @@
 
 l
-java:S3655!"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–ıt8ìÛÖï1
+java:S3655<"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–ıt8üåû€ƒ2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ŠÁ»ï1
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ıåû€ƒ2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ŠÁ»ï1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ıåû€ƒ2
+N
+java:S3599",Use another way to initialize this instance.(àäƒçùÿÿÿÿ8ÿåû€ƒ2
+{
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8€æû€ƒ2
+X
+java:S1128"6Remove this unused import 'com.pco.pco.entities.Team'.(Æ°šâÿÿÿÿÿ8†æû€ƒ2

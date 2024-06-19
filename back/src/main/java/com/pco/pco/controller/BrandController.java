@@ -1,11 +1,14 @@
 package com.pco.pco.controller;
 
 import com.pco.pco.entities.Brand;
+import com.pco.pco.entities.Team;
 import com.pco.pco.repository.BrandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @Controller
@@ -14,6 +17,23 @@ public class BrandController {
     @Autowired
     private BrandRepository brandRepository;
 
+    Map<String, String> brandCombos = new HashMap<>() {
+        {
+            put("Rapha", "United Kingdom");
+            put("Castelli", "Italy");
+            put("Oakley", "America");
+            put("Santini", "Italy");
+            put("GoRigoGo", "Australia");
+            put("Shimano", "Japan");
+            put("Assos", "Switzerland");
+            put("Craft", "Sweden");
+            put("Bioracer", "Belgium");
+            put("Pactimo", "America");
+            put("Jinga", "Portugal");
+            put("Ekoi", "France");
+        }
+    };
+
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody Brand addNewBrand (@RequestParam String brandName, @RequestParam String nationality) {
         Brand b = new Brand();
@@ -21,6 +41,13 @@ public class BrandController {
         b.setNationality(nationality);
         brandRepository.save(b);
         return b;
+    }
+    @PostMapping(path="/initaliseBrands")
+    public @ResponseBody Iterable<Brand> initaliseBrands () {
+        for(Map.Entry<String,String> entry : brandCombos.entrySet()){
+            brandRepository.save(addNewBrand(entry.getKey(), entry.getValue()));
+        }
+        return brandRepository.findAll();
     }
 
     @GetMapping(path="/all")
