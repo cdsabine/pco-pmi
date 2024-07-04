@@ -26,21 +26,21 @@ public class ProductController {
         return productRepository.findAll();
     }
 
-    public Product decideBrand(Product p, String brandName){
-        if(!bc.findBrand(brandName).isPresent()){
-            p.setBrand(bc.addNewBrand(brandName, "Undefined"));
+    public Product decideBrand(Product p, String title){
+        if(bc.findBrandNameInTitle(title).equals("N/A")){
+            p.setBrand(bc.addNewBrand("Unknown Team", "Undefined"));
         }
         else{
-            p.setBrand(bc.findBrand(brandName).get());
+            p.setBrand(bc.findBrand(bc.findBrandNameInTitle(title)).get());
         }
         return p;
     }
-    public Product decideTeam(Product p, String teamName){
-        if(!tc.findTeam(teamName).isPresent()){
-            p.setTeam(tc.addNewTeam(teamName, "Undefined"));
+    public Product decideTeam(Product p, String title){
+        if(tc.findTeamNameInTitle(title).equals("N/A")){
+            p.setTeam(tc.addNewTeam("Unknown Team", "Undefined"));
         }
         else{
-            p.setTeam(tc.findTeam(teamName).get());
+            p.setTeam(tc.findTeam(tc.findTeamNameInTitle(title)).get());
         }
         return p;
     }

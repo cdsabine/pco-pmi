@@ -32,6 +32,16 @@ public class AppUserController {
         return "Saved";
     }
 
+    public AppUser decideCountry(AppUser au, String countryName){
+        if(!cc.findCountry(countryName).isPresent()){
+            au.setCountry(cc.addNewCountry(countryName));
+        }
+        else{
+            au.setCountry(cc.findCountry(countryName).get());
+        }
+        return  au;
+    }
+
     @GetMapping(path="/all")
     public @ResponseBody Iterable<AppUser> getAllUsers() {
         // This returns a JSON or XML with the users

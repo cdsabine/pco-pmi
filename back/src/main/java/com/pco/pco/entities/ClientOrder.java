@@ -18,6 +18,10 @@ public class ClientOrder {
     @JsonIgnoreProperties("SKU")
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "clientOrder")
     private List<Product> productList;
+
+    @JsonIgnoreProperties("userCode")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "clientOrder")
+    private List<Client> clientOrderList;
     public Long getClientOrderCode() {
         return coCode;
     }

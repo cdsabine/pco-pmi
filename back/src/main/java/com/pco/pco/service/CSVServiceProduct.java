@@ -22,12 +22,12 @@ public class CSVServiceProduct {
     @Autowired
     private ProductController pc;
 
-    public void save(MultipartFile file, String teamName) {
+    public void save(MultipartFile file) {
         try {
             List<Product> products = CSVHelperProducts.csvToProduct(file.getInputStream());
             for(Product aux : products){
-                pc.decideBrand(aux, aux.getBrandName());
-                pc.decideTeam(aux, teamName);
+                pc.decideBrand(aux, aux.getTitle());
+                pc.decideTeam(aux, aux.getTitle());
                 pc.decideCoC(aux, -1L);
             }
             productRepository.saveAll(products);

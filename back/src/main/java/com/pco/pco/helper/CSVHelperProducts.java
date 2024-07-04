@@ -39,11 +39,11 @@ public class CSVHelperProducts {
 
             for (CSVRecord csvRecord : csvRecords) {
                 String title = csvRecord.get("Title");
-                String brand = csvRecord.get("Vendor");
+                String vendor = csvRecord.get("Vendor");
                 String size = csvRecord.get("Option1 Value");
                 String SKU = csvRecord.get("Variant SKU");
                 Double price = Double.parseDouble(csvRecord.get("Variant Price"));
-                Product aux = classifyProduct(csvRecord.get("Type"), title, brand, size, SKU, price);
+                Product aux = classifyProduct(csvRecord.get("Type"), title, vendor, size, SKU, price);
 
                 products.add(aux);
 
@@ -66,16 +66,16 @@ public class CSVHelperProducts {
         }
     }
 
-    public static Product classifyProduct(String productType, String title, String brand, String size, String SKU, double price) {
+    public static Product classifyProduct(String productType, String title, String vendor, String size, String SKU, double price) {
         Product p = null;
 
         if(productType.equals("Jackets") || productType.contains("Jersey") || productType.contains("shirt") || productType.contains("tops") || productType.contains("Vest") || productType.contains("Hoodies")){
             p = new Tops(SKU, title, price, false, "" ,size, "", false, false);
-            p.setBrandName(brand);
+            //p.setBrandName(brand);
         }
         else if(productType.contains("Bib") || productType.contains("Shorts")){
             p = new Bottoms(SKU, title, price, false, "" ,size, true, false, false);
-            p.setBrandName(brand);
+            //p.setBrandName(brand);
         }
         else if(productType.contains("suit")){
             //p = new Skinsuits();

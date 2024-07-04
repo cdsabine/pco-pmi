@@ -34,6 +34,7 @@ public class TopsController {
                                         @RequestParam String sleeves, @RequestParam boolean thermal, @RequestParam boolean aero) {
 
         Tops t = new Tops(SKU,title,price,activeProduct,colour,size,sleeves,thermal,aero);
+
         productController.decideBrand(t, brandName);
         productController.decideTeam(t, teamName);
         productController.decideCoC(t, coCode);

@@ -1,13 +1,17 @@
 
+
+java:S2681M"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(Á”£¹şÿÿÿÿ8®€Š¡…2
 l
-java:S3655<"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–ıt8üåû€ƒ2
+java:S3655<"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–ıt8µ€Š¡…2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ıåû€ƒ2
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¶€Š¡…2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ıåû€ƒ2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¶€Š¡…2
 N
-java:S3599",Use another way to initialize this instance.(àäƒçùÿÿÿÿ8ÿåû€ƒ2
+java:S3599",Use another way to initialize this instance.(àäƒçùÿÿÿÿ8¹€Š¡…2
 {
-java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8€æû€ƒ2
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8¹€Š¡…2
+>
+java:S1116M"Remove this empty statement.(Á”£¹şÿÿÿÿ8¿€Š¡…2
 X
-java:S1128"6Remove this unused import 'com.pco.pco.entities.Team'.(Æ°šâÿÿÿÿÿ8†æû€ƒ2
+java:S1128"6Remove this unused import 'com.pco.pco.entities.Team'.(Æ°šâÿÿÿÿÿ8¿€Š¡…2

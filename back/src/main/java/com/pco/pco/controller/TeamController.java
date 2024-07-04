@@ -67,4 +67,10 @@ public class TeamController {
         }
         return teamRepository.findById(code.intValue());
     }
+    public String findTeamNameInTitle(String title){
+        for(Map.Entry<String,String> entry : teamCombos.entrySet()){
+            if(title.contains(entry.getKey())) return entry.getKey();
+        }
+        return "N/A";
+    }
 }

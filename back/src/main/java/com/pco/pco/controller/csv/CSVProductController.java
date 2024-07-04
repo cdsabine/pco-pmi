@@ -19,10 +19,10 @@ public class CSVProductController {
     CSVServiceProduct csvServiceProduct;
 
     @PostMapping("/upload")
-    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file, @RequestParam String teamName) {
+    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
         if (CSVHelperProducts.hasCSVFormat(file)) {
             try {
-                csvServiceProduct.save(file, teamName);
+                csvServiceProduct.save(file);
                 return ResponseEntity.status(HttpStatus.OK).body("File uploaded");
             } catch (Exception e) {
                 return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body("Could not upload file");
