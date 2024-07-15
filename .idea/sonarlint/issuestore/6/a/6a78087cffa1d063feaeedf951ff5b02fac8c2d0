@@ -1,37 +1,34 @@
 
-g	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜˜‡Ûñ1
-r	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÌÿ“úÿÿÿÿ8™˜‡Ûñ1
-m	java:S117E"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÔ–’8™˜‡Ûñ1
+g	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©ÕÕî‡2
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÁÓÙ8ªÕÕî‡2
+m	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰×Ü8ªÕÕî‡2
 r
-java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(´ã§æùÿÿÿÿ8š˜‡Ûñ1
+java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(´ã§æùÿÿÿÿ8ªÕÕî‡2
 L
-java:S1444"*Make this "public static TYPE" field final(´ã§æùÿÿÿÿ8š˜‡Ûñ1
+java:S1444"*Make this "public static TYPE" field final(´ã§æùÿÿÿÿ8ªÕÕî‡2
 q
-java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ã§æùÿÿÿÿ8¥˜‡Ûñ1
+java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ã§æùÿÿÿÿ8´ÕÕî‡2
 o
-java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«×±8¥˜‡Ûñ1
+java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«×±8´ÕÕî‡2
 W
-java:S1118":Add a private constructor to hide the implicit public one.(Ôç¥¢8§˜‡Ûñ1
+java:S1118":Add a private constructor to hide the implicit public one.(Ôç¥¢8µÕÕî‡2
 ^
-java:S1126"AReplace this if-then-else statement by a single return statement.(Úı÷°8§˜‡Ûñ1
+java:S1126!"AReplace this if-then-else statement by a single return statement.(Úı÷°8¶ÕÕî‡2
 [
-java:S4719 "9Replace charset name argument with StandardCharsets.UTF_8(ôŠÑºùÿÿÿÿ8ª˜‡Ûñ1
+java:S4719'"9Replace charset name argument with StandardCharsets.UTF_8(ôŠÑºùÿÿÿÿ8¹ÕÕî‡2
 [
-java:S1874""?Remove this use of "withFirstRecordAsHeader"; it is deprecated.(âò=8ª˜‡Ûñ1
+java:S1874)"?Remove this use of "withFirstRecordAsHeader"; it is deprecated.(âò=8¹ÕÕî‡2
 X
-java:S1874""<Remove this use of "withIgnoreHeaderCase"; it is deprecated.(âò=8ª˜‡Ûñ1
+java:S1874)"<Remove this use of "withIgnoreHeaderCase"; it is deprecated.(âò=8¹ÕÕî‡2
 L
-java:S1874""0Remove this use of "withTrim"; it is deprecated.(âò=8ª˜‡Ûñ1
-]	java:S1253"<This block of commented-out lines of code should be removed.(óïß¯şÿÿÿÿ8ú­ŞÛñ1
-J
-java:S1172E"-Remove this unused method parameter "vendor".(µÔ–’8¨ ¶ …2
-X	java:S125J"<This block of commented-out lines of code should be removed.(ä»Ë³8Ä›¾ …2
-X	java:S125N"<This block of commented-out lines of code should be removed.(ä»Ë³8í¯¾ …2
-X	java:S125Q"<This block of commented-out lines of code should be removed.(å’Û8®˜‡Ûñ1
-W	java:S125T"<This block of commented-out lines of code should be removed.(ö”8®˜‡Ûñ1
-X	java:S125W"<This block of commented-out lines of code should be removed.(«ÇÛî8®˜‡Ûñ1
-]	java:S125Z"<This block of commented-out lines of code should be removed.(Ô©Šªøÿÿÿÿ8®˜‡Ûñ1
-]	java:S125]"<This block of commented-out lines of code should be removed.(¯ –Êøÿÿÿÿ8¯˜‡Ûñ1
-]	java:S125`"<This block of commented-out lines of code should be removed.(Í¦„èÿÿÿÿÿ8¯˜‡Ûñ1
-X	java:S125c"<This block of commented-out lines of code should be removed.(Äéû8¯˜‡Ûñ1
-X	java:S125f"<This block of commented-out lines of code should be removed.(ÔÓöå8¯˜‡Ûñ1
+java:S1874)"0Remove this use of "withTrim"; it is deprecated.(âò=8¹ÕÕî‡2
+X	java:S125F"<This block of commented-out lines of code should be removed.(ä»Ë³8»ÕÕî‡2
+X	java:S125J"<This block of commented-out lines of code should be removed.(ä»Ë³8¼ÕÕî‡2
+X	java:S125M"<This block of commented-out lines of code should be removed.(å’Û8¼ÕÕî‡2
+W	java:S125P"<This block of commented-out lines of code should be removed.(ö”8¼ÕÕî‡2
+X	java:S125S"<This block of commented-out lines of code should be removed.(«ÇÛî8¼ÕÕî‡2
+]	java:S125V"<This block of commented-out lines of code should be removed.(Ô©Šªøÿÿÿÿ8¼ÕÕî‡2
+]	java:S125Y"<This block of commented-out lines of code should be removed.(¯ –Êøÿÿÿÿ8¼ÕÕî‡2
+]	java:S125\"<This block of commented-out lines of code should be removed.(Í¦„èÿÿÿÿÿ8¼ÕÕî‡2
+X	java:S125_"<This block of commented-out lines of code should be removed.(Äéû8¼ÕÕî‡2
+X	java:S125b"<This block of commented-out lines of code should be removed.(ÔÓöå8¼ÕÕî‡2

@@ -26,7 +26,7 @@ public class BottomsController {
 
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody String addBottom (@RequestParam String SKU, @RequestParam String title, @RequestParam String brandName, @RequestParam String teamName, @RequestParam long coCode,
-                                        @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour, @RequestParam String size,
+                                        @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour, @RequestParam String size, @RequestParam String prodCondition, @RequestParam String vendorCode,
                                         @RequestParam boolean chamois, @RequestParam boolean thermal, @RequestParam boolean aero) {
         Bottoms b = new Bottoms();
         b.setSKU(SKU);
@@ -35,6 +35,8 @@ public class BottomsController {
         b.setActiveProduct(activeProduct);
         b.setColour(colour);
         b.setSize(size);
+        b.setProdCondition(prodCondition);
+        b.setVendorCode(vendorCode);
         b.setChamois(chamois);
         b.setThermal(thermal);
         b.setAero(aero);

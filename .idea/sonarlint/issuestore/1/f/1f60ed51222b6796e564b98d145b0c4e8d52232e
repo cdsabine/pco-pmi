@@ -1,19 +1,19 @@
 
-m	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŠÈ„8ÄÂüÚñ1
+m	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŠÈ„8²§°î‡2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ÌÂüÚñ1
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¸§°î‡2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÌÂüÚñ1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸§°î‡2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÌÂüÚñ1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸§°î‡2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÍÂüÚñ1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸§°î‡2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÍÂüÚñ1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸§°î‡2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÍÂüÚñ1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸§°î‡2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ÍÂüÚñ1
-]	java:S125+"<This block of commented-out lines of code should be removed.(ˆî›±ıÿÿÿÿ8ĞÂüÚñ1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¸§°î‡2
+]	java:S125+"<This block of commented-out lines of code should be removed.(ˆî›±ıÿÿÿÿ8»§°î‡2
 [
-java:S1128"9Remove this unused import 'com.pco.pco.entities.Product'.(öÓÇ‰üÿÿÿÿ8üÛñ1
+java:S1128"9Remove this unused import 'com.pco.pco.entities.Product'.(öÓÇ‰üÿÿÿÿ8¼§°î‡2

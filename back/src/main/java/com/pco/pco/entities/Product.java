@@ -14,6 +14,8 @@ public abstract class Product {
     private boolean activeProduct;
     private String colour;
     private String size;
+    private String prodCondition;
+    private String vendorCode;
 
     @JsonIgnoreProperties("productList")
     @ManyToOne()
@@ -34,13 +36,15 @@ public abstract class Product {
     private ClientOrder clientOrder;
 
     public Product(){}
-    public Product(String SKU, String title, double price, boolean activeProduct, String colour, String size){
+    public Product(String SKU, String title, double price, boolean activeProduct, String colour, String size, String prodCondition, String vendorCode){
         this.SKU = SKU;
         this.title = title;
         this.price = price;
         this.activeProduct = activeProduct;
         this.colour = colour;
         this.size = size;
+        this.prodCondition = prodCondition;
+        this.vendorCode = vendorCode;
     }
 
     public String getSKU() {
@@ -54,6 +58,18 @@ public abstract class Product {
     }
     public void setTitle(String Title) {
         this.title = title;
+    }
+    public String getProdCondition() {
+        return prodCondition;
+    }
+    public void setProdCondition(String prodCondition) {
+        this.prodCondition = prodCondition;
+    }
+    public String getVendorCode() {
+        return vendorCode;
+    }
+    public void setVendorCode(String vendorCode) {
+        this.vendorCode = vendorCode;
     }
     public double getPrice() {
         return price;

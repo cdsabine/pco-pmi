@@ -28,7 +28,7 @@ public class ProductController {
 
     public Product decideBrand(Product p, String title){
         if(bc.findBrandNameInTitle(title).equals("N/A")){
-            p.setBrand(bc.addNewBrand("Unknown Team", "Undefined"));
+            p.setBrand(bc.addNewBrand("Unknown Brand", "Undefined"));
         }
         else{
             p.setBrand(bc.findBrand(bc.findBrandNameInTitle(title)).get());

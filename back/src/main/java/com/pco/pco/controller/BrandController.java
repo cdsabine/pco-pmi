@@ -31,6 +31,8 @@ public class BrandController {
             put("Pactimo", "America");
             put("Jinga", "Portugal");
             put("Ekoi", "France");
+            put("Clique", "Sweden");
+            put("Dare 2B", "America");
         }
     };
 

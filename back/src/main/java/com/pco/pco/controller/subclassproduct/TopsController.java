@@ -30,10 +30,10 @@ public class TopsController {
     private ClientOrderController coc;
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody String addTop (@RequestParam String SKU, @RequestParam String title, @RequestParam String brandName, @RequestParam String teamName, @RequestParam long coCode,
-                                        @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour, @RequestParam String size,
+                                        @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour, @RequestParam String size, @RequestParam String prodCondition, @RequestParam String vendorCode,
                                         @RequestParam String sleeves, @RequestParam boolean thermal, @RequestParam boolean aero) {
 
-        Tops t = new Tops(SKU,title,price,activeProduct,colour,size,sleeves,thermal,aero);
+        Tops t = new Tops(SKU,title,price,activeProduct,colour,size, prodCondition, vendorCode, sleeves, thermal,aero);
 
         productController.decideBrand(t, brandName);
         productController.decideTeam(t, teamName);
