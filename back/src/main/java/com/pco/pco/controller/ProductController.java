@@ -20,6 +20,8 @@ public class ProductController {
     private TeamController tc;
     @Autowired
     private ClientOrderController coc;
+    @Autowired
+    private BoxController boxc;
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Product> getAllProducts() {
         // This returns a JSON or XML with the users
@@ -50,6 +52,18 @@ public class ProductController {
         }
         else{
             p.setClientOrder(coc.addNewClientOrder(coCode,"",false));
+        }
+        return p;
+    }
+    public Product decideBox(Product p, String SKU){
+        String box = SKU.substring(SKU.indexOf(' ') + 1);
+        box = box.replace(" ", "");
+
+        if(!boxc.findBox(box).isPresent()){
+            p.setBox(boxc.addNewBox(box));
+        }
+        else{
+            p.setBox(boxc.findBox(box).get());
         }
         return p;
     }

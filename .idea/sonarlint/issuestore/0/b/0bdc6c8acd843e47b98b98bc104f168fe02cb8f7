@@ -1,10 +1,13 @@
 
 Q
-java:S3740:"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8øÆš¡…2
-r
-java:S3655+"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8Òšæì†2
+java:S3740H"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8øÆš¡…2
+r	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8´®ÀÓŒ2
 l
-java:S3655""PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8Óšæì†2
+java:S3655$"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8Ôş¾ÓŒ2
+m
+java:S3655B"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(«£ğ»8 ÷ıúŒ2
+r
+java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8Òšæì†2
 ‡
 java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Çš¡…2
 _
@@ -15,6 +18,8 @@ _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Çš¡…2
 _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Çš¡…2
-]	java:S125a"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8‡Çš¡…2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô·ïÔŒ2
+]	java:S125o"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8‡Çš¡…2
 S
-java:S1128"6Remove this unused import 'com.pco.pco.entities.Tops'.(ğİÒÃ8õšæì†2
+java:S1128"6Remove this unused import 'com.pco.pco.entities.Tops'.(ğİÒÃ8ş÷ıúŒ2

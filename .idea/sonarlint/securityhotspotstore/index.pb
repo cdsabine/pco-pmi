@@ -195,3 +195,9 @@ Oback/src/main/java/com/pco/pco/controller/subclassappuser/ClientController.java
 Oback/src/main/java/com/pco/pco/controller/subclassappuser/VendorController.java,3\a\3adc9a9ca679a18226acf03c0fe0bc75f1b8e61b
 Å
 Qback/src/main/java/com/pco/pco/controller/subclassappuser/EmployeeController.java,c\6\c65a1915b014b700942bdc9fddb2c9c739d20543
+`
+0back/src/main/java/com/pco/pco/entities/Box.java,9\c\9c872606694227ace7e18793cd04da4a8e138a94
+l
+<back/src/main/java/com/pco/pco/controller/BoxController.java,3\6\3670677ba07566e3a10cc7b4f9f30b63d2863f4a
+l
+<back/src/main/java/com/pco/pco/repository/BoxRepository.java,9\e\9eeb108073751491df09ac2ac19d635a36ec12ca

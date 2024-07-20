@@ -3,6 +3,8 @@ package com.pco.pco.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "product")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -29,11 +31,13 @@ public abstract class Product {
     private Team team;
     @Transient
     private String teamName;
-
     @JsonIgnoreProperties("productList")
     @ManyToOne()
     @JoinColumn(name = "coCode")
     private ClientOrder clientOrder;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
+    private List<Box> boxes;
 
     public Product(){}
     public Product(String SKU, String title, double price, boolean activeProduct, String colour, String size, String prodCondition, String vendorCode){
@@ -125,5 +129,8 @@ public abstract class Product {
     public void setClientOrder(ClientOrder clientOrder) {
         this.clientOrder = clientOrder;
     }
+
+    public List<Box> getBoxes() { return boxes; }
+    public void setBox(Box box ) { this.boxes.add(box); }
 
 }
