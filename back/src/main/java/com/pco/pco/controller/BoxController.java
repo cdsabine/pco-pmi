@@ -15,7 +15,6 @@ public class BoxController {
     private BoxRepository boxRepository;
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Box> getAllBoxes() {
-        // This returns a JSON or XML with the users
         return boxRepository.findAll();
     }
 
