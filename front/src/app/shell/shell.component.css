@@ -1,0 +1,18 @@
+.main{
+  width: 100vw !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  background-color: #2374ED;
+  color: white;
+  height: 75px;
+  width: calc(100% - 32px);
+  padding: 16px;
+}
+
+.allRouter{
+  height: 100%;
+}
