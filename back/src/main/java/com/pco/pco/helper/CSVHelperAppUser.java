@@ -1,6 +1,9 @@
 package com.pco.pco.helper;
 
 import com.pco.pco.entities.AppUser;
+import com.pco.pco.entities.Client;
+import com.pco.pco.entities.Employee;
+import com.pco.pco.entities.Vendor;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -17,7 +20,7 @@ public class CSVHelperAppUser {
 
     public static String TYPE = "text/csv";
     //static String[] HEADERs = { "userCode", "appUsername", "emailAddress", "address", "country" }; Removed user code from CSV. Assigned automatically
-    static String[] HEADERs = {"appUsername", "emailAddress", "address", "country" };
+    static String[] HEADERs = {"appUsername", "emailAddress", "address", "country", "userType"};
 
     public static boolean hasCSVFormat(MultipartFile file) {
         if (!TYPE.equals(file.getContentType())) {
@@ -35,20 +38,34 @@ public class CSVHelperAppUser {
             Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 
             for (CSVRecord csvRecord : csvRecords) {
-                AppUser appuser = new AppUser(
-                        //Long.parseLong(csvRecord.get("userCode")),
-                        csvRecord.get("appUsername"),
-                        csvRecord.get("emailAddress"),
-                        csvRecord.get("address"),
-                        csvRecord.get("country")
-                );
+                String username = csvRecord.get("appUsername");
+                String emailAddress = csvRecord.get("emailAddress");
+                String address = csvRecord.get("address");
+                String country = csvRecord.get("country");
+                String userType = csvRecord.get("userType");
 
-                appusers.add(appuser);
+                AppUser aux = classifyUser(username, emailAddress, address, country, userType);
+
+                appusers.add(aux);
             }
 
             return appusers;
         } catch (IOException e) {
             throw new RuntimeException("fail to parse CSV file: " + e.getMessage());
         }
+    }
+
+    public static AppUser classifyUser(String userName, String emailAddress, String address, String country, String userType){
+        AppUser a = null;
+        if(userType.equals("Vendor")){
+            a = new Vendor(userName, emailAddress, address, country, userName+"Vendor");
+        }
+        else if(userType.equals("Employee")){
+            a = new Employee(userName, emailAddress, address, country);
+        }
+        else if(userType.equals("Client")){
+            a = new Client(userName, emailAddress, address, country, 0, 0);
+        }
+        return a;
     }
 }

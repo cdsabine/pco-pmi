@@ -1,7 +1,8 @@
 package com.pco.pco.controller;
 
 import com.pco.pco.entities.Product;
-import com.pco.pco.entities.Tops;
+import com.pco.pco.entities.Box;
+import com.pco.pco.repository.BoxRepository;
 import com.pco.pco.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,6 @@ public class ProductController {
     private BoxController boxc;
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Product> getAllProducts() {
-        // This returns a JSON or XML with the users
         return productRepository.findAll();
     }
 
@@ -59,12 +59,19 @@ public class ProductController {
         String box = SKU.substring(SKU.indexOf(' ') + 1);
         box = box.replace(" ", "");
 
-        if(!boxc.findBox(box).isPresent()){
-            p.setBox(boxc.addNewBox(box));
-        }
-        else{
-            p.setBox(boxc.findBox(box).get());
-        }
+        p.setBox(boxc.findBox(box));
+
+        boxc.addProductToBox(boxc.findBox(box), p);
+
+        return p;
+    }
+
+    @PostMapping(path="/moveProductBox")
+    public @ResponseBody Product changeBox(@RequestParam String SKU, @RequestParam String oldBox, @RequestParam String newBox){
+        Product p = productRepository.findById(SKU).get();
+
+        //NEED TO IMPLEMENT THE NEW TABLE BETWEEN BOX AND PRODUCT INSTEAD OF THE CURRENT N..M RELATION.
+
         return p;
     }
 

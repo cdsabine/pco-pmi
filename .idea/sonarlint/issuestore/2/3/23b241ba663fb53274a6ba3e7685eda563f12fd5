@@ -1,22 +1,22 @@
 
-b	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(î½ı8£ÚîÀî1
+b	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(î½ı8ÕßÓª2
 r
-java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(´ã§æùÿÿÿÿ8¤ÚîÀî1
+java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(´ã§æùÿÿÿÿ8ÖßÓª2
 L
-java:S1444"*Make this "public static TYPE" field final(´ã§æùÿÿÿÿ8¥ÚîÀî1
+java:S1444"*Make this "public static TYPE" field final(´ã§æùÿÿÿÿ8ÖßÓª2
 q
-java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ã§æùÿÿÿÿ8©ÚîÀî1
-o
-java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¸¡8ªÚîÀî1
+java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ã§æùÿÿÿÿ8İßÓª2
+t
+java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îóß·úÿÿÿÿ8İßÓª2
 \
-java:S1118":Add a private constructor to hide the implicit public one.(Ãÿ„Üşÿÿÿÿ8¾Ä Áî1
+java:S1118":Add a private constructor to hide the implicit public one.(Ãÿ„Üşÿÿÿÿ8ŞßÓª2
 ^
-java:S1126"AReplace this if-then-else statement by a single return statement.(Úı÷°8¬ÚîÀî1
+java:S1126"AReplace this if-then-else statement by a single return statement.(Úı÷°8ßßÓª2
 [
-java:S4719"9Replace charset name argument with StandardCharsets.UTF_8(ôŠÑºùÿÿÿÿ8®ÚîÀî1
+java:S4719 "9Replace charset name argument with StandardCharsets.UTF_8(ôŠÑºùÿÿÿÿ8àßÓª2
 [
-java:S1874"?Remove this use of "withFirstRecordAsHeader"; it is deprecated.(âò=8¯ÚîÀî1
+java:S1874""?Remove this use of "withFirstRecordAsHeader"; it is deprecated.(âò=8âßÓª2
 X
-java:S1874"<Remove this use of "withIgnoreHeaderCase"; it is deprecated.(âò=8¯ÚîÀî1
+java:S1874""<Remove this use of "withIgnoreHeaderCase"; it is deprecated.(âò=8âßÓª2
 L
-java:S1874"0Remove this use of "withTrim"; it is deprecated.(âò=8¯ÚîÀî1
+java:S1874""0Remove this use of "withTrim"; it is deprecated.(âò=8âßÓª2

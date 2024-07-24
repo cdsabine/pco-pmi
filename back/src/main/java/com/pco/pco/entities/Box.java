@@ -28,6 +28,7 @@ public class Box {
         this.quantityDraft = quantityDraft;
         this.quantityTotal = quantityTotal;
         this.allActive = allActive;
+        this.products = new ArrayList<>();
     }
 
     public String getBoxNumber() { return boxNumber; }
@@ -35,16 +36,19 @@ public class Box {
 
     public int getQuantityActive() { return quantityActive; }
     public void setQuantityActive(int quantityActive) { this.quantityActive = quantityActive; }
+    public void addToQuantityActive() { this.quantityActive++; }
 
     public int getQuantityDraft() { return quantityDraft; }
     public void setQuantityDraft(int quantityDraft) { this.quantityDraft = quantityDraft; }
+    public void addToQuantityDraft() { this.quantityDraft++; }
 
     public int getQuantityTotal() { return quantityTotal; }
     public void setQuantityTotal(int quantityTotal) { this.quantityTotal = quantityTotal; }
+    public void addToQuantityTotal() { this.quantityTotal++; }
 
     public boolean isAllActive() { return allActive; }
     public void setAllActive(boolean allActive) { this.allActive = allActive; }
     public List<Product> getProducts() { return products; }
-    public void setProducts(List<Product> products ) { this.products = products; }
+    public void setProducts(Product products ) { this.products.add(products); }
 
 }

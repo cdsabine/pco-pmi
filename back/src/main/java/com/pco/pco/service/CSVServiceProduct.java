@@ -29,6 +29,7 @@ public class CSVServiceProduct {
                 pc.decideBrand(aux, aux.getTitle());
                 pc.decideTeam(aux, aux.getTitle());
                 pc.decideCoC(aux, -1L);
+                pc.decideBox(aux, aux.getSKU());
             }
             productRepository.saveAll(products);
         } catch (IOException e) {

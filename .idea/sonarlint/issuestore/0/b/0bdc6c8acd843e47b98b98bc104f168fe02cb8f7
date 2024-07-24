@@ -1,25 +1,30 @@
 
 Q
-java:S3740H"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8øÆš¡…2
-r	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8´®ÀÓŒ2
-m
-java:S3655B"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(«£ğ»8 ÷ıúŒ2
-r
-java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8Òšæì†2
+java:S3740O"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8¡Òù©2
+r	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8¢Òù©2
+r	java:S117F"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í°ßĞùÿÿÿÿ8¢Òù©2
+v
+java:S1488G"YImmediately return this expression instead of assigning it to the temporary variable "p".(˜Û€Œ8‚ „ª2
 l
-java:S3655$"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8Ôş¾ÓŒ2
+java:S3655$"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8­Òù©2
+r
+java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8­Òù©2
+m
+java:S3655G"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(˜Û€Œ8ç›«2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Çš¡…2
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8­Òù©2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Çš¡…2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8­Òù©2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Çš¡…2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8­Òù©2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Çš¡…2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8­Òù©2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8‚Çš¡…2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8­Òù©2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ô·ïÔŒ2
-]	java:S125o"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8‡Çš¡…2
-S
-java:S1128"6Remove this unused import 'com.pco.pco.entities.Tops'.(ğİÒÃ8ş÷ıúŒ2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8­Òù©2
+]	java:S125v"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8´Òù©2
+W
+java:S1128"5Remove this unused import 'com.pco.pco.entities.Box'.(ö¢²æşÿÿÿÿ8ç›«2
+c
+java:S1128"ARemove this unused import 'com.pco.pco.repository.BoxRepository'.(ôÖÃ¥ıÿÿÿÿ8 ç›«2

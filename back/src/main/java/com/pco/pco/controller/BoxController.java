@@ -1,6 +1,7 @@
 package com.pco.pco.controller;
 
 import com.pco.pco.entities.Box;
+import com.pco.pco.entities.Product;
 import com.pco.pco.repository.BoxRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,16 +20,16 @@ public class BoxController {
     }
 
     @PostMapping(path="/findBox")
-    public Optional<Box> findBox (@RequestParam String boxNumber) {
-        int code = 0;
+    public @ResponseBody Box findBox (@RequestParam String boxNumber) {
         Iterable<Box> boxes = getAllBoxes();
         for(Box aux : boxes){
             if(aux.getBoxNumber().equals(boxNumber)) {
-                return boxRepository.findById(code);
+                return boxRepository.findById(boxNumber).get();
             }
-            else code++;
         }
-        return boxRepository.findById(code);
+        Box b = new Box(boxNumber, 0,0,0, false);
+        boxRepository.save(b);
+        return boxRepository.findById(boxNumber).get();
     }
 
     @PostMapping(path="/add")
@@ -37,5 +38,16 @@ public class BoxController {
         b.setBoxNumber(boxNumber);
         boxRepository.save(b);
         return b;
+    }
+
+    public Box addProductToBox(Box b, Product p){
+        Box selectedBox = boxRepository.findById(b.getBoxNumber()).get();
+        selectedBox.setProducts(p);
+        selectedBox.addToQuantityDraft();
+        selectedBox.addToQuantityTotal();
+
+        boxRepository.save(selectedBox);
+
+        return selectedBox;
     }
 }

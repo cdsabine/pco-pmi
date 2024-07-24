@@ -49,9 +49,10 @@ public class CSVHelperProducts {
                 String vendor = csvRecord.get("Vendor");
                 String size = csvRecord.get("Option1 Value");
                 String SKU = csvRecord.get("Variant SKU"); //also gives box
+                int quantity = Integer.parseInt(csvRecord.get("Variant Inventory Qty"));
                 Double price = Double.parseDouble(csvRecord.get("Variant Price"));
                 String prodCondition = csvRecord.get("Google Shopping / Condition");
-                Product aux = classifyProduct(csvRecord.get("Type"), title, vendor, size, prodCondition, SKU, price);
+                Product aux = classifyProduct(csvRecord.get("Type"), title, vendor, size, quantity, prodCondition, SKU, price);
 
                 products.add(aux);
             }
@@ -62,15 +63,15 @@ public class CSVHelperProducts {
         }
     }
 
-    public static Product classifyProduct(String productType, String title, String vendor, String size, String prodCondition, String SKU, double price) {
+    public static Product classifyProduct(String productType, String title, String vendor, String size, int quantity, String prodCondition, String SKU, double price) {
         Product p = null;
 
         if(productType.equals("Jackets") || productType.contains("Jersey") || productType.contains("shirt") || productType.contains("tops") || productType.contains("Vest") || productType.contains("Hoodies")){
-            p = new Tops(SKU, title, price, false, "" ,size, prodCondition, vendor, "", false, false);
+            p = new Tops(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, false);
             //p.setBrandName(brand);
         }
         else if(productType.contains("Bib") || productType.contains("Shorts")){
-            p = new Bottoms(SKU, title, price, false, "" ,size, prodCondition, vendor, true, false, false);
+            p = new Bottoms(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, true, false, false);
             //p.setBrandName(brand);
         }
         else if(productType.contains("suit")){

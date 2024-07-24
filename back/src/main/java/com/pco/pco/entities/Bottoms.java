@@ -11,8 +11,8 @@ public class Bottoms extends Product{
     private boolean aero;
 
     public Bottoms(){}
-    public Bottoms(String SKU, String title, double price, boolean activeProduct, String colour, String size, String prodCondition, String vendorCode, boolean chamois, boolean thermal, boolean aero){
-        super(SKU,title,price,activeProduct,colour,size, prodCondition, vendorCode);
+    public Bottoms(String SKU, String title, double price, boolean activeProduct, String colour, String size, int quantity, String prodCondition, String vendorCode, boolean chamois, boolean thermal, boolean aero){
+        super(SKU,title,price,activeProduct,colour,size, quantity, prodCondition, vendorCode);
         this.chamois = chamois;
         this.thermal = thermal;
         this.aero = aero;
