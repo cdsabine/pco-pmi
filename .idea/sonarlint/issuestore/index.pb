@@ -271,3 +271,5 @@ K
 front/src/app/app.module.ts,8\4\84d01d817d41ff657aa1e391bb82924d4de25525
 S
 #front/src/app/app-routing.module.ts,a\b\ab85ee27fe08b34f99b6fde55b37bc36d89fea1e
+s
+Cback/src/main/java/com/pco/pco/entities/productLocationChanges.java,6\1\61cfda99dd7818962b6387d220ee7493842fdbde

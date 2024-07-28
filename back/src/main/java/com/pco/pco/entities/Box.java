@@ -16,11 +16,20 @@ public class Box {
     private int quantityTotal;
     private boolean allActive;
 
+    @JsonIgnoreProperties({"products","box"})
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "box")
+    private List<Product> productList;
+
+    @JsonIgnoreProperties("boxMovementCode")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "box")
+    private List<productLocationChanges> productLocationChanges;
+
+    /*
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnoreProperties({"boxes","products"})
     @JoinTable(name = "boxproductmapping", joinColumns = @JoinColumn(name = "boxNumber"), inverseJoinColumns = @JoinColumn(name = "SKU"))
     private List<Product> products;
-
+     */
     public Box(){}
     public Box(String boxNumber, int quantityActive, int quantityDraft, int quantityTotal, boolean allActive) {
         this.boxNumber = boxNumber;
@@ -28,7 +37,8 @@ public class Box {
         this.quantityDraft = quantityDraft;
         this.quantityTotal = quantityTotal;
         this.allActive = allActive;
-        this.products = new ArrayList<>();
+        this.productList = new ArrayList<>();
+        this.productLocationChanges = new ArrayList<>();
     }
 
     public String getBoxNumber() { return boxNumber; }
@@ -48,7 +58,9 @@ public class Box {
 
     public boolean isAllActive() { return allActive; }
     public void setAllActive(boolean allActive) { this.allActive = allActive; }
-    public List<Product> getProducts() { return products; }
-    public void setProducts(Product products ) { this.products.add(products); }
+    public List<Product> getProducts() { return productList; }
+    public void setProducts(Product products ) { this.productList.add(products); }
+    public List<productLocationChanges> getProductLocationChanges() { return productLocationChanges; }
+    public void setProductLocationChanges(productLocationChanges productLocationChanges ) { this.productLocationChanges.add(productLocationChanges); }
 
 }

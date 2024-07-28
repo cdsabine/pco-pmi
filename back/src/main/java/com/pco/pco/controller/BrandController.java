@@ -76,7 +76,7 @@ public class BrandController {
 
     public String findBrandNameInTitle(String title){
         for(Map.Entry<String,String> entry : brandCombos.entrySet()){
-            if(title.contains(entry.getKey())) return entry.getKey();;
+            if(title.contains(entry.getKey())) return entry.getKey();
         }
         return "N/A";
     }

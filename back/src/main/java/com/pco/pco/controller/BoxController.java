@@ -3,6 +3,7 @@ package com.pco.pco.controller;
 import com.pco.pco.entities.Box;
 import com.pco.pco.entities.Product;
 import com.pco.pco.repository.BoxRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -24,12 +25,18 @@ public class BoxController {
         Iterable<Box> boxes = getAllBoxes();
         for(Box aux : boxes){
             if(aux.getBoxNumber().equals(boxNumber)) {
+                aux.addToQuantityDraft();
+                aux.addToQuantityTotal();
+                boxRepository.save(aux);
                 return boxRepository.findById(boxNumber).get();
             }
         }
-        Box b = new Box(boxNumber, 0,0,0, false);
+        Box b = new Box();
+        b.setBoxNumber(boxNumber);
+        b.addToQuantityDraft();
+        b.addToQuantityTotal();
         boxRepository.save(b);
-        return boxRepository.findById(boxNumber).get();
+        return b;
     }
 
     @PostMapping(path="/add")
@@ -41,13 +48,10 @@ public class BoxController {
     }
 
     public Box addProductToBox(Box b, Product p){
-        Box selectedBox = boxRepository.findById(b.getBoxNumber()).get();
-        selectedBox.setProducts(p);
-        selectedBox.addToQuantityDraft();
-        selectedBox.addToQuantityTotal();
+        b.setProducts(p);
+        b.addToQuantityDraft();
+        b.addToQuantityTotal();
 
-        boxRepository.save(selectedBox);
-
-        return selectedBox;
+        return boxRepository.save(b);
     }
 }

@@ -2,6 +2,8 @@ package com.pco.pco.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,9 +40,22 @@ public abstract class Product {
     @JoinColumn(name = "coCode")
     private ClientOrder clientOrder;
 
+    @JsonIgnoreProperties({"box","products"})
+    @ManyToOne()
+    @JoinColumn(name = "boxNumber")
+    private Box box;
+    @Transient
+    private String boxNumber;
+
+    @JsonIgnoreProperties("boxMovementCode")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+    private List<productLocationChanges> productLocationChanges;
+
+    /*
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
     @JsonIgnoreProperties({"boxes", "products"})
     private List<Box> boxes;
+    */
 
     public Product(){}
     public Product(String SKU, String title, double price, boolean activeProduct, String colour, String size, int quantity, String prodCondition, String vendorCode){
@@ -53,7 +68,10 @@ public abstract class Product {
         this.quantity = quantity;
         this.prodCondition = prodCondition;
         this.vendorCode = vendorCode;
-        this.boxes = new ArrayList<>();
+
+        this.box = new Box();
+
+        this.productLocationChanges = new ArrayList<>();
     }
 
     public String getSKU() {
@@ -137,7 +155,10 @@ public abstract class Product {
         this.clientOrder = clientOrder;
     }
 
-    public List<Box> getBoxes() { return boxes; }
-    public void setBox(Box box ) { this.boxes.add(box); }
+    public Box getBox() { return box; }
+    public void setBox(Box box) { this.box = box; }
+
+    public List<productLocationChanges> getProductLocationChanges() { return productLocationChanges; }
+    public void setProductLocationChanges(productLocationChanges productLocationChanges ) { this.productLocationChanges.add(productLocationChanges); }
 
 }

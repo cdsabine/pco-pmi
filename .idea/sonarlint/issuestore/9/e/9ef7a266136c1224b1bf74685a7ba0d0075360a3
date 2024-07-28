@@ -1,16 +1,21 @@
 
-m	java:S117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å£8èªÁ¢2
-l	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìê‡l8èªÁ¢2
-m	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¡Ú8èªÁ¢2
+m	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å£8Æ£ÇÌ2
+l	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìê‡l8Ç£ÇÌ2
+m	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¡Ú8Ç£ÇÌ2
 €
-java:S4165E"cRemove this useless assignment; "title" already holds the assigned value along all execution paths.(¦Ó×8îªÁ¢2
-j	java:S116"NRename this field "SKU" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¥ú†8ïªÁ¢2
+java:S4165W"cRemove this useless assignment; "title" already holds the assigned value along all execution paths.(¦Ó×8Ë£ÇÌ2
+j	java:S116"NRename this field "SKU" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¥ú†8Ì£ÇÌ2
 V
-java:S5993-"9Change the visibility of this constructor to "protected".(İ»Ğ¼8ğªÁ¢2
+java:S5993<"9Change the visibility of this constructor to "protected".(İ»Ğ¼8Í£ÇÌ2
 V
-java:S5993."9Change the visibility of this constructor to "protected".(å£8ğªÁ¢2
-]	java:S107."AConstructor has 9 parameters, which is greater than 7 authorized.(å£8òªÁ¢2
+java:S5993="9Change the visibility of this constructor to "protected".(å£8Í£ÇÌ2
+]	java:S107="AConstructor has 9 parameters, which is greater than 7 authorized.(å£8Î£ÇÌ2
+X	java:S1259"<This block of commented-out lines of code should be removed.(¬çäï8Ï£ÇÌ2
 I
-java:S1172D",Remove this unused method parameter "Title".(³¡Ú8ôªÁ¢2
+java:S1172V",Remove this unused method parameter "Title".(³¡Ú8Ï£ÇÌ2
 L
-java:S1656E"/Remove or correct this useless self-assignment.(¦Ó×8øªÁ¢2
+java:S1656W"/Remove or correct this useless self-assignment.(¦Ó×8Ò£ÇÌ2
+a
+java:S1128"?Remove this unused import 'org.hibernate.annotations.OnDelete'.(¸´€áùÿÿÿÿ8µµÜ¬2
+g
+java:S1128"ERemove this unused import 'org.hibernate.annotations.OnDeleteAction'.(ÅöŒ”üÿÿÿÿ8µµÜ¬2

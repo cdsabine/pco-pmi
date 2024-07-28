@@ -2,8 +2,10 @@ package com.pco.pco.controller;
 
 import com.pco.pco.entities.Product;
 import com.pco.pco.entities.Box;
+import com.pco.pco.entities.Tops;
 import com.pco.pco.repository.BoxRepository;
 import com.pco.pco.repository.ProductRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,8 @@ import java.lang.reflect.InvocationTargetException;
 public class ProductController {
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private BoxRepository boxRepository;
     @Autowired
     private BrandController bc;
     @Autowired
@@ -56,14 +60,15 @@ public class ProductController {
         return p;
     }
     public Product decideBox(Product p, String SKU){
-        String box = SKU.substring(SKU.indexOf(' ') + 1);
-        box = box.replace(" ", "");
-
-        p.setBox(boxc.findBox(box));
-
-        boxc.addProductToBox(boxc.findBox(box), p);
+        p.setBox(boxc.findBox(decideBoxNumber(SKU)));
 
         return p;
+    }
+
+    public String decideBoxNumber(String SKU){
+        String box = SKU.substring(SKU.indexOf(' ') + 1);
+        box = box.replace(" ", "");
+        return box;
     }
 
     @PostMapping(path="/moveProductBox")
@@ -74,6 +79,28 @@ public class ProductController {
 
         return p;
     }
+
+    @PostMapping(path="/testProduct")
+    public @ResponseBody Product testSetBox(@RequestParam String SKU){
+        Product p = new Tops(SKU, "Rapha Cycling Australia Test Top", 16.05, false, "Yellow", "S", 1, "New", "vc56", "Short", false, false);
+
+        Box b = new Box("2-A-1",0,0,0,false);
+
+        //productRepository.save(p);
+        boxRepository.save(b);
+
+        p = decideBrand(p, "Rapha Cycling Australia Test Top");
+        p = decideTeam(p, "Rapha Cycling Australia Test Top");
+        p = decideCoC(p, -1l);
+        p.setBox(b);
+
+        productRepository.save(p);
+        b.setProducts(p);
+        boxRepository.save(b);
+
+        return p;
+    }
+
 
     @PostMapping(path="/classifyProduct")
     public @ResponseBody Class classifyProduct(@RequestParam String productType) throws ClassNotFoundException {

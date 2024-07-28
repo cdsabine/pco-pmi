@@ -1,5 +1,6 @@
 package com.pco.pco.service;
 
+import com.pco.pco.controller.BoxController;
 import com.pco.pco.controller.CountryController;
 import com.pco.pco.controller.ProductController;
 import com.pco.pco.entities.AppUser;
@@ -21,6 +22,8 @@ public class CSVServiceProduct {
 
     @Autowired
     private ProductController pc;
+    @Autowired
+    private BoxController bc;
 
     public void save(MultipartFile file) {
         try {
