@@ -1,20 +1,15 @@
 
 Q
-java:S3740j"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8¸äõ¬2
+java:S3740a"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8¸äõ¬2
 ƒ
-java:S1192U"aDefine a constant instead of duplicating this literal "Rapha Cycling Australia Test Top" 3 times.(Ëÿ³úÿÿÿÿ8¹äõ¬2
+java:S1192L"aDefine a constant instead of duplicating this literal "Rapha Cycling Australia Test Top" 3 times.(Ëÿ³úÿÿÿÿ8¹äõ¬2
 r	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8¹äõ¬2
 r	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ˆøÿÿÿÿ8¹äõ¬2
-r	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í°ßĞùÿÿÿÿ8¹äõ¬2
-m	java:S117T"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8¹äõ¬2
-v
-java:S1488L"YImmediately return this expression instead of assigning it to the temporary variable "p".(˜Û€Œ8¹äõ¬2
-l
-java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8Åäõ¬2
+m	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8¹äõ¬2
 r
 java:S36551"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8Åäõ¬2
-m
-java:S3655L"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(˜Û€Œ8Åäõ¬2
+l
+java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8Åäõ¬2
 ‡
 java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Åäõ¬2
 _
@@ -29,7 +24,7 @@ _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
 _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
-X	java:S125Y"<This block of commented-out lines of code should be removed.(´‹Öš8••­2
-^	java:S125‘"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8Íäõ¬2
+X	java:S125P"<This block of commented-out lines of code should be removed.(´‹Öš8••­2
+^	java:S125ˆ"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8Íäõ¬2
 [
 java:S1128">Remove this unused import 'jakarta.transaction.Transactional'.(ß–Ê³8åÏ‹­2

@@ -273,3 +273,7 @@ S
 #front/src/app/app-routing.module.ts,a\b\ab85ee27fe08b34f99b6fde55b37bc36d89fea1e
 s
 Cback/src/main/java/com/pco/pco/entities/productLocationChanges.java,6\1\61cfda99dd7818962b6387d220ee7493842fdbde
+x
+Hback/src/main/java/com/pco/pco/controller/pLocationChangeController.java,9\4\9469b87013a554d0d63dc9f5926eb6e8c8f5fe4a
+~
+Nback/src/main/java/com/pco/pco/repository/ProductLocationChangeRepository.java,5\e\5ec56377111258e1c3025b5611bd9ab8a967c68d

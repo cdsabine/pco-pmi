@@ -20,7 +20,7 @@ public class Box {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "box")
     private List<Product> productList;
 
-    @JsonIgnoreProperties("boxMovementCode")
+    @JsonIgnoreProperties({"box","products","productLocationChanges"})
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "box")
     private List<productLocationChanges> productLocationChanges;
 
@@ -47,14 +47,17 @@ public class Box {
     public int getQuantityActive() { return quantityActive; }
     public void setQuantityActive(int quantityActive) { this.quantityActive = quantityActive; }
     public void addToQuantityActive() { this.quantityActive++; }
+    public void removeFromQuantityActive() { this.quantityActive--; }
 
     public int getQuantityDraft() { return quantityDraft; }
     public void setQuantityDraft(int quantityDraft) { this.quantityDraft = quantityDraft; }
     public void addToQuantityDraft() { this.quantityDraft++; }
+    public void removeFromQuantityDraft() { this.quantityDraft--; }
 
     public int getQuantityTotal() { return quantityTotal; }
     public void setQuantityTotal(int quantityTotal) { this.quantityTotal = quantityTotal; }
     public void addToQuantityTotal() { this.quantityTotal++; }
+    public void removeFromQuantityTotal() { this.quantityTotal--; }
 
     public boolean isAllActive() { return allActive; }
     public void setAllActive(boolean allActive) { this.allActive = allActive; }

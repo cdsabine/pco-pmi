@@ -47,7 +47,7 @@ public abstract class Product {
     @Transient
     private String boxNumber;
 
-    @JsonIgnoreProperties("boxMovementCode")
+    @JsonIgnoreProperties({"box","products","productLocationChanges"})
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     private List<productLocationChanges> productLocationChanges;
 

@@ -71,15 +71,6 @@ public class ProductController {
         return box;
     }
 
-    @PostMapping(path="/moveProductBox")
-    public @ResponseBody Product changeBox(@RequestParam String SKU, @RequestParam String oldBox, @RequestParam String newBox){
-        Product p = productRepository.findById(SKU).get();
-
-        //NEED TO IMPLEMENT THE NEW TABLE BETWEEN BOX AND PRODUCT INSTEAD OF THE CURRENT N..M RELATION.
-
-        return p;
-    }
-
     @PostMapping(path="/testProduct")
     public @ResponseBody Product testSetBox(@RequestParam String SKU){
         Product p = new Tops(SKU, "Rapha Cycling Australia Test Top", 16.05, false, "Yellow", "S", 1, "New", "vc56", "Short", false, false);

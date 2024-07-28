@@ -48,10 +48,20 @@ public class BoxController {
     }
 
     public Box addProductToBox(Box b, Product p){
-        b.setProducts(p);
-        b.addToQuantityDraft();
         b.addToQuantityTotal();
+        if(p.getActiveProduct()){
+            b.addToQuantityActive();
+        }
+        else b.addToQuantityDraft();
+        return boxRepository.save(b);
+    }
 
+    public Box removeProductFromBox(Box b, Product p){
+        b.removeFromQuantityTotal();
+        if(p.getActiveProduct()){
+            b.removeFromQuantityActive();
+        }
+        else b.removeFromQuantityDraft();
         return boxRepository.save(b);
     }
 }
