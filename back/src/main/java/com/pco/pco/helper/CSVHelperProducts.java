@@ -1,14 +1,14 @@
 package com.pco.pco.helper;
 
-import com.pco.pco.entities.Bottoms;
+import com.pco.pco.entities.productchildren.*;
 import com.pco.pco.entities.Product;
-import com.pco.pco.entities.Tops;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,35 +68,33 @@ public class CSVHelperProducts {
 
         if(productType.equals("Jackets") || productType.contains("Jersey") || productType.contains("shirt") || productType.contains("tops") || productType.contains("Vest") || productType.contains("Hoodies")){
             p = new Tops(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, false);
-            //p.setBrandName(brand);
         }
         else if(productType.contains("Bib") || productType.contains("Shorts")){
             p = new Bottoms(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, true, false, false);
-            //p.setBrandName(brand);
         }
         else if(productType.contains("suit")){
-            //p = new Skinsuits();
+            p = new Skinsuits(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, true, false);
         }
         else if(productType.equals("Component")){
-            //p = new Components();
+            p = new Components(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor);
         }
         else if(productType.equals("layer")){
-            //p = new Baselayers();
+            p = new Baselayers(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, false);
         }
         else if(productType.equals("Warmer")){
-            //p = new Warmers();
+            p = new Warmers(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, false, "", false);
         }
         else if(productType.contains("Shoe") || productType.contains("Sock")){
-            //p = new Footwear();
+            p = new Footwear(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "");
         }
         else if(productType.equals("Gloves")){
-            //p = new Gloves();
+            p = new Gloves(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, false, false, false);
         }
         else if(productType.equals("Helmet") || productType.contains("Cap")){
-            //p = new Headwear();
+            p = new Headwear(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, false, true, false);
         }
         else if(productType.equals("Healthnutrition")){
-            //p = new Healthnutrition();
+            p = new HealthNutrition(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, LocalDate.parse("2030-01-01"), "");
         }
         return p;
     }

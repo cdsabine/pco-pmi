@@ -1,11 +1,12 @@
-package com.pco.pco.entities;
+package com.pco.pco.entities.productchildren;
 
+import com.pco.pco.entities.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tops")
-public class Tops extends Product{
+public class Tops extends Product {
     private String sleeves;
     private boolean thermal;
     private boolean aero;

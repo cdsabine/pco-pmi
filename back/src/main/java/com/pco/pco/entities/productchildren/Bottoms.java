@@ -1,11 +1,12 @@
-package com.pco.pco.entities;
+package com.pco.pco.entities.productchildren;
 
+import com.pco.pco.entities.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "bottoms")
-public class Bottoms extends Product{
+public class Bottoms extends Product {
     private boolean chamois;
     private boolean thermal;
     private boolean aero;

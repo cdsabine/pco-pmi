@@ -2,10 +2,9 @@ package com.pco.pco.controller;
 
 import com.pco.pco.entities.Product;
 import com.pco.pco.entities.Box;
-import com.pco.pco.entities.Tops;
+import com.pco.pco.entities.productchildren.Tops;
 import com.pco.pco.repository.BoxRepository;
 import com.pco.pco.repository.ProductRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

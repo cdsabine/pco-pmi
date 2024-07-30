@@ -3,7 +3,7 @@ package com.pco.pco.controller.subclassproduct;
 import com.pco.pco.controller.BrandController;
 import com.pco.pco.controller.ClientOrderController;
 import com.pco.pco.controller.TeamController;
-import com.pco.pco.entities.Bottoms;
+import com.pco.pco.entities.productchildren.Bottoms;
 import com.pco.pco.repository.ProductRepository;
 import com.pco.pco.repository.BottomsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
