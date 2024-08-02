@@ -17,4 +17,16 @@ public class Gloves extends Product {
         this.thermal = thermal;
         this.neoprene = neoprene;
     }
+    public boolean getThermal() {
+        return thermal;
+    }
+    public void setThermal(boolean thermal) { this.thermal=thermal; }
+    public boolean getWaterproof() {
+        return waterproof;
+    }
+    public void setWaterproof(boolean waterproof) {
+        this.waterproof = waterproof;
+    }
+    public boolean getNeoprene() { return neoprene; }
+    public void setNeoprene(boolean neoprene) { this.neoprene = neoprene; }
 }

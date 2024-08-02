@@ -19,4 +19,26 @@ public class Skinsuits extends Product {
         this.aero = aero;
         this.timetrial = timetrial;
     }
+    public String getSleeves() {
+        return sleeves;
+    }
+    public void setSleeves(String sleeves) {
+        this.sleeves = sleeves;
+    }
+    public boolean getThermal() {
+        return thermal;
+    }
+    public void setThermal(boolean thermal) { this.thermal=thermal; }
+    public boolean getAero() {
+        return aero;
+    }
+    public void setAero(boolean aero) {
+        this.aero = aero;
+    }
+    public boolean getTimetrial() {
+        return timetrial;
+    }
+    public void setTimetrial(boolean timetrial) {
+        this.timetrial = timetrial;
+    }
 }

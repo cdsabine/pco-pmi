@@ -17,4 +17,18 @@ public class Headwear extends Product {
         this.visor = visor;
         this.thermal = thermal;
     }
+    public boolean getThermal() {
+        return thermal;
+    }
+    public void setThermal(boolean thermal) { this.thermal=thermal; }
+    public boolean getWaterproof() {
+        return waterproof;
+    }
+    public void setWaterproof(boolean waterproof) {
+        this.waterproof = waterproof;
+    }
+    public boolean getVisor() {
+        return visor;
+    }
+    public void setVisor(boolean visor) { this.visor = visor; }
 }

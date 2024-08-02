@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/product")
@@ -26,6 +29,9 @@ public class ProductController {
     private ClientOrderController coc;
     @Autowired
     private BoxController boxc;
+
+    private List<String> colours = Arrays.asList("black","white","red","green","blue","yellow","grey","brown","purple","gold","orange","pink");
+
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Product> getAllProducts() {
         return productRepository.findAll();
@@ -68,6 +74,15 @@ public class ProductController {
         String box = SKU.substring(SKU.indexOf(' ') + 1);
         box = box.replace(" ", "");
         return box;
+    }
+
+    public Product decideColour(Product p, String title){
+        String aux = "No colour";
+        for(String colour : colours){
+            if (title.toLowerCase().contains(colour)) aux = colour;
+        }
+        p.setColour(aux);
+        return p;
     }
 
     @PostMapping(path="/testProduct")
@@ -136,5 +151,10 @@ public class ProductController {
         Product aux = (Product) classifyProduct(productType).getDeclaredConstructor().newInstance();
 
         return aux.getClass();
+    }
+
+    @PostMapping(path="/findProduct")
+    public @ResponseBody Class returnProduct(@RequestParam String SKU) {
+        return productRepository.findById(SKU).get().getClass();
     }
 }

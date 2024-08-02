@@ -1,12 +1,17 @@
 package com.pco.pco.controller.subclassproduct;
 
 import com.pco.pco.controller.ProductController;
+import com.pco.pco.entities.Product;
 import com.pco.pco.entities.productchildren.Skinsuits;
+import com.pco.pco.entities.productchildren.Tops;
 import com.pco.pco.repository.SkinsuitsRepository;
 import com.pco.pco.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/product/skinsuits")
@@ -38,5 +43,14 @@ public class SkinsuitController {
     public @ResponseBody Iterable<Skinsuits> getAllSkinsuits() {
         // This returns a JSON or XML with the users
         return skinsuitsRepository.findAll();
+    }
+    private List<String> sleeves = Arrays.asList("long sleeve","short sleeve","sleeveless");
+    public Product decideSleeves(Skinsuits s, String title){
+        String aux = "No sleeves";
+        for(String sleeve : sleeves){
+            if (title.toLowerCase().contains(sleeve)) aux = sleeve;
+        }
+        s.setSleeves(aux);
+        return s;
     }
 }

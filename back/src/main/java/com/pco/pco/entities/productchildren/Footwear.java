@@ -13,4 +13,8 @@ public class Footwear extends Product {
         super(SKU,title,price,activeProduct,colour,size, quantity, prodCondition, vendorCode);
         this.discipline = discipline;
     }
+    public String getDiscipline() {
+        return discipline;
+    }
+    public void setDiscipline(String discipline) { this.discipline = discipline; }
 }

@@ -17,5 +17,20 @@ public class Baselayers extends Product {
         this.thermal = thermal;
         this.merino = merino;
     }
-
+    public String getSleeves() {
+        return sleeves;
+    }
+    public void setSleeves(String sleeves) {
+        this.sleeves = sleeves;
+    }
+    public boolean getThermal() {
+        return thermal;
+    }
+    public void setThermal(boolean thermal) { this.thermal=thermal; }
+    public boolean getMerino() {
+        return merino;
+    }
+    public void setMerino(boolean merino) {
+        this.merino = merino;
+    }
 }

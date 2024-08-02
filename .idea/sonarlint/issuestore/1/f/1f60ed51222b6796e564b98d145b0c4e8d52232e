@@ -1,17 +1,17 @@
 
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŠÈ„8²§°î‡2
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŠÈ„8²§°î‡2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¸§°î‡2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¸§°î‡2
-_
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¸§°î‡2
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¸§°î‡2
 _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¸§°î‡2
 _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¸§°î‡2
 _
 java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¸§°î‡2
+]	java:S125)"<This block of commented-out lines of code should be removed.(ˆî›±ýÿÿÿÿ8»§°î‡2
+`
+java:S1128"CRemove this unused import 'com.pco.pco.controller.BrandController'.(ê¿…ñ8Ë‰õ2
+f
+java:S1128"IRemove this unused import 'com.pco.pco.controller.ClientOrderController'.( ±£‰8Ë‰õ2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¸§°î‡2
-]	java:S125*"<This block of commented-out lines of code should be removed.(ˆî›±ýÿÿÿÿ8»§°î‡2
+java:S1128"BRemove this unused import 'com.pco.pco.controller.TeamController'.(ÝÆéÈ8Ë‰õ2

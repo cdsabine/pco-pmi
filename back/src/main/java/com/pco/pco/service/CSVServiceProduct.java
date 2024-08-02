@@ -1,12 +1,8 @@
 package com.pco.pco.service;
 
-import com.pco.pco.controller.BoxController;
-import com.pco.pco.controller.CountryController;
 import com.pco.pco.controller.ProductController;
-import com.pco.pco.entities.AppUser;
 import com.pco.pco.entities.Product;
 import com.pco.pco.helper.CSVHelperProducts;
-import com.pco.pco.repository.AppUserRepository;
 import com.pco.pco.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,8 +18,6 @@ public class CSVServiceProduct {
 
     @Autowired
     private ProductController pc;
-    @Autowired
-    private BoxController bc;
 
     public void save(MultipartFile file) {
         try {
@@ -33,6 +27,7 @@ public class CSVServiceProduct {
                 pc.decideTeam(aux, aux.getTitle());
                 pc.decideCoC(aux, -1L);
                 pc.decideBox(aux, aux.getSKU());
+                pc.decideColour(aux, aux.getTitle());
             }
             productRepository.saveAll(products);
         } catch (IOException e) {

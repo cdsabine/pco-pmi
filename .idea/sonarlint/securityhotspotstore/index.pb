@@ -43,10 +43,6 @@ a
 1back/src/main/java/com/pco/pco/entities/Team.java,2\9\291de46add7eb812d3d50d19c0cd23c3d9970922
 h
 8back/src/main/java/com/pco/pco/entities/ClientOrder.java,8\3\83813eaf90e51d659d6de0d9d1efe9a9ff2bfc4d
-a
-1back/src/main/java/com/pco/pco/entities/Tops.java,a\7\a7ce34d971d9eee7c639f45f84e668e229a0e75e
-d
-4back/src/main/java/com/pco/pco/entities/Bottoms.java,c\1\c1eb72ec0925bee34942db9fa47a6e6c6b639aaf
 p
 @back/src/main/java/com/pco/pco/controller/ProductController.java,0\b\0bdc6c8acd843e47b98b98bc104f168fe02cb8f7
 m
@@ -82,11 +78,7 @@ G.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,a\e\ae
 Å
 Q.idea/sonarlint/securityhotspotstore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,9\0\909762385fc6eb20f922a91c6865741308b57f2c
 Å
-Q.idea/sonarlint/securityhotspotstore/c/1/c1eb72ec0925bee34942db9fa47a6e6c6b639aaf,d\0\d0cdb4e090c0f61a9f9369a4d87da287de2e0b45
-Å
 Q.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,b\b\bbf202272a96de5cd6b6828ffdc55fb3ce45289c
-Å
-Q.idea/sonarlint/securityhotspotstore/a/7/a7ce34d971d9eee7c639f45f84e668e229a0e75e,0\e\0eb5fb4d090808429abb67770bdac1a90f571f3a
 Å
 Q.idea/sonarlint/securityhotspotstore/1/c/1c81f8279d9e608348250f6b3a4453f78eedfe7b,0\3\0324b39b83be2e96e973f363e66bf6fb0c80e4ad
 Å

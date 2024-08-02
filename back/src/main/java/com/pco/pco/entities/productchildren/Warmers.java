@@ -17,4 +17,18 @@ public class Warmers extends Product {
         this.thermal = thermal;
         this.bodypart = bodypart;
     }
+    public boolean getThermal() {
+        return thermal;
+    }
+    public void setThermal(boolean thermal) { this.thermal=thermal; }
+    public boolean getWaterproof() {
+        return waterproof;
+    }
+    public void setWaterproof(boolean waterproof) {
+        this.waterproof = waterproof;
+    }
+    public String getBodypart() {
+        return bodypart;
+    }
+    public void setBodypart(String bodypart) { this.bodypart = bodypart; }
 }

@@ -5,12 +5,16 @@ import com.pco.pco.controller.BrandController;
 import com.pco.pco.controller.ClientOrderController;
 import com.pco.pco.controller.ProductController;
 import com.pco.pco.controller.TeamController;
+import com.pco.pco.entities.Product;
 import com.pco.pco.entities.productchildren.Tops;
 import com.pco.pco.repository.ProductRepository;
 import com.pco.pco.repository.TopsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/product/tops")
@@ -21,12 +25,7 @@ public class TopsController {
     private TopsRepository topsRepository;
     @Autowired
     private ProductController productController;
-    @Autowired
-    private BrandController bc;
-    @Autowired
-    private TeamController tc;
-    @Autowired
-    private ClientOrderController coc;
+
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody String addTop (@RequestParam String SKU, @RequestParam String title, @RequestParam String brandName, @RequestParam String teamName, @RequestParam long coCode,
                                         @RequestParam double price, @RequestParam boolean activeProduct, @RequestParam String colour, @RequestParam String size, @RequestParam int quantity,
@@ -65,8 +64,18 @@ public class TopsController {
         return "Saved";
     }
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Tops> getAllUsers() {
+    public @ResponseBody Iterable<Tops> getAllTops() {
         // This returns a JSON or XML with the users
         return topsRepository.findAll();
+    }
+
+    private List<String> sleeves = Arrays.asList("long sleeve","short sleeve","sleeveless");
+    public Product decideSleeves(Tops t, String title){
+        String aux = "No sleeves";
+        for(String sleeve : sleeves){
+            if (title.toLowerCase().contains(sleeve)) aux = sleeve;
+        }
+        t.setSleeves(aux);
+        return t;
     }
 }

@@ -17,4 +17,10 @@ public class HealthNutrition extends Product {
         this.expirationDate = expirationDate;
         this.flavour = flavour;
     }
+    public LocalDate getExpirationDate() { return expirationDate; }
+    public void setExpirationDate(LocalDate expirationDate) { this.expirationDate=expirationDate; }
+    public String getFlavour() {
+        return flavour;
+    }
+    public void setFlavour(String flavour) { this.flavour = flavour; }
 }

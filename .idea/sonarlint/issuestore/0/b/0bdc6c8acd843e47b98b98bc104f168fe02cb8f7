@@ -1,30 +1,35 @@
 
 Q
-java:S3740a"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8¸äõ¬2
+java:S3740o"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8Ö‘áú2
+R
+java:S3740"/Provide the parametrized type for this generic.(•À‚™şÿÿÿÿ8ÙÓ”û2
 ƒ
-java:S1192L"aDefine a constant instead of duplicating this literal "Rapha Cycling Australia Test Top" 3 times.(Ëÿ³úÿÿÿÿ8¹äõ¬2
-r	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8¹äõ¬2
-r	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ˆøÿÿÿÿ8¹äõ¬2
-m	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8¹äõ¬2
-r
-java:S36551"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8Åäõ¬2
+java:S1192Z"aDefine a constant instead of duplicating this literal "Rapha Cycling Australia Test Top" 3 times.(Ëÿ³úÿÿÿÿ8Ö‘áú2
+r	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8×‘áú2
+r	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ˆøÿÿÿÿ8×‘áú2
+m	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8×‘áú2
+s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•À‚™şÿÿÿÿ8×‘áú2
 l
-java:S3655("PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8Åäõ¬2
+java:S3655-"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8á‘áú2
+r
+java:S36556"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8á‘áú2
+n
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±İúü8¢…”û2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Åäõ¬2
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8â‘áú2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â‘áú2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â‘áú2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â‘áú2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â‘áú2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â‘áú2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Åäõ¬2
-X	java:S125P"<This block of commented-out lines of code should be removed.(´‹Öš8••­2
-^	java:S125ˆ"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8Íäõ¬2
-[
-java:S1128">Remove this unused import 'jakarta.transaction.Transactional'.(ß–Ê³8åÏ‹­2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â‘áú2
+X	java:S125^"<This block of commented-out lines of code should be removed.(´‹Öš8ç‘áú2
+^	java:S125–"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8ê‘áú2
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ª…”û2

@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CSVHelperProducts {
@@ -66,36 +67,82 @@ public class CSVHelperProducts {
     public static Product classifyProduct(String productType, String title, String vendor, String size, int quantity, String prodCondition, String SKU, double price) {
         Product p = null;
 
-        if(productType.equals("Jackets") || productType.contains("Jersey") || productType.contains("shirt") || productType.contains("tops") || productType.contains("Vest") || productType.contains("Hoodies")){
-            p = new Tops(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, false);
+        if(productType.toLowerCase().contains("jackets") || productType.toLowerCase().contains("jersey") || productType.toLowerCase().contains("shirt") || productType.toLowerCase().contains("tops") || productType.toLowerCase().contains("vest") || productType.toLowerCase().contains("hoodies")){
+            String sleeves = decideSleeves(title);
+            boolean thermal = decideThermal(title);
+            boolean aero = decideAero(title);
+            p = new Tops(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, sleeves, thermal, aero);
         }
-        else if(productType.contains("Bib") || productType.contains("Shorts")){
-            p = new Bottoms(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, true, false, false);
+        else if(productType.toLowerCase().toLowerCase().contains("bib") || productType.toLowerCase().contains("shorts") || productType.toLowerCase().contains("pants")){
+            boolean thermal = decideThermal(title);
+            boolean aero = decideAero(title);
+            p = new Bottoms(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, true, thermal, aero);
         }
-        else if(productType.contains("suit")){
-            p = new Skinsuits(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, true, false);
+        else if(productType.toLowerCase().contains("suit")){
+            String sleeves = decideSleeves(title);
+            boolean thermal = decideThermal(title);
+            boolean aero = decideAero(title);
+            boolean tt = decideTT(title);
+            p = new Skinsuits(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, sleeves, thermal, aero, tt);
         }
-        else if(productType.equals("Component")){
+        else if(productType.toLowerCase().contains("component") || productType.toLowerCase().contains("bags")){
             p = new Components(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor);
         }
-        else if(productType.equals("layer")){
-            p = new Baselayers(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "", false, false);
+        else if(productType.toLowerCase().contains("layer")){
+            String sleeves = decideSleeves(title);
+            boolean thermal = decideThermal(title);
+            boolean merino = decideMerino(title);
+            p = new Baselayers(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, sleeves, thermal, merino);
         }
-        else if(productType.equals("Warmer")){
-            p = new Warmers(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, false, "", false);
+        else if(productType.toLowerCase().contains("warmer")){
+            boolean thermal = decideThermal(title);
+            boolean waterproof = decideWaterproof(title);
+            p = new Warmers(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, waterproof, "", thermal);
         }
-        else if(productType.contains("Shoe") || productType.contains("Sock")){
+        else if(productType.toLowerCase().contains("shoe") || productType.toLowerCase().contains("sock") || productType.toLowerCase().contains("cover")){
             p = new Footwear(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, "");
         }
-        else if(productType.equals("Gloves")){
-            p = new Gloves(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, false, false, false);
+        else if(productType.toLowerCase().contains("gloves")){
+            boolean thermal = decideThermal(title);
+            boolean waterproof = decideWaterproof(title);
+            boolean neoprene = decideNeoprene(title);
+            p = new Gloves(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, waterproof, thermal, neoprene);
         }
-        else if(productType.equals("Helmet") || productType.contains("Cap")){
-            p = new Headwear(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, false, true, false);
+        else if(productType.toLowerCase().contains("helmet") || productType.toLowerCase().contains("cap") || productType.toLowerCase().contains("eyewear")){
+            boolean thermal = decideThermal(title);
+            boolean waterproof = decideWaterproof(title);
+            p = new Headwear(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, waterproof, true, thermal);
         }
-        else if(productType.equals("Healthnutrition")){
-            p = new HealthNutrition(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, LocalDate.parse("2030-01-01"), "");
+        else if(productType.toLowerCase().contains("health") || productType.toLowerCase().contains("nutrition")){
+            p = new HealthNutrition(SKU, title, price, false, "" ,size, quantity, prodCondition, vendor, LocalDate.parse("2030-01-01"), "Flavour");
         }
         return p;
+    }
+
+    public static List<String> sleeves = Arrays.asList("long sleeve","short sleeve","sleeveless");
+    public static String decideSleeves(String title){
+        String aux = "No sleeves";
+        for(String sleeve : sleeves){
+            if (title.toLowerCase().contains(sleeve)) aux = sleeve;
+        }
+        return aux;
+    }
+    public static boolean decideThermal(String title){
+        return title.toLowerCase().contains("thermal");
+    }
+    public static boolean decideAero(String title){
+        return title.toLowerCase().contains("aero") || title.toLowerCase().contains("speed");
+    }
+    public static boolean decideTT(String title){
+        return title.toLowerCase().contains("speed");
+    }
+    public static boolean decideMerino(String title){
+        return title.toLowerCase().contains("merino");
+    }
+    public static boolean decideWaterproof(String title){
+        return title.toLowerCase().contains("waterproof") || title.toLowerCase().contains("water");
+    }
+    public static boolean decideNeoprene(String title){
+        return title.toLowerCase().contains("neoprene");
     }
 }
