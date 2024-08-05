@@ -5,6 +5,7 @@ import {NgModule} from "@angular/core";
 import {UploadCsvComponent} from "./upload-csv/upload-csv.component";
 import {DownloadDatabaseComponent} from "./download-database/download-database.component";
 import {ViewDatabaseComponent} from "./view-database/view-database.component";
+import {ViewAppuserComponent} from "./view-appuser/view-appuser.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       },
       {
         path: 'view-db', component: ViewDatabaseComponent,
+        children: [
+          {
+            path: 'appuser', component: ViewAppuserComponent,
+          }]
       }]
   },
 ];

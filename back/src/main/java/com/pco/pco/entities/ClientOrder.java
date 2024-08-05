@@ -11,7 +11,6 @@ public class ClientOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long coCode;
-
     private String dateOfOrder;
     private boolean shipped;
 

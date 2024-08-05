@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path="/product")
 public class ProductController {
     @Autowired
@@ -33,8 +34,8 @@ public class ProductController {
     private List<String> colours = Arrays.asList("black","white","red","green","blue","yellow","grey","brown","purple","gold","orange","pink");
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Product> getAllProducts() {
-        return productRepository.findAll();
+    public @ResponseBody List<Product> getAllProducts() {
+         return (List<Product>) productRepository.findAll();
     }
 
     public Product decideBrand(Product p, String title){

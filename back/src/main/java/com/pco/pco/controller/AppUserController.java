@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path="/user")
 public class AppUserController {
     @Autowired
@@ -43,9 +46,9 @@ public class AppUserController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<AppUser> getAllUsers() {
+    public @ResponseBody List<AppUser> getAllUsers() {
         // This returns a JSON or XML with the users
-        return appUserRepository.findAll();
+        return (List<AppUser>) appUserRepository.findAll();
     }
 
     @GetMapping(path="/delete")

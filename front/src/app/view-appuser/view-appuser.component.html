@@ -1,0 +1,33 @@
+<div class="all">
+  <div class="lowContainer">
+    <div class="menu">
+      <button [routerLink]="''">back</button>
+      <div class="menuSection">
+        View Database
+      </div>
+      <div class="menuButton">
+        <button [routerLink]="'/view-db'" routerLinkActive="active">View Database</button>
+      </div>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">User Code</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email Address</th>
+        <th scope="col">Address</th>
+        <th scope="col">Country Code</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let appuser of appuser">
+        <td>{{ appuser.userCode }}</td>
+        <td>{{ appuser.appUsername }}</td>
+        <td>{{ appuser.emailAddress }}</td>
+        <td>{{ appuser.address }}</td>
+        <td>{{ appuser.countryCode }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
