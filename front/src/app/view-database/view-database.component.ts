@@ -1,5 +1,4 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {app} from "../../../server";
 import {Product} from "../model/product";
 import {ProductServiceService} from "../service/product-service.service";
 

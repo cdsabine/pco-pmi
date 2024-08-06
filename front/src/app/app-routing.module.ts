@@ -21,10 +21,13 @@ const routes: Routes = [
         path: 'download-db', component: DownloadDatabaseComponent,
       },
       {
-        path: 'view-db', component: ViewDatabaseComponent,
+        path: 'view-db',
         children: [
           {
             path: 'appuser', component: ViewAppuserComponent,
+          },
+          {
+            path: '', component: ViewDatabaseComponent,
           }]
       }]
   },

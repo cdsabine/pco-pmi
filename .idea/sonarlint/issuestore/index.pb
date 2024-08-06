@@ -325,8 +325,6 @@ R
 "front/src/app/app.config.server.ts,b\4\b42d1843f31cc150f17abd4d500f2727e088c09e
 K
 front/src/app/app.routes.ts,2\c\2c596f7c5494ec3ba3861e11e592c2a33f53620b
-h
-8front/src/app/product-service/product-service.service.ts,f\c\fc10e3f9fb6dfca54f41ef3fd03fe13db4671e5d
 N
 front/src/app/model/product.ts,c\5\c58d0673d650843d6bb682fc5f3374df5e484adc
 K
@@ -343,12 +341,6 @@ N
 front/src/app/model/appuser.ts,9\c\9ccbf0780058750f0baa883b5a2cb8a245b57209
 S
 #front/src/app/model/product.spec.ts,6\5\6517eccdb770249750d5bf08710d53db8341074c
-m
-=front/src/app/product-service/product-service.service.spec.ts,5\7\5787d846c0fd9b8cb7db02560a3adb0846963ec7
-h
-8front/src/app/product-service/appuser-service.service.ts,9\0\902ef62fe649012082b272a063739237bfaf4c24
-m
-=front/src/app/product-service/appuser-service.service.spec.ts,4\3\43d8b1001057744789b237dc14275ef0ebd3d0da
 i
 9front/src/app/view-appuser/view-appuser.component.spec.ts,0\0\009c65beca9df156328004b1089624693d191758
 S
@@ -365,3 +357,11 @@ V
 &front/src/app/pipe/filter-pipe.pipe.ts,d\3\d3ac066ecab94fcdc3725cc8420960185868c04d
 [
 +front/src/app/pipe/filter-pipe.pipe.spec.ts,6\5\6516f5669f5c4dc877a92340b650df4f6218c5a2
+^
+.front/src/app/pipe/filter-pipe-product.pipe.ts,7\a\7abfeb1c6c916863070b1a03d256736edf4ac2d8
+c
+3front/src/app/pipe/filter-pipe-product.pipe.spec.ts,e\4\e4fd4d1266df65cb9ae588cbdc1a8ff104005988
+c
+3front/src/app/pipe/filter-pipe-appuser.pipe.spec.ts,6\c\6ca576d295e1889ce28ecd01ea3a38e3f806854d
+^
+.front/src/app/pipe/filter-pipe-appuser.pipe.ts,5\8\58e2e5f88ebff39b2c0981b71f05781798092b6d

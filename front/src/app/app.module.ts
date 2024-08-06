@@ -12,7 +12,7 @@ import { HttpClientModule } from "@angular/common/http";
 import {ProductServiceService} from "./service/product-service.service";
 import {ViewAppuserComponent} from "./view-appuser/view-appuser.component";
 import {AppuserServiceService} from "./service/appuser-service.service";
-import {FilterPipePipe} from "./pipe/filter-pipe.pipe";
+import {FilterPipeProductPipe} from "./pipe/filter-pipe-product.pipe";
 import {FormsModule} from "@angular/forms";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -23,6 +23,9 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
 import {MatLine} from "@angular/material/core";
+import {CdkScrollable} from "@angular/cdk/overlay";
+import {MatCard, MatCardContent} from "@angular/material/card";
+import {FilterPipeAppuserPipe} from "./pipe/filter-pipe-appuser.pipe";
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,8 @@ import {MatLine} from "@angular/material/core";
     DownloadDatabaseComponent,
     ViewDatabaseComponent,
     ViewAppuserComponent,
-    FilterPipePipe
+    FilterPipeProductPipe,
+    FilterPipeAppuserPipe
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,10 @@ import {MatLine} from "@angular/material/core";
     MatFormFieldModule,
     MatListModule,
     MatInputModule,
-    MatLine
+    MatLine,
+    CdkScrollable,
+    MatCard,
+    MatCardContent
   ],
   providers: [ProductServiceService, AppuserServiceService, provideAnimationsAsync()],
   bootstrap: [AppComponent]

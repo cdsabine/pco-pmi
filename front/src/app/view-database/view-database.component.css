@@ -1,16 +1,5 @@
-header{
-  position: fixed;
-  top: 0;
-  z-index: 11;
-  transition: all 250ms ease-in-out;
-}
-.main-header{
-  &.hidden{
-    opacity: 0;
-  }
-}
 .search-block{
-  width: 0%;
+  width: 0;
   right: 0;
   background: #fff;
   &.active{
@@ -24,3 +13,14 @@ header{
     padding-left: 10px;
   }
 }
+.lowContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.product-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px 0;
+}
+

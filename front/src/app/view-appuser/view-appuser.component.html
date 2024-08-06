@@ -1,33 +1,37 @@
 <div class="all">
-  <div class="lowContainer">
-    <div class="menu">
-      <button [routerLink]="''">back</button>
-      <div class="menuSection">
-        View Database
-      </div>
-      <div class="menuButton">
-        <button [routerLink]="'/view-db'" routerLinkActive="active">View Database</button>
-      </div>
+  <div class="menu">
+    <button [routerLink]="''">back</button>
+    <div class="menuSection">
+      View Database
     </div>
-    <table class="table table-bordered table-striped">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">User Code</th>
-        <th scope="col">Username</th>
-        <th scope="col">Email Address</th>
-        <th scope="col">Address</th>
-        <th scope="col">Country Code</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let appuser of appuser">
-        <td>{{ appuser.userCode }}</td>
-        <td>{{ appuser.appUsername }}</td>
-        <td>{{ appuser.emailAddress }}</td>
-        <td>{{ appuser.address }}</td>
-        <td>{{ appuser.countryCode }}</td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="menuSection">
+      <button [routerLink]="'./appuser'" routerLinkActive="active">View AppUsers</button>
+    </div>
+  </div>
+  <div class="lowContainer">
+    <mat-toolbar class="search-block mat-elevation-z4" [class.active]="toggleSearch">
+      <mat-toolbar-row style="padding: 0 5px;">
+        <button class="search-icon" mat-icon-button disabled>
+          <mat-icon>search</mat-icon>
+        </button>
+        <input class="search-control" type="text" placeholder="Search" [(ngModel)]="searchText" #searchbar>
+        <button mat-icon-button (click)="searchClose()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-card *ngFor="let appuser of appuser | filterPipeAppuser: searchText">
+      <mat-card-content>
+        <div class="product-line">
+          <span class="appuser-userCode">{{appuser.userCode}}</span>
+          <span class="appuser-username">{{appuser.username}}</span>
+          <span class="appuser-emailAddress">{{appuser.emailAddress}}</span>
+          <span class="appuser-address">{{appuser.address}}</span>
+          <span class="appuser-countryCode">{{appuser.countryCode}}</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
   </div>
 </div>
