@@ -1,13 +1,13 @@
 
 P
-java:S1121:".Extract the assignment out of this expression.(‰¨¶Àüÿÿÿÿ8Ã”Õ’î1
+java:S1121;".Extract the assignment out of this expression.(‰¨¶Àüÿÿÿÿ8Ã”Õ’î1
 m
-java:S3655""PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ú’¥Ú8Ò”Õ’î1
+java:S3655D"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(­Øž®8Ò”Õ’î1
 m
-java:S3655C"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(­Øž®8Ò”Õ’î1
+java:S3655#"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ú’¥Ú8Ò”Õ’î1
 ‡
 java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Ô”Õ’î1
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Ô”Õ’î1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Ô”Õ’î1
 [
-java:S1854:"9Remove this useless assignment to local variable "found".(‰¨¶Àüÿÿÿÿ8Ü”Õ’î1
+java:S1854;"9Remove this useless assignment to local variable "found".(‰¨¶Àüÿÿÿÿ8Ü”Õ’î1

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path="/country")
 public class CountryController {
     @Autowired
@@ -25,8 +26,8 @@ public class CountryController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Country> getAllCountries() {
-        return countryRepository.findAll();
+    public @ResponseBody List<Country> getAllCountries() {
+        return (List<Country>) countryRepository.findAll();
     }
 
     @GetMapping(path="/findCountry")

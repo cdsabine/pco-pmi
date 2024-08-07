@@ -425,3 +425,7 @@ _
 /front/src/app/pipe/filter-pipe-box.pipe.spec.ts,5\8\580fa86bc71da2bd64911036330a8606d090c9d6
 c
 3front/src/app/service/brand-service.service.spec.ts,1\d\1d3e877d4c6ed8446727bdc2ce75741125b7cf3a
+N
+front/src/app/model/country.ts,0\a\0a63af47d918732577e04c6e61ca48e1b4f8729c
+S
+#front/src/app/model/country.spec.ts,1\0\10924762b36687ceb176dff0798e99960963f4c0
