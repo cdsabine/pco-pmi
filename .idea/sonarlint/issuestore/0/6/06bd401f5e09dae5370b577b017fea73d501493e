@@ -1,11 +1,11 @@
 
 r
-java:S36558"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÑÔî¢ÿÿÿÿÿ8£Ù¥ˆ‚2
+java:S3655:"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÑÔî¢ÿÿÿÿÿ8Íµ·æ’2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¤Ù¥ˆ‚2
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Îµ·æ’2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8¥Ù¥ˆ‚2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Ïµ·æ’2
 N
-java:S3599",Use another way to initialize this instance.(ŸòÕ´ÿÿÿÿÿ8¨Ù¥ˆ‚2
+java:S3599",Use another way to initialize this instance.(ŸòÕ´ÿÿÿÿÿ8¨Ù¥ˆ‚2
 {
-java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8¨Ù¥ˆ‚2
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8Öµ·æ’2

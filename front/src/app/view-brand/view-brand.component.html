@@ -21,24 +21,19 @@
     <mat-card>
       <mat-card-content>
         <div class="header-row">
-          <span class="header-userCode">User Code</span>
-          <span class="header-username">Username</span>
-          <span class="header-emailAddress">Email Address</span>
-          <span class="header-address">Address</span>
-          <span class="header-countryCode">Country Code</span>
+          <span class="header-brandCode">Brand Code</span>
+          <span class="header-brandName">Name</span>
+          <span class="header-nationality">Nationality</span>
         </div>
       </mat-card-content>
     </mat-card>
 
-
-    <mat-card *ngFor="let appuser of appuser | filterPipeAppuser: searchText">
+    <mat-card *ngFor="let brand of brand | filterPipeBrand: searchText">
       <mat-card-content>
         <div class="product-line">
-          <span class="appuser-userCode">{{appuser.userCode}}</span>
-          <span class="appuser-username">{{appuser.appUsername}}</span>
-          <span class="appuser-emailAddress">{{appuser.emailAddress}}</span>
-          <span class="appuser-address">{{appuser.address}}</span>
-          <span class="appuser-countryCode">{{appuser.countryCode}}</span>
+          <span class="brand-brandCode">{{brand.brandCode}}</span>
+          <span class="brand-brandName">{{brand.brandName}}</span>
+          <span class="brand-nationality">{{brand.nationality}}</span>
         </div>
       </mat-card-content>
     </mat-card>

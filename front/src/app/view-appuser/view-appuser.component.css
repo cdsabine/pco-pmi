@@ -18,9 +18,33 @@
   flex-direction: column;
   height: 100%;
 }
-.product-line {
+.menuSection{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-row {
   display: flex;
   justify-content: space-between;
-  padding: 1px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.header-userCode, .header-username, .header-emailAddress, .header-address, .header-countryCode {
+  flex: 1;
+  text-align: left;
+}
+.product-card {
+  margin-bottom: 16px; /* Adjust this value to control the space between items */
+}
+.product-line{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.appuser-userCode, .appuser-username, .appuser-emailAddress, .appuser-address, .appuser-countryCode{
+  flex: 1;
+  font-size: 16px;
 }
 

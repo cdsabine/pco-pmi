@@ -11,7 +11,7 @@ export class FilterPipeAppuserPipe implements PipeTransform {
     if (!searchText) return appusers;
     searchText = searchText.toLowerCase();
     return appusers.filter(it => {
-      return it.userCode.toString().includes(searchText) || it.appUsername.toLowerCase().includes(searchText);
+      return it.userCode.toString().toLowerCase().includes(searchText) || it.appUsername.toLowerCase().includes(searchText);
     })
   }
 

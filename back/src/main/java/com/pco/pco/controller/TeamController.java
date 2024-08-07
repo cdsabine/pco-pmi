@@ -7,10 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path="/team")
 public class TeamController {
     @Autowired
@@ -47,8 +49,8 @@ public class TeamController {
         return teamRepository.findAll();
     }
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Team> getAllTeams() {
-        return teamRepository.findAll();
+    public @ResponseBody List<Team> getAllTeams() {
+        return (List<Team>) teamRepository.findAll();
     }
 
     @GetMapping(path="/findTeam")

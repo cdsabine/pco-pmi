@@ -6,6 +6,9 @@ import {UploadCsvComponent} from "./upload-csv/upload-csv.component";
 import {DownloadDatabaseComponent} from "./download-database/download-database.component";
 import {ViewDatabaseComponent} from "./view-database/view-database.component";
 import {ViewAppuserComponent} from "./view-appuser/view-appuser.component";
+import {ViewBoxComponent} from "./view-box/view-box.component";
+import {ViewBrandComponent} from "./view-brand/view-brand.component";
+import {ViewTeamComponent} from "./view-team/view-team.component";
 
 const routes: Routes = [
   {
@@ -25,6 +28,18 @@ const routes: Routes = [
         children: [
           {
             path: 'appuser', component: ViewAppuserComponent,
+          },
+          {
+            path: 'boxes', component: ViewBoxComponent,
+          },
+          {
+            path: 'teams', component: ViewTeamComponent,
+          },
+          {
+            path: 'clientorders', component: ViewAppuserComponent,
+          },
+          {
+            path: 'brand', component: ViewBrandComponent,
           },
           {
             path: '', component: ViewDatabaseComponent,

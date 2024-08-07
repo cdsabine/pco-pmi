@@ -13,7 +13,7 @@ public class AppUser {
     private Long userCode;
     private String appUsername;
     private String emailAddress;
-    private String address;
+    private String appAddress;
 
     @Transient
     private String countryName;
@@ -27,7 +27,7 @@ public class AppUser {
         //this.userCode = userCode;
         this.appUsername = appUsername;
         this.emailAddress = emailAddress;
-        this.address = address;
+        this.appAddress = address;
         this.countryName = country;
     }
 
@@ -56,11 +56,11 @@ public class AppUser {
     }
 
     public String getAddress() {
-        return address;
+        return appAddress;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.appAddress = address;
     }
 
     public Country getCountry(){

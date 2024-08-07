@@ -26,6 +26,15 @@ import {MatLine} from "@angular/material/core";
 import {CdkScrollable} from "@angular/cdk/overlay";
 import {MatCard, MatCardContent} from "@angular/material/card";
 import {FilterPipeAppuserPipe} from "./pipe/filter-pipe-appuser.pipe";
+import {ViewBoxComponent} from "./view-box/view-box.component";
+import {BoxServiceService} from "./service/box-service.service";
+import {FilterPipeBoxPipe} from "./pipe/filter-pipe-box.pipe";
+import {ViewBrandComponent} from "./view-brand/view-brand.component";
+import {BrandServiceService} from "./service/brand-service.service";
+import {FilterPipeBrandPipe} from "./pipe/filter-pipe-brand.pipe";
+import {TeamServiceService} from "./service/team-service.service";
+import {ViewTeamComponent} from "./view-team/view-team.component";
+import {FilterPipeTeamPipe} from "./pipe/filter-pipe-team.pipe";
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +44,14 @@ import {FilterPipeAppuserPipe} from "./pipe/filter-pipe-appuser.pipe";
     DownloadDatabaseComponent,
     ViewDatabaseComponent,
     ViewAppuserComponent,
+    ViewBoxComponent,
+    ViewBrandComponent,
+    ViewTeamComponent,
     FilterPipeProductPipe,
-    FilterPipeAppuserPipe
+    FilterPipeAppuserPipe,
+    FilterPipeBoxPipe,
+    FilterPipeBrandPipe,
+    FilterPipeTeamPipe
   ],
   imports: [
     BrowserModule,
@@ -57,7 +72,7 @@ import {FilterPipeAppuserPipe} from "./pipe/filter-pipe-appuser.pipe";
     MatCard,
     MatCardContent
   ],
-  providers: [ProductServiceService, AppuserServiceService, provideAnimationsAsync()],
+  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

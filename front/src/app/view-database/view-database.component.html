@@ -6,6 +6,10 @@
     </div>
     <div class="menuSection">
       <button [routerLink]="'./appuser'" routerLinkActive="active">View AppUsers</button>
+      <button [routerLink]="'./boxes'" routerLinkActive="active">View Boxes</button>
+      <button [routerLink]="'./brand'" routerLinkActive="active">View Brand</button>
+      <button [routerLink]="'./clientorders'" routerLinkActive="active">View Client Orders</button>
+      <button [routerLink]="'./teams'" routerLinkActive="active">View Teams</button>
     </div>
   </div>
   <div class="lowContainer">
@@ -20,6 +24,21 @@
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="header-row">
+          <span class="header-sku">SKU</span>
+          <span class="header-title">Title</span>
+          <span class="header-price">Price</span>
+          <span class="header-activeProduct">Active Product</span>
+          <span class="header-colour">Colour</span>
+          <span class="header-quality">Quality</span>
+          <span class="header-condition">Product Condition</span>
+          <span class="header-vendorCode">Vendor Code</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
 
     <mat-card *ngFor="let product of product | filterPipeProduct: searchText">
       <mat-card-content>

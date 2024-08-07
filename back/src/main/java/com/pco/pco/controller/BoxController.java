@@ -1,5 +1,6 @@
 package com.pco.pco.controller;
 
+import com.pco.pco.entities.AppUser;
 import com.pco.pco.entities.Box;
 import com.pco.pco.entities.Product;
 import com.pco.pco.repository.BoxRepository;
@@ -8,16 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path="/box")
 public class BoxController {
     @Autowired
     private BoxRepository boxRepository;
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Box> getAllBoxes() {
-        return boxRepository.findAll();
+    public @ResponseBody List<Box> getAllBoxes() {
+        return (List<Box>) boxRepository.findAll();
     }
 
     @PostMapping(path="/findBox")
