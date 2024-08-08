@@ -26,6 +26,7 @@
           <span class="header-quantityDraft">Quantity Draft</span>
           <span class="header-quantityTotal">Quantity Total</span>
           <span class="header-allActive">All Active</span>
+          <span class="header-allProducts">Products</span>
         </div>
       </mat-card-content>
     </mat-card>
@@ -38,6 +39,7 @@
           <span class="box-quantityDraft">{{box.quantityDraft}}</span>
           <span class="box-quantityTotal">{{box.quantityTotal}}</span>
           <span class="box-allActive">{{box.allActive}}</span>
+          <button mat-button (click)="openProductList(box)">View Products</button>
         </div>
       </mat-card-content>
     </mat-card>

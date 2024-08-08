@@ -72,6 +72,7 @@ public abstract class Product {
         this.box = new Box();
 
         this.productLocationChanges = new ArrayList<>();
+        this.boxNumber = setBoxNumber(SKU);
     }
 
     public String getSKU() {
@@ -157,6 +158,13 @@ public abstract class Product {
 
     public Box getBox() { return box; }
     public void setBox(Box box) { this.box = box; }
+
+    public String getBoxNumber(){ return boxNumber; }
+    public String setBoxNumber(String SKU) {
+        String box = SKU.substring(SKU.indexOf(' ') + 1);
+        box = box.replace(" ", "");
+        return box;
+    }
 
     public List<productLocationChanges> getProductLocationChanges() { return productLocationChanges; }
     public void setProductLocationChanges(productLocationChanges productLocationChanges ) { this.productLocationChanges.add(productLocationChanges); }

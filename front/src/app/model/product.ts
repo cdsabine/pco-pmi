@@ -1,3 +1,5 @@
+import {Box} from "./box";
+
 export class Product {
   sku: string;
   title: string;
@@ -8,6 +10,7 @@ export class Product {
   quantity: number;
   prodCondition: string;
   vendorCode: string;
+  box: Box;
 
   constructor() {
     this.sku = "sku";

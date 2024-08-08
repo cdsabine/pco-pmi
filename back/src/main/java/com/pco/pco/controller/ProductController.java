@@ -67,6 +67,7 @@ public class ProductController {
     }
     public Product decideBox(Product p, String SKU){
         p.setBox(boxc.findBox(decideBoxNumber(SKU)));
+        p.setBoxNumber(decideBoxNumber(SKU));
 
         return p;
     }
@@ -84,6 +85,16 @@ public class ProductController {
         }
         p.setColour(aux);
         return p;
+    }
+
+    @GetMapping(path="/allProductsInBox")
+    public @ResponseBody List<Product> getAllProductsInBox(@RequestParam String boxNumber) {
+        List<Product> productList = new ArrayList<>();
+        Iterable<Product> products = productRepository.findAll();
+        for(Product product : products){
+            if(product.getBox().getBoxNumber().equals(boxNumber)) productList.add(product);
+        }
+        return productList;
     }
 
     @PostMapping(path="/testProduct")

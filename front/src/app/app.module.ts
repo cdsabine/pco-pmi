@@ -24,7 +24,7 @@ import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
 import {MatLine} from "@angular/material/core";
 import {CdkScrollable} from "@angular/cdk/overlay";
-import {MatCard, MatCardContent} from "@angular/material/card";
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {FilterPipeAppuserPipe} from "./pipe/filter-pipe-appuser.pipe";
 import {ViewBoxComponent} from "./view-box/view-box.component";
 import {BoxServiceService} from "./service/box-service.service";
@@ -35,6 +35,11 @@ import {FilterPipeBrandPipe} from "./pipe/filter-pipe-brand.pipe";
 import {TeamServiceService} from "./service/team-service.service";
 import {ViewTeamComponent} from "./view-team/view-team.component";
 import {FilterPipeTeamPipe} from "./pipe/filter-pipe-team.pipe";
+import {
+  ViewBoxDialogueWindowComponent
+} from "./view-box-dialogue-window/view-box-dialogue-window.component";
+import {ViewUploadCsvDialogueComponent} from "./view-upload-csv-dialogue/view-upload-csv-dialogue.component";
+import {UploadFileService} from "./service/upload-file.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +52,8 @@ import {FilterPipeTeamPipe} from "./pipe/filter-pipe-team.pipe";
     ViewBoxComponent,
     ViewBrandComponent,
     ViewTeamComponent,
+    ViewBoxDialogueWindowComponent,
+    ViewUploadCsvDialogueComponent,
     FilterPipeProductPipe,
     FilterPipeAppuserPipe,
     FilterPipeBoxPipe,
@@ -70,9 +77,11 @@ import {FilterPipeTeamPipe} from "./pipe/filter-pipe-team.pipe";
     MatLine,
     CdkScrollable,
     MatCard,
-    MatCardContent
+    MatCardContent,
+    MatCardHeader,
+    MatCardTitle
   ],
-  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, provideAnimationsAsync()],
+  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, UploadFileService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

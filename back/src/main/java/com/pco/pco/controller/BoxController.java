@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -66,5 +67,14 @@ public class BoxController {
         }
         else b.removeFromQuantityDraft();
         return boxRepository.save(b);
+    }
+
+    @GetMapping(path="/allFromBox")
+    public @ResponseBody List<Box> getAllFromSpecificBox(@RequestParam String boxNumber) {
+        List<Box> aux = new ArrayList<>();
+        if(boxRepository.findById(boxNumber).isPresent()) {
+            aux.add(boxRepository.findById(boxNumber).get());
+        }
+        return aux;
     }
 }

@@ -429,3 +429,23 @@ N
 front/src/app/model/country.ts,0\a\0a63af47d918732577e04c6e61ca48e1b4f8729c
 S
 #front/src/app/model/country.spec.ts,1\0\10924762b36687ceb176dff0798e99960963f4c0
+|
+Lfront/src/app/view-box-dialogue-window/view-box-dialogue-window.component.ts,4\1\41ee40b49b6ac7a460443fce23d7064a1140397a
+~
+Nfront/src/app/view-box-dialogue-window/view-box-dialogue-window.component.html,1\6\16d67020e9b5f37a58336661cad1ad5539f0b6aa
+}
+Mfront/src/app/view-box-dialogue-window/view-box-dialogue-window.component.css,7\f\7fd182a5372b30df4d33e1b9bd8e401e5ac00f35
+Å
+Qfront/src/app/view-box-dialogue-window/view-box-dialogue-window.component.spec.ts,2\5\2569423d89fa4dee42a6dcf2b80d6e591dc56c06
+|
+Lfront/src/app/view-upload-csv-dialogue/view-upload-csv-dialogue.component.ts,9\3\93d732b77d332a84964ad198fbe09aaf5f9a7dd8
+~
+Nfront/src/app/view-upload-csv-dialogue/view-upload-csv-dialogue.component.html,d\4\d496e19865483e858e9c248afafbeed9ec5a9e38
+a
+1front/src/app/service/upload-file.service.spec.ts,2\2\22c73a6aa8e20fbdb2381e618c65dc65e9c1a430
+\
+,front/src/app/service/upload-file.service.ts,2\5\2511e65680ac201487771929be3534ccc9893d40
+Å
+Qfront/src/app/view-upload-csv-dialogue/view-upload-csv-dialogue.component.spec.ts,7\0\70ce63a752a94fa8641ed17ad592571407586275
+}
+Mfront/src/app/view-upload-csv-dialogue/view-upload-csv-dialogue.component.css,4\6\461409e8c9a33dc37cd28a51f12106325c1ac8b4

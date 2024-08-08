@@ -1,0 +1,17 @@
+.product-list-content {
+  max-height: 600px; /* Adjust as necessary */
+  overflow-y: auto;
+}
+.product-line {
+  margin-bottom: 8px;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-card-header mat-icon {
+  cursor: pointer;
+}

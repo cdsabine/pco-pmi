@@ -9,6 +9,18 @@
         Upload History
       </div>
     </div>
-    <p>upload csv works!</p>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" class="upload-button" (click)="openDialog('Upload Products')">
+        Upload Products
+      </button>
+      <button mat-raised-button color="accent" class="upload-button" (click)="openDialog('Upload Client Order')">
+        Upload Client Order
+      </button>
+      <button mat-raised-button color="warn" class="upload-button" (click)="openDialog('Initialize Database')">
+        Initialize Database
+      </button>
+    </div>
+
   </div>
 </div>
