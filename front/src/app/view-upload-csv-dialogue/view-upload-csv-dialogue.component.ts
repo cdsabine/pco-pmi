@@ -9,14 +9,29 @@ import {response} from "express";
   styleUrl: './view-upload-csv-dialogue.component.css'
 })
 export class ViewUploadCsvDialogueComponent {
+
   selectedFile: File | null = null;
+  uploadProgress: number | null = null;
+  uploadStatus: string | null = null;
+
   constructor(@Inject(MAT_DIALOG_DATA) public data: { action: string }, private http: HttpClient, private uploadFileService: UploadFileService) {}
 
-  onFileSelected(event: any): void {
+  onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
   }
 
-  uploadFile(): void {
-
+  onUpload() {
+    if (this.selectedFile) {
+      this.uploadFileService.uploadFile(this.selectedFile).subscribe(
+        (event: any) => {
+          if (event.status === 'progress') {
+            this.uploadProgress = event.message;
+          } else if (event.status === 'success') {
+            this.uploadStatus = 'Upload successful!';
+            this.uploadProgress = null;
+          }
+        }
+      );
+    }
   }
 }

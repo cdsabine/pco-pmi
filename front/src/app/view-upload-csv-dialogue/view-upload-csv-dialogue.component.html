@@ -1,7 +1,16 @@
 <h1>{{ data.action }}</h1>
 
 <div *ngIf="data.action === 'Upload Products'">
-  <p>Upload Products</p>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+
+  <div *ngIf="uploadProgress !== null">
+    <p>Uploading: {{ uploadProgress }}%</p>
+  </div>
+
+  <div *ngIf="uploadStatus">
+    <p>{{ uploadStatus }}</p>
+  </div>
 </div>
 <div *ngIf="data.action === 'Upload Client Order'">
   <p>Upload Client Order</p>
