@@ -12,9 +12,11 @@
     <p>{{ uploadStatus }}</p>
   </div>
 </div>
+
 <div *ngIf="data.action === 'Upload Client Order'">
   <p>Upload Client Order</p>
 </div>
+
 <div *ngIf="data.action === 'Initialize Database'">
-  <p>Initialize Database</p>
+  <button (click)="executeInit()">Initialize</button>
 </div>

@@ -40,6 +40,7 @@ import {
 } from "./view-box-dialogue-window/view-box-dialogue-window.component";
 import {ViewUploadCsvDialogueComponent} from "./view-upload-csv-dialogue/view-upload-csv-dialogue.component";
 import {UploadFileService} from "./service/upload-file.service";
+import {InitDbService} from "./service/init-db.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,7 +82,7 @@ import {UploadFileService} from "./service/upload-file.service";
     MatCardHeader,
     MatCardTitle
   ],
-  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, UploadFileService, provideAnimationsAsync()],
+  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, UploadFileService, InitDbService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

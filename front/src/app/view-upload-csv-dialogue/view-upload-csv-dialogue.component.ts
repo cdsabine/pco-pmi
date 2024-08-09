@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 import {HttpClient} from "@angular/common/http";
 import {UploadFileService} from "../service/upload-file.service";
 import {response} from "express";
+import {InitDbService} from "../service/init-db.service";
 @Component({
   selector: 'app-view-upload-csv-dialogue',
   templateUrl: './view-upload-csv-dialogue.component.html',
@@ -13,8 +14,10 @@ export class ViewUploadCsvDialogueComponent {
   selectedFile: File | null = null;
   uploadProgress: number | null = null;
   uploadStatus: string | null = null;
+  initStatusBrand: string | null = null;
+  initStatusTeam: string | null = null;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { action: string }, private http: HttpClient, private uploadFileService: UploadFileService) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { action: string }, private http: HttpClient, private uploadFileService: UploadFileService, private initDbService: InitDbService) {}
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
@@ -34,4 +37,25 @@ export class ViewUploadCsvDialogueComponent {
       );
     }
   }
+
+  onInitaliseBrand(){
+    this.initDbService.initBrand().subscribe(
+      response => {
+        this.initStatusBrand = response;
+      }
+    );
+  }
+  onInitaliseTeam(){
+    this.initDbService.initTeam().subscribe(
+      response => {
+        this.initStatusTeam = response;
+      }
+    );
+  }
+
+  executeInit(){
+    this.onInitaliseBrand();
+    this.onInitaliseTeam();
+  }
+
 }
