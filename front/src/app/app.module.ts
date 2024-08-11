@@ -41,6 +41,8 @@ import {
 import {ViewUploadCsvDialogueComponent} from "./view-upload-csv-dialogue/view-upload-csv-dialogue.component";
 import {UploadFileService} from "./service/upload-file.service";
 import {InitDbService} from "./service/init-db.service";
+import {LogService} from "./service/log.service";
+import {LogHistoryComponent} from "./log-history/log-history.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +57,7 @@ import {InitDbService} from "./service/init-db.service";
     ViewTeamComponent,
     ViewBoxDialogueWindowComponent,
     ViewUploadCsvDialogueComponent,
+    LogHistoryComponent,
     FilterPipeProductPipe,
     FilterPipeAppuserPipe,
     FilterPipeBoxPipe,
@@ -82,7 +85,7 @@ import {InitDbService} from "./service/init-db.service";
     MatCardHeader,
     MatCardTitle
   ],
-  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, UploadFileService, InitDbService, provideAnimationsAsync()],
+  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, UploadFileService, InitDbService, LogService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

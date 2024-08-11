@@ -453,3 +453,15 @@ X
 (front/src/app/service/init-db.service.ts,7\4\74a1972125fc94af91da3c4f75580debfe56ee4b
 ]
 -front/src/app/service/init-db.service.spec.ts,8\5\856359fb82f8195464b97765d9094731bd312de2
+T
+$front/src/app/service/log.service.ts,8\7\871e5df9e84d053845997000ffb96c78070b2a57
+b
+2front/src/app/log-history/log-history.component.ts,7\e\7eb994678f2adddc98f54783ede1c802af0ab700
+c
+3front/src/app/log-history/log-history.component.css,9\5\959435a7c252b7ba2db64297b70d01d63b481d7f
+d
+4front/src/app/log-history/log-history.component.html,6\c\6cb16a501e4889e515b6d33c074d5f6bb01a99de
+g
+7front/src/app/log-history/log-history.component.spec.ts,c\1\c1c751fa5e1a009d5ad9aec23e4ab8cf5753356b
+Y
+)front/src/app/service/log.service.spec.ts,b\a\ba074cebdc6e360dac6c8cabb9bbc41c01880de5

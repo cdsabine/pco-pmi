@@ -1,0 +1,31 @@
+.log-register {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 250px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.log-register h3 {
+  margin-top: 0;
+}
+
+.log-register button {
+  margin-bottom: 10px; /* Space between the button and the log list */
+  display: block;
+  width: 100%;
+}
+
+.log-register ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.log-register li {
+  margin-bottom: 5px;
+}
