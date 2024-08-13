@@ -1,9 +1,10 @@
 import {Component, Inject} from '@angular/core';
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {HttpClient} from "@angular/common/http";
 import {UploadFileService} from "../service/upload-file.service";
-import {response} from "express";
 import {InitDbService} from "../service/init-db.service";
+import {UploadFileClientorderService} from "../service/upload-file-clientorder.service";
+import {BoxMovementService} from "../service/box-movement.service";
 @Component({
   selector: 'app-view-upload-csv-dialogue',
   templateUrl: './view-upload-csv-dialogue.component.html',
@@ -12,20 +13,41 @@ import {InitDbService} from "../service/init-db.service";
 export class ViewUploadCsvDialogueComponent {
 
   selectedFile: File | null = null;
+  selectedFileClientOrder: File | null = null;
   uploadProgress: number | null = null;
   uploadStatus: string | null = null;
   initStatusBrand: string | null = null;
   initStatusTeam: string | null = null;
+  sku: string = '';
+  newBoxNumber: string = '';
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { action: string }, private http: HttpClient, private uploadFileService: UploadFileService, private initDbService: InitDbService) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { action: string }, private http: HttpClient, private dialogRef: MatDialogRef<ViewUploadCsvDialogueComponent>, private uploadFileService: UploadFileService,
+              private uploadFileClientorderService: UploadFileClientorderService, private boxMovementService: BoxMovementService, private initDbService: InitDbService) {}
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
+  }
+  onFileSelectedClientOrder(event: any) {
+    this.selectedFileClientOrder = event.target.files[0];
   }
 
   onUpload() {
     if (this.selectedFile) {
       this.uploadFileService.uploadFile(this.selectedFile).subscribe(
+        (event: any) => {
+          if (event.status === 'progress') {
+            this.uploadProgress = event.message;
+          } else if (event.status === 'success') {
+            this.uploadStatus = 'Upload successful!';
+            this.uploadProgress = null;
+          }
+        }
+      );
+    }
+  }
+  onUploadClientOrder(){
+    if (this.selectedFileClientOrder) {
+      this.uploadFileClientorderService.uploadFile(this.selectedFileClientOrder).subscribe(
         (event: any) => {
           if (event.status === 'progress') {
             this.uploadProgress = event.message;
@@ -56,6 +78,23 @@ export class ViewUploadCsvDialogueComponent {
   executeInit(){
     this.onInitaliseBrand();
     this.onInitaliseTeam();
+  }
+  onSubmit() {
+    const currentDate = new Date().toISOString().split('T')[0];
+
+    this.boxMovementService.moveProductBox(this.sku, this.newBoxNumber, currentDate).subscribe({
+      next: (response) => {
+        console.log('Product moved successfully', response);
+        this.dialogRef.close();
+      },
+      error: (error) => {
+        console.error('Error moving product', error);
+      }
+    });
+  }
+
+  onCancel(): void {
+    this.dialogRef.close();
   }
 
 }

@@ -47,6 +47,11 @@ import {ClientorderService} from "./service/clientorder.service";
 import {FilterPipeClientorderPipe} from "./pipe/filter-pipe-clientorder.pipe";
 import {ViewClientorderComponent} from "./view-clientorder/view-clientorder.component";
 import {ViewCoDialogueWindowComponent} from "./view-co-dialogue-window/view-co-dialogue-window.component";
+import {UploadFileClientorderService} from "./service/upload-file-clientorder.service";
+import {BoxMovementService} from "./service/box-movement.service";
+import {DashboardCOOverTimeService} from "./service/dashboard-co-over-time.service";
+import {BaseChartDirective} from "ng2-charts";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,9 +95,11 @@ import {ViewCoDialogueWindowComponent} from "./view-co-dialogue-window/view-co-d
     MatCard,
     MatCardContent,
     MatCardHeader,
-    MatCardTitle
+    MatCardTitle,
+    BaseChartDirective
   ],
-  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, ClientorderService, UploadFileService, InitDbService, LogService, provideAnimationsAsync()],
+  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService,
+    ClientorderService, UploadFileService, UploadFileClientorderService, BoxMovementService, DashboardCOOverTimeService, InitDbService, LogService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

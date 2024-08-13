@@ -497,3 +497,15 @@ q
 Afront/src/app/view-clientorder/view-clientorder.component.spec.ts,2\0\20aedb2a0a395859c94f34a8a865e1f13f8129de
 g
 7front/src/app/pipe/filter-pipe-clientorder.pipe.spec.ts,2\6\262ccbaf32a2320bede286e816aa19254fda3055
+h
+8front/src/app/service/upload-file-clientorder.service.ts,a\e\aebde5de6892bcf15acf5a26e74605bb4164088a
+]
+-front/src/app/service/box-movement.service.ts,1\2\127629e5b18b150f1280796cc46bedf5c29a248f
+g
+7front/src/app/service/dashboard-co-over-time.service.ts,0\1\01aa5495343af2f7d60f4bff3ce75c0b2fc8f757
+b
+2front/src/app/service/box-movement.service.spec.ts,a\f\af8171a73cb0b7959aa2806a5d3169a9543791c7
+l
+<front/src/app/service/dashboard-co-over-time.service.spec.ts,3\a\3a3eef1b57849ed33bd7ccff0b1bbb0c7c6bf0a6
+m
+=front/src/app/service/upload-file-clientorder.service.spec.ts,2\5\25d2f567043e76534b46343a84a43ada0eed7066

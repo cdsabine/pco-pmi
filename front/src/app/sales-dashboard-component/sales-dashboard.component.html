@@ -4,16 +4,22 @@
       <div class="menuButton" [routerLink]="'/csv'" routerLinkActive="active">
         Upload CSV
       </div>
-
       <div class="menuButton" [routerLink]="'/download-db'" routerLinkActive="active">
         Download Database
       </div>
-
-
       <div class="menuButton" [routerLink]="'/view-db'" routerLinkActive="active">
         View Database
       </div>
     </div>
-  <p>sales dashboard works!</p>
+    <div>
+      <h2>Client Orders Over Time</h2>
+      <canvas baseChart
+              [datasets]="chartData"
+              [labels]="chartLabels"
+              [options]="chartOptions"
+              [legend]="chartLegend"
+              [type]="chartType">
+      </canvas>
+    </div>
   </div>
 </div>

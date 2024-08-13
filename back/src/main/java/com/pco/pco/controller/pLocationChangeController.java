@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(path="/pLocationChangeController")
 public class pLocationChangeController {
     @Autowired
@@ -40,9 +41,6 @@ public class pLocationChangeController {
         boxController.addProductToBox(newBox, p);
 
         p.setBox(newBox);
-        //SKU = SKU.substring(0, SKU.indexOf(' ')) + " " + newBoxNumber;
-        //p.setSKU(SKU);
-
         productRepository.save(p);
 
         LocalDate date = LocalDate.parse(currentDate);

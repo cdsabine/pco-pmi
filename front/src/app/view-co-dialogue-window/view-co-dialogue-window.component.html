@@ -7,7 +7,7 @@
   </mat-card-header>
   <mat-card-content class = "product-list-content">
     <div *ngFor="let product of products" class="product-line">
-      <span>{{ product.sku }} ({{ product.title }} {{ product.price}})</span>
+      <span>{{ product.sku }} {{ product.title }} {{ product.price}}</span>
     </div>
   </mat-card-content>
 </mat-card>

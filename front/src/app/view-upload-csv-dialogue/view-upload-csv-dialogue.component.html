@@ -14,9 +14,36 @@
 </div>
 
 <div *ngIf="data.action === 'Upload Client Order'">
-  <p>Upload Client Order</p>
+  <input type="file" (change)="onFileSelectedClientOrder($event)" />
+  <button (click)="onUploadClientOrder()" [disabled]="!selectedFileClientOrder">Upload</button>
+
+  <div *ngIf="uploadProgress !== null">
+    <p>Uploading: {{ uploadProgress }}%</p>
+  </div>
+
+  <div *ngIf="uploadStatus">
+    <p>{{ uploadStatus }}</p>
+  </div>
 </div>
 
 <div *ngIf="data.action === 'Initialize Database'">
   <button (click)="executeInit()">Initialize</button>
+</div>
+<div *ngIf="data.action === 'Box Movement'">
+  <h1 mat-dialog-title>Move Product Box</h1>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>SKU</mat-label>
+      <input matInput [(ngModel)]="sku" placeholder="Enter SKU" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>New Box Number</mat-label>
+      <input matInput [(ngModel)]="newBoxNumber" placeholder="Enter New Box Number" required>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Move</button>
+  </div>
 </div>
