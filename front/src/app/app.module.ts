@@ -43,6 +43,10 @@ import {UploadFileService} from "./service/upload-file.service";
 import {InitDbService} from "./service/init-db.service";
 import {LogService} from "./service/log.service";
 import {LogHistoryComponent} from "./log-history/log-history.component";
+import {ClientorderService} from "./service/clientorder.service";
+import {FilterPipeClientorderPipe} from "./pipe/filter-pipe-clientorder.pipe";
+import {ViewClientorderComponent} from "./view-clientorder/view-clientorder.component";
+import {ViewCoDialogueWindowComponent} from "./view-co-dialogue-window/view-co-dialogue-window.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,14 +59,17 @@ import {LogHistoryComponent} from "./log-history/log-history.component";
     ViewBoxComponent,
     ViewBrandComponent,
     ViewTeamComponent,
+    ViewClientorderComponent,
     ViewBoxDialogueWindowComponent,
+    ViewCoDialogueWindowComponent,
     ViewUploadCsvDialogueComponent,
     LogHistoryComponent,
     FilterPipeProductPipe,
     FilterPipeAppuserPipe,
     FilterPipeBoxPipe,
     FilterPipeBrandPipe,
-    FilterPipeTeamPipe
+    FilterPipeTeamPipe,
+    FilterPipeClientorderPipe
   ],
   imports: [
     BrowserModule,
@@ -85,7 +92,7 @@ import {LogHistoryComponent} from "./log-history/log-history.component";
     MatCardHeader,
     MatCardTitle
   ],
-  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, UploadFileService, InitDbService, LogService, provideAnimationsAsync()],
+  providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService, ClientorderService, UploadFileService, InitDbService, LogService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

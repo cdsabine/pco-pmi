@@ -9,6 +9,7 @@ import {ViewAppuserComponent} from "./view-appuser/view-appuser.component";
 import {ViewBoxComponent} from "./view-box/view-box.component";
 import {ViewBrandComponent} from "./view-brand/view-brand.component";
 import {ViewTeamComponent} from "./view-team/view-team.component";
+import {ViewClientorderComponent} from "./view-clientorder/view-clientorder.component";
 
 const routes: Routes = [
   {
@@ -36,7 +37,7 @@ const routes: Routes = [
             path: 'teams', component: ViewTeamComponent,
           },
           {
-            path: 'clientorders', component: ViewAppuserComponent,
+            path: 'clientorders', component: ViewClientorderComponent,
           },
           {
             path: 'brand', component: ViewBrandComponent,

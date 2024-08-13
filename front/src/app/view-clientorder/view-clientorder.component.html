@@ -1,0 +1,46 @@
+<div class="all">
+  <div class="menu">
+    <button [routerLink]="''">back</button>
+    <div class="menuSection">
+      View Database
+    </div>
+  </div>
+  <div class="lowContainer">
+    <mat-toolbar class="search-block mat-elevation-z4" [class.active]="toggleSearch">
+      <mat-toolbar-row style="padding: 0 5px;">
+        <button class="search-icon" mat-icon-button disabled>
+          <mat-icon>search</mat-icon>
+        </button>
+        <input class="search-control" type="text" placeholder="Search" [(ngModel)]="searchText" #searchbar>
+        <button mat-icon-button (click)="searchClose()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-card>
+      <mat-card-content>
+        <div class="header-row">
+          <span class="header-coCode">Client Order Code</span>
+          <span class="header-dateOfOrder">Date of Order</span>
+          <span class="header-shipped">Shipped</span>
+          <span class="header-totalOrderValue">Total Order Value</span>
+          <span class="header-products">View Products</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngFor="let clientorder of clientorder | filterPipeClientorder: searchText">
+      <mat-card-content>
+        <div class="product-line">
+          <span class="clientorder-coCode">{{clientorder.clientOrderCode}}</span>
+          <span class="clientorder-dateOfOrder">{{clientorder.dateOfOrder}}</span>
+          <span class="clientorder-shipped">{{clientorder.shipped}}</span>
+          <span class="clientorder-totalOrderValue">{{clientorder.totalOrderValue}}</span>
+          <button mat-button (click)="openProductList(clientorder)">View Products</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

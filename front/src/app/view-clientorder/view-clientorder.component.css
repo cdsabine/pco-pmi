@@ -1,0 +1,50 @@
+.search-block{
+  width: 0;
+  right: 0;
+  background: #fff;
+  &.active{
+    width: 100%;
+  }
+  .search-control{
+    flex: 1;
+    font-size: 1rem;
+    border: 0;
+    outline: none;
+    padding-left: 10px;
+  }
+}
+.lowContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.menuSection{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+.header-coCode, .header-dateOfOrder, .header-shipped, .header-totalOrderValue {
+  flex: 1;
+  text-align: left;
+}
+.product-card {
+  margin-bottom: 16px; /* Adjust this value to control the space between items */
+}
+.product-line{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.clientorder-coCode, .clientorder-dateOfOrder, .clientorder-shipped, .clientorder-totalOrderValue{
+  flex: 1;
+  font-size: 16px;
+}
+
