@@ -3,8 +3,12 @@ package com.pco.pco.service;
 import com.pco.pco.controller.AppUserController;
 import com.pco.pco.controller.CountryController;
 import com.pco.pco.entities.AppUser;
+import com.pco.pco.entities.Vendor;
 import com.pco.pco.helper.CSVHelperAppUser;
 import com.pco.pco.repository.AppUserRepository;
+import com.pco.pco.repository.ClientRepository;
+import com.pco.pco.repository.EmployeeRepository;
+import com.pco.pco.repository.VendorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +20,12 @@ import java.util.List;
 public class CSVServiceAppUser {
     @Autowired
     AppUserRepository appUserRepository;
+    @Autowired
+    VendorRepository vendorRepository;
+    @Autowired
+    ClientRepository clientRepository;
+    @Autowired
+    EmployeeRepository employeeRepository;
 
     @Autowired
     private AppUserController ac;

@@ -45,6 +45,7 @@ public class CSVHelperAppUser {
                 String userType = csvRecord.get("userType");
 
                 AppUser aux = classifyUser(username, emailAddress, address, country, userType);
+                aux.setUserType(userType);
 
                 appusers.add(aux);
             }

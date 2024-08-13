@@ -14,6 +14,8 @@ public class AppUser {
     private String appUsername;
     private String emailAddress;
     private String appAddress;
+    @Transient
+    private String userType;
 
     @Transient
     private String countryName;
@@ -73,4 +75,6 @@ public class AppUser {
 
     public String getCountryName(){ return countryName; }
     public void setCountryName(String countryName){ this.countryName = countryName; }
+    public String getUserType() {return userType; }
+    public void setUserType(String userType) {this.userType = userType; }
 }

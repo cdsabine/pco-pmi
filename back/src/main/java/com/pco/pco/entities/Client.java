@@ -3,22 +3,24 @@ package com.pco.pco.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "client")
 public class Client extends AppUser{
     private int repeatedTransactions;
     private double totalValueAchieved;
-
-    @JsonIgnoreProperties("clientOrderList")
-    @ManyToOne()
-    @JoinColumn(name = "coCode")
-    private ClientOrder clientOrder;
+    @JsonIgnoreProperties("coCode")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "client")
+    private List<ClientOrder> clientOrderList;
 
     public Client(){}
     public Client(String appUsername, String emailAddress, String address, String country, int repeatedTransactions, double totalValueAchieved) {
         super(appUsername, emailAddress, address, country);
         this.repeatedTransactions = repeatedTransactions;
         this.totalValueAchieved = totalValueAchieved;
+        this.clientOrderList = new ArrayList<>();
     }
 
     public int getRepeatedTransactions() {
@@ -36,9 +38,9 @@ public class Client extends AppUser{
         this.totalValueAchieved = totalValueAchieved;
     }
 
-    public ClientOrder getClientOrder() { return clientOrder; }
-    public void setClientorder(ClientOrder clientorder) {
-        this.clientOrder = clientorder;
+    public List<ClientOrder> getClientOrderList() { return clientOrderList; }
+    public void addToClientOrderList(ClientOrder clientorder) {
+        this.clientOrderList.add(clientorder);
     }
 
 }

@@ -51,12 +51,6 @@ public abstract class Product {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
     private List<productLocationChanges> productLocationChanges;
 
-    /*
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "products")
-    @JsonIgnoreProperties({"boxes", "products"})
-    private List<Box> boxes;
-    */
-
     public Product(){}
     public Product(String SKU, String title, double price, boolean activeProduct, String colour, String size, int quantity, String prodCondition, String vendorCode){
         this.SKU = SKU;
@@ -70,6 +64,7 @@ public abstract class Product {
         this.vendorCode = vendorCode;
 
         this.box = new Box();
+        this.clientOrder = new ClientOrder();
 
         this.productLocationChanges = new ArrayList<>();
         this.boxNumber = setBoxNumber(SKU);

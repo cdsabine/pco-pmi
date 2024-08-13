@@ -68,7 +68,7 @@ public class BottomsController {
         return "Saved";
     }
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Bottoms> getAllUsers() {
+    public @ResponseBody Iterable<Bottoms> getAllBottoms() {
         // This returns a JSON or XML with the users
         return bottomsRepository.findAll();
     }

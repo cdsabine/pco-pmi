@@ -61,7 +61,7 @@ public class ProductController {
             p.setClientOrder(null);
         }
         else{
-            p.setClientOrder(coc.addNewClientOrder(coCode,"",false));
+            p.setClientOrder(coc.addNewClientOrder(coCode,"2099-01-01",false));
         }
         return p;
     }
