@@ -1,5 +1,6 @@
 package com.pco.pco.controller;
 
+import com.pco.pco.entities.Client;
 import com.pco.pco.entities.ClientOrder;
 import com.pco.pco.entities.Product;
 import com.pco.pco.repository.ClientOrderRepository;
@@ -61,15 +62,18 @@ public class ClientOrderController {
     public ClientOrder convertSKUtoProduct(ClientOrder co){
         List<String> productSKU = co.getProductSKUList();
         List<Product> products = new ArrayList<>();
+        double totalPrice = 0;
         for(String sku : productSKU){
             if(productRepository.findById(sku).isPresent()) {
                 Product p = productRepository.findById(sku).get();
                 p.setClientOrder(co);
                 products.add(p);
                 productRepository.save(p);
+                totalPrice = totalPrice + p.getPrice();
             }
         }
         co.setProductList(products);
+        co.setTotalOrderValue(totalPrice);
         clientOrderRepository.save(co);
         return co;
     }
@@ -77,9 +81,15 @@ public class ClientOrderController {
     @Transactional
     public ClientOrder decideClient(ClientOrder co){
         int clientID = co.getClientNumber();
-        if(clientRepository.findById(clientID).isPresent()) co.setClient(clientRepository.findById(clientID).get());
+        if(clientRepository.findById(clientID).isPresent()){
+            Client c = clientRepository.findById(clientID).get();
+            co.setClient(c);
+            c.addToTotalValueAchieved(co.getTotalOrderValue());
+            c.addToRepeatedTransactions();
+            clientRepository.save(c);
+        }
         clientOrderRepository.save(co);
+
         return co;
     }
-
 }

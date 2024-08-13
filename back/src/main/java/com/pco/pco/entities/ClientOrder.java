@@ -15,6 +15,7 @@ public class ClientOrder {
     private Long coCode;
     private LocalDate dateOfOrder;
     private boolean shipped;
+    private double totalOrderValue;
     @JsonIgnoreProperties("products")
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "clientOrder")
     private List<Product> productList;
@@ -33,6 +34,7 @@ public class ClientOrder {
         this.productSKUList = productSKUList;
         this.dateOfOrder = currentDate;
 
+        this.totalOrderValue = 0;
         this.productList = new ArrayList<>();
     }
 
@@ -51,7 +53,8 @@ public class ClientOrder {
     }
     public boolean getShipped(){ return shipped; }
     public void setShipped(boolean shipped){ this.shipped = shipped; }
-
+    public double getTotalOrderValue(){ return totalOrderValue; }
+    public void setTotalOrderValue(double totalOrderValue){ this.totalOrderValue = totalOrderValue; }
     public List<Product> getProductList() { return productList; }
     public void setProductList(List<Product> productList) { this.productList = productList; }
     public void addToProductList(Product product) { this.productList.add(product); }

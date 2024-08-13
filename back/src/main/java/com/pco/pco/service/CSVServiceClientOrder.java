@@ -29,7 +29,6 @@ public class CSVServiceClientOrder {
                 coc.decideClient(co);
             }
             clientOrderRepository.saveAll(clientOrders);
-            System.out.println(clientOrders.get(1).getProductList());
         } catch (IOException e) {
             throw new RuntimeException("fail to store csv data: " + e.getMessage());
         }

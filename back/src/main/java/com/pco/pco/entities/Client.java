@@ -30,12 +30,16 @@ public class Client extends AppUser{
     public void setRepeatedTransactions(int repeatedTransactions) {
         this.repeatedTransactions = repeatedTransactions;
     }
+    public void addToRepeatedTransactions(){this.repeatedTransactions++;}
     public double getTotalValueAchieved() {
         return totalValueAchieved;
     }
 
     public void setTotalValueAchieved(double totalValueAchieved) {
         this.totalValueAchieved = totalValueAchieved;
+    }
+    public void addToTotalValueAchieved(double valueAchieved) {
+        this.totalValueAchieved = this.totalValueAchieved+valueAchieved;
     }
 
     public List<ClientOrder> getClientOrderList() { return clientOrderList; }
