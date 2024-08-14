@@ -1,33 +1,40 @@
 
-Q
-java:S3740{"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8’áúî’2
 R
-java:S3740©"/Provide the parametrized type for this generic.(•À‚™şÿÿÿÿ8’áúî’2
-ƒ
-java:S1192f"aDefine a constant instead of duplicating this literal "Rapha Cycling Australia Test Top" 3 times.(Ëÿ³úÿÿÿÿ8’áúî’2
-r	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8“áúî’2
-r	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ˆøÿÿÿÿ8“áúî’2
-m	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8“áúî’2
-s	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•À‚™şÿÿÿÿ8“áúî’2
+java:S3740—"/Provide the parametrized type for this generic.(¯¢Éıÿÿÿÿ8éŸÁ‡•2
+R
+java:S3740Å"/Provide the parametrized type for this generic.(•À‚™şÿÿÿÿ8éŸÁ‡•2
+„
+java:S1192‚"aDefine a constant instead of duplicating this literal "Rapha Cycling Australia Test Top" 3 times.(Ëÿ³úÿÿÿÿ8êŸÁ‡•2
+r	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿŒìıÿÿÿÿ8êŸÁ‡•2
+r	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ˆøÿÿÿÿ8êŸÁ‡•2
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8êŸÁ‡•2
+s	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•À‚™şÿÿÿÿ8ëŸÁ‡•2
 n
-java:S3655ª"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±İúü8§áúî’2
+java:S3655Æ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±İúü8‚ Á‡•2
 l
-java:S3655."PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8§áúî’2
+java:S3655J"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8‚ Á‡•2
 r
-java:S36557"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8§áúî’2
+java:S3655S"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8‚ Á‡•2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8¨áúî’2
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ƒ Á‡•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨áúî’2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ Á‡•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨áúî’2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ Á‡•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨áúî’2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ Á‡•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨áúî’2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ Á‡•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨áúî’2
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ Á‡•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8¨áúî’2
-X	java:S125j"<This block of commented-out lines of code should be removed.(´‹Öš8³áúî’2
-^	java:S125¢"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8¹áúî’2
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8ƒ Á‡•2
+]	java:S125A"<This block of commented-out lines of code should be removed.(¿°Ò˜ÿÿÿÿÿ8‰ Á‡•2
+Y	java:S125†"<This block of commented-out lines of code should be removed.(´‹Öš8 Á‡•2
+^	java:S125¾"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8 Á‡•2
+X
+java:S1128";Remove this unused import 'org.antlr.v4.runtime.misc.Pair'.(ÇàŸ˜8‘ Á‡•2
+J
+java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ8‘ Á‡•2
+Q
+java:S1128"4Remove this unused import 'java.text.DecimalFormat'.(¤°Ó˜8‘ Á‡•2

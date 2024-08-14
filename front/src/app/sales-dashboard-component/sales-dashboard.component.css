@@ -1,0 +1,29 @@
+.chart-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  top: 8%;
+  padding-left: 1%;
+  bottom: 0;
+  width: 60%;
+}
+
+.pie-chart-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.line-bar-container {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.line-chart, .bar-chart {
+  margin-bottom: 20px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}

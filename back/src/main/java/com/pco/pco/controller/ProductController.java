@@ -5,14 +5,15 @@ import com.pco.pco.entities.Box;
 import com.pco.pco.entities.productchildren.Tops;
 import com.pco.pco.repository.BoxRepository;
 import com.pco.pco.repository.ProductRepository;
+import org.antlr.v4.runtime.misc.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.*;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.text.DecimalFormat;
+import java.util.*;
 
 @Controller
 @CrossOrigin(origins = "http://localhost:4200")
@@ -36,6 +37,33 @@ public class ProductController {
     @GetMapping(path="/all")
     public @ResponseBody List<Product> getAllProducts() {
          return (List<Product>) productRepository.findAll();
+    }
+
+    @GetMapping(path="/allTypeCount")
+    public @ResponseBody Map<String,Integer> getProductTypeCount() {
+        Map<String, Integer> classCountMap = new HashMap<>();
+        List<Product> aux = (List<Product>) productRepository.findAll();
+        for(Product p : aux){
+            classCountMap.put(p.getClass().toString(), classCountMap.getOrDefault(p.getClass().toString(), 0) + 1);
+        }
+        return classCountMap;
+    }
+    @GetMapping(path="/totalProductValue")
+    public @ResponseBody Map<String,Double> getTotalValue() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Map<String, Double> classCountMap = new HashMap<>();
+        List<Product> aux = (List<Product>) productRepository.findAll();
+        Double totalPrice = 0.0;
+        for(Product p : aux){
+            String name = p.getClass().toString();
+            String delimiter = "productchildren.";
+            name = name.substring(name.indexOf("productchildren.") + delimiter.length());
+            double price;
+            price = (double) p.getClass().getMethod("getPrice").invoke(p);
+            classCountMap.put(name, classCountMap.getOrDefault(name, 0.0) + price);
+            totalPrice = totalPrice + price;
+        }
+        //classCountMap.put("Total Product Value", totalPrice);
+        return classCountMap;
     }
 
     public Product decideBrand(Product p, String title){
