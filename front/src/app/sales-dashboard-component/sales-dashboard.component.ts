@@ -3,6 +3,9 @@ import {ClientorderService} from "../service/clientorder.service";
 import { Chart, ChartOptions, ChartType, ChartDataset, CategoryScale, LinearScale, LineController, PieController, PointElement, LineElement, Title, Tooltip, Legend, BarController, BarElement, ArcElement} from 'chart.js';
 import {ClientService} from "../service/client.service";
 import {ProductServiceService} from "../service/product-service.service";
+import {TeamServiceService} from "../service/team-service.service";
+import {response} from "express";
+import {Team} from "../model/team";
 
 Chart.register(CategoryScale, LinearScale, LineController, PieController, PointElement, LineElement, Title, Tooltip, Legend, BarController, BarElement, ArcElement);
 
@@ -12,8 +15,9 @@ Chart.register(CategoryScale, LinearScale, LineController, PieController, PointE
   styleUrl: './sales-dashboard.component.css'
 })
 export class SalesDashboardComponent implements OnInit {
+  public data: Map<string, Map<string, number>> = new Map();
 
-  constructor(private clientOrderService: ClientorderService, private clientService: ClientService, private productService: ProductServiceService) {}
+  constructor(private clientOrderService: ClientorderService, private clientService: ClientService, private productService: ProductServiceService, private teamService: TeamServiceService) {}
 
   public chart1Options: ChartOptions = {
     responsive: true,
@@ -101,6 +105,46 @@ export class SalesDashboardComponent implements OnInit {
       ]
     }
   ];
+
+  public chart4Options: ChartOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      tooltip: {
+        callbacks: {
+          label: function(context) {
+            const label = context.label || '';
+            const value = Number(context.raw) || 0;
+            return `${label}: $${value.toFixed(2)}`;
+          }
+        }
+      }
+    }
+  };
+  public chart4Labels: string[] = [];
+  public chart4Type: ChartType = 'pie';
+  public chart4Legend = true;
+  public chart4Data: ChartDataset<'pie'>[] = [
+    {
+      data: [],
+      label: 'Product Values',
+      backgroundColor: [
+        '#1f77b4', // Blue
+        '#ff7f0e', // Orange
+        '#2ca02c', // Green
+        '#d62728', // Red
+        '#9467bd', // Purple
+        '#8c564b', // Brown
+        '#e377c2', // Pink
+        '#7f7f7f', // Gray
+        '#bcbd22', // Olive
+        '#17becf'  // Teal
+      ]
+    }
+  ];
+
   ngOnInit(): void {
     this.clientOrderService.findAllOrdered().subscribe(data=>{
       const aggregatedData = this.aggregateDataByDate(data);
@@ -115,6 +159,15 @@ export class SalesDashboardComponent implements OnInit {
     this.productService.findTotalValue().subscribe(data => {
       this.chart3Labels = Object.keys(data);
       this.chart3Data[0].data = Object.values(data);
+    });
+    this.teamService.findProductsFromTeam().subscribe(data => {
+      this.teamService.findProductsFromTeam().subscribe(response => {
+        this.processData(response);
+      });
+    });
+    this.teamService.findTeamTotalValue().subscribe(data => {
+      this.chart4Labels = Object.keys(data);
+      this.chart4Data[0].data = Object.values(data);
     });
   }
 
@@ -143,5 +196,16 @@ export class SalesDashboardComponent implements OnInit {
 
       return acc;
     }, {});
+  }
+  private processData(response: any){
+    this.data = new Map(Object.entries(response).map(([team, products]) => {
+      return [team, new Map(Object.entries(products))];
+    }));
+  }
+  getTeamNames(): string[] {
+    return Array.from((this.data.keys()));
+  }
+  getProductNamesForTeam(team: string): string[] {
+    return Array.from(this.data.get(team)?.keys() || []);
   }
 }

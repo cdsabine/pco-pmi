@@ -11,10 +11,10 @@ n	java:S117"QRename this local variable to match the regular expression '^[a
 s	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•À‚™şÿÿÿÿ8ëŸÁ‡•2
 n
 java:S3655Æ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±İúü8‚ Á‡•2
-l
-java:S3655J"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8‚ Á‡•2
 r
 java:S3655S"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8‚ Á‡•2
+l
+java:S3655J"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8‚ Á‡•2
 ‡
 java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8ƒ Á‡•2
 _
@@ -33,8 +33,8 @@ java:S6813 "BRemove this field injection and use constructor injection instead.
 Y	java:S125†"<This block of commented-out lines of code should be removed.(´‹Öš8 Á‡•2
 ^	java:S125¾"<This block of commented-out lines of code should be removed.(Ù¨¶Óÿÿÿÿÿ8 Á‡•2
 X
-java:S1128";Remove this unused import 'org.antlr.v4.runtime.misc.Pair'.(ÇàŸ˜8‘ Á‡•2
+java:S1128";Remove this unused import 'org.antlr.v4.runtime.misc.Pair'.(ÇàŸ˜8Çêµˆ•2
 J
-java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ8‘ Á‡•2
+java:S1128"(Remove this unused import 'javax.swing'.(Ìí¿Üüÿÿÿÿ8Çêµˆ•2
 Q
-java:S1128"4Remove this unused import 'java.text.DecimalFormat'.(¤°Ó˜8‘ Á‡•2
+java:S1128"4Remove this unused import 'java.text.DecimalFormat'.(¤°Ó˜8Çêµˆ•2

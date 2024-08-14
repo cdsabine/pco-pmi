@@ -12,6 +12,40 @@
       </div>
     </div>
     <div class="chart-container">
+      <div class="team-list-container">
+        <ul>
+          <li *ngFor="let team of getTeamNames()">
+            <h3>{{ team }}</h3>
+            <ul>
+              <li *ngFor="let product of getProductNamesForTeam(team)">
+                {{ product }} - Quantity: {{ data.get(team).get(product) }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="pie-chart-container">
+        <div class="pie-chart1">
+          <h2>Product Values</h2>
+          <canvas baseChart
+                  [datasets]="chart3Data"
+                  [labels]="chart3Labels"
+                  [options]="chart3Options"
+                  [legend]="chart3Legend"
+                  [type]="chart3Type">
+          </canvas>
+        </div>
+        <div class="pie-chart2">
+          <h2>Team Worth</h2>
+          <canvas baseChart
+                  [datasets]="chart4Data"
+                  [labels]="chart4Labels"
+                  [options]="chart4Options"
+                  [legend]="chart4Legend"
+                  [type]="chart4Type">
+          </canvas>
+        </div>
+      </div>
       <div class="line-bar-container">
         <div class="line-chart">
           <h2>Client orders over time</h2>
@@ -33,16 +67,6 @@
                   [type]="chart2Type">
           </canvas>
         </div>
-      </div>
-      <div class="pie-chart-container">
-        <h2>Product Values</h2>
-        <canvas baseChart
-                [datasets]="chart3Data"
-                [labels]="chart3Labels"
-                [options]="chart3Options"
-                [legend]="chart3Legend"
-                [type]="chart3Type">
-        </canvas>
       </div>
     </div>
   </div>
