@@ -35,9 +35,7 @@ import {FilterPipeBrandPipe} from "./pipe/filter-pipe-brand.pipe";
 import {TeamServiceService} from "./service/team-service.service";
 import {ViewTeamComponent} from "./view-team/view-team.component";
 import {FilterPipeTeamPipe} from "./pipe/filter-pipe-team.pipe";
-import {
-  ViewBoxDialogueWindowComponent
-} from "./view-box-dialogue-window/view-box-dialogue-window.component";
+import {ViewBoxDialogueWindowComponent} from "./view-box-dialogue-window/view-box-dialogue-window.component";
 import {ViewUploadCsvDialogueComponent} from "./view-upload-csv-dialogue/view-upload-csv-dialogue.component";
 import {UploadFileService} from "./service/upload-file.service";
 import {InitDbService} from "./service/init-db.service";
@@ -51,6 +49,7 @@ import {UploadFileClientorderService} from "./service/upload-file-clientorder.se
 import {BoxMovementService} from "./service/box-movement.service";
 import {DashboardCOOverTimeService} from "./service/dashboard-co-over-time.service";
 import {BaseChartDirective} from "ng2-charts";
+import {ClientService} from "./service/client.service";
 
 @NgModule({
   declarations: [
@@ -99,7 +98,7 @@ import {BaseChartDirective} from "ng2-charts";
     BaseChartDirective
   ],
   providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService,
-    ClientorderService, UploadFileService, UploadFileClientorderService, BoxMovementService, DashboardCOOverTimeService, InitDbService, LogService, provideAnimationsAsync()],
+    ClientorderService, UploadFileService, UploadFileClientorderService, BoxMovementService, DashboardCOOverTimeService, ClientService, InitDbService, LogService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

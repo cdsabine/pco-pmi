@@ -12,13 +12,23 @@
       </div>
     </div>
     <div>
-      <h2>Client Orders Over Time</h2>
+      <h2>Client orders over time</h2>
       <canvas baseChart
-              [datasets]="chartData"
-              [labels]="chartLabels"
-              [options]="chartOptions"
-              [legend]="chartLegend"
-              [type]="chartType">
+              [datasets]="chart1Data"
+              [labels]="chart1Labels"
+              [options]="chart1Options"
+              [legend]="chart1Legend"
+              [type]="chart1Type">
+      </canvas>
+    </div>
+    <div>
+      <h2>Chart 2: Orders per Country</h2>
+      <canvas baseChart
+              [datasets]="chart2Data"
+              [labels]="chart2Labels"
+              [options]="chart2Options"
+              [legend]="chart2Legend"
+              [type]="chart2Type">
       </canvas>
     </div>
   </div>

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -56,6 +57,12 @@ public class ClientOrderController {
     @GetMapping(path="/all")
     public @ResponseBody List<ClientOrder> getAllCOs() {
         return (List<ClientOrder>) clientOrderRepository.findAll();
+    }
+    @GetMapping(path="/allOrderedByDate")
+    public @ResponseBody List<ClientOrder> getAllCOsByDate() {
+        List<ClientOrder> aux = (List<ClientOrder>) clientOrderRepository.findAll();
+        aux.sort((a,b)->a.getDateOfOrder().compareTo(b.getDateOfOrder()));
+        return aux;
     }
 
     @Transactional

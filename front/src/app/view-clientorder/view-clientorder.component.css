@@ -31,7 +31,7 @@
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
-.header-coCode, .header-dateOfOrder, .header-shipped, .header-totalOrderValue {
+.header-coCode, .header-destination, .header-dateOfOrder, .header-shipped, .header-totalOrderValue {
   flex: 1;
   text-align: left;
 }
@@ -43,7 +43,7 @@
   justify-content: space-between;
   padding: 8px 0;
 }
-.clientorder-coCode, .clientorder-dateOfOrder, .clientorder-shipped, .clientorder-totalOrderValue{
+.clientorder-coCode, .clientorder-destination, .clientorder-dateOfOrder, .clientorder-shipped, .clientorder-totalOrderValue{
   flex: 1;
   font-size: 16px;
 }

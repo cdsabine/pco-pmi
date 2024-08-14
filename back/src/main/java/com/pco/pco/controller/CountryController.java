@@ -1,12 +1,16 @@
 package com.pco.pco.controller;
 
 import com.pco.pco.entities.AppUser;
+import com.pco.pco.entities.Client;
+import com.pco.pco.entities.ClientOrder;
 import com.pco.pco.entities.Country;
+import com.pco.pco.repository.ClientRepository;
 import com.pco.pco.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +20,8 @@ import java.util.Optional;
 public class CountryController {
     @Autowired
     private CountryRepository countryRepository;
+    @Autowired
+    private ClientRepository clientRepository;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody Country addNewCountry (@RequestParam String countryName) {

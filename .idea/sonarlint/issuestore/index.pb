@@ -509,3 +509,13 @@ l
 <front/src/app/service/dashboard-co-over-time.service.spec.ts,3\a\3a3eef1b57849ed33bd7ccff0b1bbb0c7c6bf0a6
 m
 =front/src/app/service/upload-file-clientorder.service.spec.ts,2\5\25d2f567043e76534b46343a84a43ada0eed7066
+M
+front/src/app/model/client.ts,8\4\8482d4a05362ff3642c0c9aa9db142fc7754d0e2
+W
+'front/src/app/service/client.service.ts,c\4\c4631fdfd79ca525a7ead1405d89c6fefa4b8983
+\
+,front/src/app/service/client.service.spec.ts,0\6\0605a4cce5ed8bd4b5576ba21bcf76abb80dbfb9
+H
+dataCSV/clientorder2.csv,9\3\93bb685d428da7ceeae2997ba9701135ab2246a2
+R
+"front/src/app/model/client.spec.ts,e\c\ecbc20fb2f424441aa7c436fdab27f8ff06d62f2

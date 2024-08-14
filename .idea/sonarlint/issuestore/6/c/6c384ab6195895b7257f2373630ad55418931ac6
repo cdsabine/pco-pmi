@@ -1,13 +1,21 @@
 
 P
-java:S1121;".Extract the assignment out of this expression.(‰¨¶Àüÿÿÿÿ8Ã”Õ’î1
+java:S1121A".Extract the assignment out of this expression.(‰¨¶Àüÿÿÿÿ8µ»å‚•2
 m
-java:S3655D"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(­Øž®8Ò”Õ’î1
+java:S3655J"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(­Øž®8Æ»å‚•2
 m
-java:S3655#"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ú’¥Ú8Ò”Õ’î1
+java:S3655)"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Ú’¥Ú8Æ»å‚•2
 ‡
-java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Ô”Õ’î1
+java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(íœ¡ñùÿÿÿÿ8Ç»å‚•2
 _
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Ô”Õ’î1
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8Ç»å‚•2
+_
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8È»å‚•2
 [
-java:S1854;"9Remove this useless assignment to local variable "found".(‰¨¶Àüÿÿÿÿ8Ü”Õ’î1
+java:S1854A"9Remove this useless assignment to local variable "found".(‰¨¶Àüÿÿÿÿ8Î»å‚•2
+Z
+java:S1128"8Remove this unused import 'com.pco.pco.entities.Client'.(…øŽžÿÿÿÿÿ8½æŽƒ•2
+Z
+java:S1128"=Remove this unused import 'com.pco.pco.entities.ClientOrder'.(‚ÿ•·8Ð»å‚•2
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8½æŽƒ•2
