@@ -13,18 +13,22 @@
   margin-right: 20px;
 }
 
-.line-bar-container {
+.line-container {
   display: flex;
   flex-direction: column;
   flex: 2;
 }
-
-.line-chart, .bar-chart {
+.line-chart, .line-chart2 {
   margin-bottom: 20px;
 }
-.bar-chart2 {
-  margin: 20px;
+
+.bar-chart{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin-bottom: 20px;
 }
+
 .team-list-container {
   margin: 20px;
   font-family: Arial, sans-serif;

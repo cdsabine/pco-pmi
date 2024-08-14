@@ -37,7 +37,6 @@ export class SalesDashboardComponent implements OnInit {
       }
     }
   };
-
   public chart1Labels: string[] = [];
   public chart1Type: ChartType = 'line';
   public chart1Legend = true;
@@ -61,7 +60,6 @@ export class SalesDashboardComponent implements OnInit {
       }
     }
   };
-
   public chart2Labels: string[] = [];
   public chart2Type: ChartType = 'bar';
   public chart2Legend = true;
@@ -145,6 +143,29 @@ export class SalesDashboardComponent implements OnInit {
     }
   ];
 
+  public chart5Options: ChartOptions = {
+    responsive: true,
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Date of Order'
+        },
+        type: 'category'
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Total Orders Made'
+        }
+      }
+    }
+  };
+  public chart5Labels: string[] = [];
+  public chart5Type: ChartType = 'line';
+  public chart5Legend = true;
+  public chart5Data: ChartDataset[] = [{ data: [], label: 'Total Orders Made',borderColor: 'rgba(75, 192, 192, 1)', borderWidth: 2, fill: false}];
+
   ngOnInit(): void {
     this.clientOrderService.findAllOrdered().subscribe(data=>{
       const aggregatedData = this.aggregateDataByDate(data);
@@ -169,6 +190,11 @@ export class SalesDashboardComponent implements OnInit {
       this.chart4Labels = Object.keys(data);
       this.chart4Data[0].data = Object.values(data);
     });
+    this.clientOrderService.findAllOrdered().subscribe(data=>{
+      const aggregatedData = this.aggregateOrdersByDate(data);
+      this.chart5Labels = Object.keys(aggregatedData);
+      this.chart5Data[0].data = Object.values(aggregatedData);
+    });
   }
 
   private aggregateDataByDate(data: any[]): { [date: string]: number } {
@@ -182,6 +208,17 @@ export class SalesDashboardComponent implements OnInit {
       }
       return acc;
       }, {});
+  }
+  private aggregateOrdersByDate(data: any[]): { [date: string]: number } {
+    return data.reduce((acc, current) => {
+      const date = current.dateOfOrder;
+      if (acc[date]) {
+        acc[date] += 1;
+      } else {
+        acc[date] = 1;
+      }
+      return acc;
+    }, {});
   }
   private aggregateOrdersByCountry(data: any[]): { [countryName: string]: number } {
     return data.reduce((acc, client) => {

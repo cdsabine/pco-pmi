@@ -13,6 +13,7 @@
     </div>
     <div class="chart-container">
       <div class="team-list-container">
+        <h2>Products by Team</h2>
         <ul>
           <li *ngFor="let team of getTeamNames()">
             <h3>{{ team }}</h3>
@@ -46,9 +47,9 @@
           </canvas>
         </div>
       </div>
-      <div class="line-bar-container">
+      <div class="line-container">
         <div class="line-chart">
-          <h2>Client orders over time</h2>
+          <h2>Value of orders over time</h2>
           <canvas baseChart
                   [datasets]="chart1Data"
                   [labels]="chart1Labels"
@@ -57,16 +58,26 @@
                   [type]="chart1Type">
           </canvas>
         </div>
-        <div class="bar-chart">
-          <h2>Orders per Country</h2>
+        <div class="line-chart2">
+          <h2>Quantity of orders over time</h2>
           <canvas baseChart
-                  [datasets]="chart2Data"
-                  [labels]="chart2Labels"
-                  [options]="chart2Options"
-                  [legend]="chart2Legend"
-                  [type]="chart2Type">
+                  [datasets]="chart5Data"
+                  [labels]="chart5Labels"
+                  [options]="chart5Options"
+                  [legend]="chart5Legend"
+                  [type]="chart5Type">
           </canvas>
         </div>
+      </div>
+      <div class="bar-chart">
+        <h2>Orders per Country</h2>
+        <canvas baseChart
+                [datasets]="chart2Data"
+                [labels]="chart2Labels"
+                [options]="chart2Options"
+                [legend]="chart2Legend"
+                [type]="chart2Type">
+        </canvas>
       </div>
     </div>
   </div>
