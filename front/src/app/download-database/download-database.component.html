@@ -3,12 +3,27 @@
     <div class="menu">
       <button [routerLink]="''">back</button>
       <div class="menuSection">
-        Download Database
+        Upload CSV
       </div>
       <div class="menuSectionOptions">
-        Download History
+        Upload History
       </div>
     </div>
-    <p>download database works!</p>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" class="download-button" (click)="openDialog('Download CO')">
+        Download Client Orders
+      </button>
+      <button mat-raised-button color="accent" class="download-button" (click)="openDialog('Download Box')">
+        Download Box Products
+      </button>
+      <button mat-raised-button color="warn" class="download-button" (click)="openDialog('Download All')">
+        Download All Products
+      </button>
+      <button mat-raised-button color="accent" class="download-button" (click)="openDialog('Download Team')">
+        Download Team Products
+      </button>
+    </div>
+    <app-log-history></app-log-history>
   </div>
 </div>

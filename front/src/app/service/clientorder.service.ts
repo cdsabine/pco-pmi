@@ -19,4 +19,25 @@ export class ClientorderService {
   public findAllOrdered(): Observable<Clientorder[]> {
     return this.http.get<Clientorder[]>(this.clientOrderUrlOrderedByDate);
   }
+
+  downloadCOasCSV(selectedOrders: any[]): void{
+    const csvData = this.convertToCsv(selectedOrders);
+    const blob = new Blob([csvData], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'client-orders.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+  private convertToCsv(data: any[]): string {
+    const headers = Object.keys(data[0]);
+    const csvRows = data.map(order =>
+      headers.map(header => JSON.stringify(order[header], replacer)).join(',')
+    );
+    return [headers.join(','), ...csvRows].join('\r\n');
+    function replacer(key: string, value: any) {
+      return value === null ? '' : value;
+    }
+  }
 }

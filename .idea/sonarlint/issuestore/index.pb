@@ -519,3 +519,11 @@ H
 dataCSV/clientorder2.csv,9\3\93bb685d428da7ceeae2997ba9701135ab2246a2
 R
 "front/src/app/model/client.spec.ts,e\c\ecbc20fb2f424441aa7c436fdab27f8ff06d62f2
+x
+Hfront/src/app/view-download-dialogue/view-download-dialogue.component.ts,8\7\8751569e7e6af00c86942a52a822a6e23555fdd2
+z
+Jfront/src/app/view-download-dialogue/view-download-dialogue.component.html,d\e\de8c8b75b22b7224710ce615c0eded0a51b41468
+y
+Ifront/src/app/view-download-dialogue/view-download-dialogue.component.css,1\6\16896de82362edcfb8caa7bcbfe37c99377dd8eb
+}
+Mfront/src/app/view-download-dialogue/view-download-dialogue.component.spec.ts,1\1\11f90bbac5ea6f84bb9c778004108e01bc6f12af

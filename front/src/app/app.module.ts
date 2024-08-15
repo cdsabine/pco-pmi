@@ -50,6 +50,7 @@ import {BoxMovementService} from "./service/box-movement.service";
 import {DashboardCOOverTimeService} from "./service/dashboard-co-over-time.service";
 import {BaseChartDirective} from "ng2-charts";
 import {ClientService} from "./service/client.service";
+import {ViewDownloadDialogueComponent} from "./view-download-dialogue/view-download-dialogue.component";
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import {ClientService} from "./service/client.service";
     ViewBoxDialogueWindowComponent,
     ViewCoDialogueWindowComponent,
     ViewUploadCsvDialogueComponent,
+    ViewDownloadDialogueComponent,
     LogHistoryComponent,
     FilterPipeProductPipe,
     FilterPipeAppuserPipe,

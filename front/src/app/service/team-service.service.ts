@@ -24,4 +24,24 @@ export class TeamServiceService {
   public findTeamTotalValue(): Observable<{[teamName: string]: number}>{
     return this.http.get<{[teamName: string]: number}>(this.teamTotalValueUrl);
   }
+  downloadTeamAsCSV(selectedTeams: any[]): void{
+    const csvData = this.convertToCsv(selectedTeams);
+    const blob = new Blob([csvData], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'team-products.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+  private convertToCsv(data: any[]): string {
+    const headers = Object.keys(data[0]);
+    const csvRows = data.map(order =>
+      headers.map(header => JSON.stringify(order[header], replacer)).join(',')
+    );
+    return [headers.join(','), ...csvRows].join('\r\n');
+    function replacer(key: string, value: any) {
+      return value === null ? '' : value;
+    }
+  }
 }

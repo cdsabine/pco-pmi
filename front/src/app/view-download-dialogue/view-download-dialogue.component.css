@@ -1,0 +1,10 @@
+.mat-dialog-content {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+}

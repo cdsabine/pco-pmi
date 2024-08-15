@@ -1,59 +1,40 @@
-.chart-container {
+/* Main container for the whole dashboard */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Left side 1/4 of screen, right side 3/4 */
+}
+
+/* Container for the list */
+.list-container {
+  padding: 20px;
+  overflow-y: auto; /* Allow scrolling if the list is too long */
+}
+
+/* Container for the charts */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three rows for the chart sections */
+  gap: 10px; /* Space between rows */
+  padding: 20px;
+}
+
+/* Each row of charts */
+.piechart-row {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
-  top: 8%;
-  padding-left: 1%;
-  bottom: 0;
-  width: 60%;
+}
+.linechart-row {
+  display: flex;
+  justify-content: space-between;
+}
+.barchart-row {
+  display: flex;
+  justify-content: space-between;
 }
 
-.pie-chart-container {
+/* Individual charts */
+.chart {
   flex: 1;
-  margin-right: 20px;
-}
-
-.line-container {
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-}
-.line-chart, .line-chart2 {
-  margin-bottom: 20px;
-}
-
-.bar-chart{
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-  margin-bottom: 20px;
-}
-
-.team-list-container {
-  margin: 20px;
-  font-family: Arial, sans-serif;
-}
-
-h3 {
-  color: #333;
-  margin-bottom: 5px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul > li {
-  margin-bottom: 10px;
-}
-
-ul > li > ul > li {
-  margin-left: 20px;
-  padding-left: 10px;
-  border-left: 2px solid #ccc;
-}
-canvas {
-  max-width: 100%;
-  height: auto;
+  margin: 0 10px; /* Spacing between charts */
 }

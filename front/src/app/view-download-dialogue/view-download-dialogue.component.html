@@ -1,0 +1,43 @@
+<h1>{{ data.action }}</h1>
+
+<div *ngIf="data.action === 'Download CO'">
+  <p>Select the client orders you want to download:</p>
+  <mat-selection-list [(ngModel)]="selectedOrders">
+    <mat-list-option *ngFor="let order of clientOrders" [value]="order">
+      {{ order.client.appUsername }} - {{ order.dateOfOrder }} - {{ order.totalOrderValue }}
+    </mat-list-option>
+  </mat-selection-list>
+  <button (click)="onDownloadCO()" [disabled]="!selectedOrders.length">Download</button>
+</div>
+
+<div *ngIf="data.action === 'Download Box'">
+  <p>Select the box you want to download:</p>
+  <mat-selection-list [(ngModel)]="selectedBox">
+    <mat-list-option *ngFor="let box of allBoxes" [value]="box">
+      {{ box.boxNumber }} - {{ box.quantityTotal }}
+    </mat-list-option>
+  </mat-selection-list>
+  <button (click)="onDownloadBox()" [disabled]="!selectedBox.length">Download</button>
+</div>
+
+<div *ngIf="data.action === 'Download All'">
+  <p>Select the products you want to download:</p>
+  <button (click)="selectAll()">Select All</button>
+  <button (click)="deselectAll()">Deselect All</button>
+  <mat-selection-list [(ngModel)]="selectedProducts">
+    <mat-list-option *ngFor="let product of allProducts" [value]="product">
+      {{ product.sku }} - {{ product.quantity }}
+    </mat-list-option>
+  </mat-selection-list>
+  <button (click)="onDownloadAllProducts()" [disabled]="!selectedProducts.length">Download</button>
+</div>
+
+<div *ngIf="data.action === 'Download Team'">
+  <p>Select the team you want to download:</p>
+  <mat-selection-list [(ngModel)]="selectedTeam">
+    <mat-list-option *ngFor="let team of allTeams" [value]="team">
+      {{ team.teamCode }} - {{ team.teamName }}
+    </mat-list-option>
+  </mat-selection-list>
+  <button (click)="onDownloadTeam()" [disabled]="!selectedTeam.length">Download</button>
+</div>
