@@ -26,6 +26,19 @@
   </div>
 </div>
 
+<div *ngIf="data.action === 'Upload App Users'">
+  <input type="file" (change)="onFileSelectedAppUser($event)" />
+  <button (click)="onUploadAppUser()" [disabled]="!selectedFileAppUser">Upload</button>
+
+  <div *ngIf="uploadProgress !== null">
+    <p>Uploading: {{ uploadProgress }}%</p>
+  </div>
+
+  <div *ngIf="uploadStatus">
+    <p>{{ uploadStatus }}</p>
+  </div>
+</div>
+
 <div *ngIf="data.action === 'Initialize Database'">
   <button (click)="executeInit()">Initialize</button>
 </div>

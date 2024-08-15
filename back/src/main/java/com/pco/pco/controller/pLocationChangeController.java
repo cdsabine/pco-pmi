@@ -33,12 +33,16 @@ public class pLocationChangeController {
     @PostMapping(path="/moveProductBox")
     public @ResponseBody productLocationChanges changeBox(@RequestParam String SKU, @RequestParam String newBoxNumber, @RequestParam String currentDate){
         Product p = productRepository.findById(SKU).get();
-
+        Box newBox;
         Box oldBox = p.getBox();
-        Box newBox = boxController.findBox(newBoxNumber);
-
+        if(boxRepository.findById(newBoxNumber).isPresent()){
+            newBox = boxRepository.findById(newBoxNumber).get();
+            boxController.addProductToBox(newBox, p);
+        }
+        else{
+            newBox = boxController.findBox(newBoxNumber);
+        }
         boxController.removeProductFromBox(oldBox, p);
-        boxController.addProductToBox(newBox, p);
 
         p.setBox(newBox);
         productRepository.save(p);

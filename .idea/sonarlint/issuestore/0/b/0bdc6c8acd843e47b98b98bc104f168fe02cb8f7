@@ -9,10 +9,10 @@ r	java:S117`"QRename this local variable to match the regular expression '^[a-
 r	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î½ˆøÿÿÿÿ8êŸÁ‡•2
 n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰‘Ã8êŸÁ‡•2
 s	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•À‚™şÿÿÿÿ8ëŸÁ‡•2
-n
-java:S3655Æ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±İúü8‚ Á‡•2
 r
 java:S3655S"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(²ŠÕ€şÿÿÿÿ8‚ Á‡•2
+n
+java:S3655Æ"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(±İúü8‚ Á‡•2
 l
 java:S3655J"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ŠÃ£=8‚ Á‡•2
 ‡

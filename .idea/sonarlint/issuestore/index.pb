@@ -531,3 +531,7 @@ e
 5front/src/app/pipe/filter-pipe-button-product.pipe.ts,4\7\4799ed96b88eb922f251453ca88cbc169461155e
 j
 :front/src/app/pipe/filter-pipe-button-product.pipe.spec.ts,1\b\1bfa43dcf61f5088f7d1f2232b4062731afef16f
+d
+4front/src/app/service/upload-file-appuser.service.ts,7\c\7ca5a24f16e22356852c798dd65b732e0e4792f3
+i
+9front/src/app/service/upload-file-appuser.service.spec.ts,9\a\9ae200436af7f69a7bb8fce941c32fba94cf6165

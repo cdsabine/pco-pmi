@@ -52,6 +52,7 @@ import {BaseChartDirective} from "ng2-charts";
 import {ClientService} from "./service/client.service";
 import {ViewDownloadDialogueComponent} from "./view-download-dialogue/view-download-dialogue.component";
 import {FilterPipeButtonProductPipe} from "./pipe/filter-pipe-button-product.pipe";
+import {UploadFileAppuserService} from "./service/upload-file-appuser.service";
 
 @NgModule({
   declarations: [
@@ -102,7 +103,7 @@ import {FilterPipeButtonProductPipe} from "./pipe/filter-pipe-button-product.pip
     BaseChartDirective
   ],
   providers: [ProductServiceService, AppuserServiceService, BoxServiceService, BrandServiceService, TeamServiceService,
-    ClientorderService, UploadFileService, UploadFileClientorderService, BoxMovementService, DashboardCOOverTimeService, ClientService, InitDbService, LogService, provideAnimationsAsync()],
+    ClientorderService, UploadFileService, UploadFileClientorderService, BoxMovementService, DashboardCOOverTimeService, ClientService, UploadFileAppuserService, InitDbService, LogService, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
