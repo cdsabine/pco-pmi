@@ -96,7 +96,13 @@ public class ClientOrderController {
             clientRepository.save(c);
         }
         clientOrderRepository.save(co);
-
         return co;
+    }
+
+    @PostMapping(path="/setActive")
+    public ClientOrder setActive(@RequestParam int clientOrderCode){
+        ClientOrder co = clientOrderRepository.findById(clientOrderCode).get();
+        co.setShipped(true);
+        return clientOrderRepository.save(co);
     }
 }

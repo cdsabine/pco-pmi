@@ -27,6 +27,7 @@ public class CSVServiceClientOrder {
             for(ClientOrder co : clientOrders){
                 coc.convertSKUtoProduct(co);
                 coc.decideClient(co);
+                if(co.getTotalOrderValue() < 100.0) co.setShipped(true);
             }
             clientOrderRepository.saveAll(clientOrders);
         } catch (IOException e) {

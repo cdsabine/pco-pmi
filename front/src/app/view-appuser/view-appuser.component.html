@@ -18,6 +18,40 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
+    <div class="filter-buttons">
+      <label>
+        User:
+        <select [(ngModel)]="selectedUser" (change)="filterUser()">
+          <option value="">All</option>
+          <option *ngFor="let user of appuser | filterPipeButtonProduct:'userCode'" [value]="user.userCode">
+            {{ user.userCode }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        City:
+        <select [(ngModel)]="selectedAddress" (change)="filterUser()">
+          <option value="">All</option>
+          <option *ngFor="let address of appuser | filterPipeButtonProduct:'address'" [value]="address.address">
+            {{ address.address }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Country:
+        <select [(ngModel)]="selectedCountry" (change)="filterUser()">
+          <option value="">All</option>
+          <option *ngFor="let country of appuser | filterPipeButtonProduct:'country.countryName'" [value]="country.country.countryName">
+            {{ country.country.countryName }}
+          </option>
+        </select>
+      </label>
+
+      <button (click)="clearFilters()">Clear Filters</button>
+    </div>
+
     <mat-card>
       <mat-card-content>
         <div class="header-row">
@@ -25,20 +59,20 @@
           <span class="header-username">Username</span>
           <span class="header-emailAddress">Email Address</span>
           <span class="header-address">Address</span>
-          <span class="header-countryCode">Country Code</span>
+          <span class="header-countryName">Country</span>
         </div>
       </mat-card-content>
     </mat-card>
 
 
-    <mat-card *ngFor="let appuser of appuser | filterPipeAppuser: searchText">
+    <mat-card *ngFor="let appuser of filteredUsers | filterPipeAppuser: searchText">
       <mat-card-content>
         <div class="product-line">
           <span class="appuser-userCode">{{appuser.userCode}}</span>
           <span class="appuser-username">{{appuser.appUsername}}</span>
           <span class="appuser-emailAddress">{{appuser.emailAddress}}</span>
           <span class="appuser-address">{{appuser.address}}</span>
-          <span class="appuser-countryCode">{{appuser.country.countryName}}</span>
+          <span class="appuser-countryName">{{appuser.country.countryName}}</span>
         </div>
       </mat-card-content>
     </mat-card>

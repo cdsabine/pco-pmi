@@ -11,8 +11,12 @@ import {ViewCoDialogueWindowComponent} from "../view-co-dialogue-window/view-co-
 })
 export class ViewClientorderComponent implements OnInit{
   clientorder: Clientorder[];
+  filteredClientOrder: any[] = [];
   @ViewChild('searchbar') searchbar: ElementRef;
   searchText = '';
+  selectedDestination: string = '';
+  selectedDate: string = '';
+  selectedShipped: string = '';
 
   toggleSearch: boolean = false;
   constructor(private clientOrderService: ClientorderService, public dialog: MatDialog) {
@@ -20,6 +24,7 @@ export class ViewClientorderComponent implements OnInit{
   ngOnInit() {
     this.clientOrderService.findAll().subscribe(data => {
       this.clientorder = data;
+      this.filteredClientOrder = data;
     });
   }
   openSearch() {
@@ -38,5 +43,19 @@ export class ViewClientorderComponent implements OnInit{
       maxHeight: '90vw',
       data:  clientorder.productList
     });
+  }
+  filterClientOrder(): void {
+    let filtered = this.clientorder.filter(clientOrder => {
+      return (!this.selectedDestination || clientOrder.client.country.countryName === this.selectedDestination) &&
+        (!this.selectedDate || clientOrder.dateOfOrder === this.selectedDate) &&
+        (!this.selectedShipped || `${clientOrder.shipped}` === this.selectedShipped);
+    });
+    this.filteredClientOrder = filtered;
+  }
+  clearFilters(): void {
+    this.selectedDestination = '';
+    this.selectedDate = '';
+    this.selectedShipped = '';
+    this.filteredClientOrder = [...this.clientorder];
   }
 }

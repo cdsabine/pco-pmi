@@ -18,6 +18,19 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
+    <div class="filter-buttons">
+      <label>
+        Nationality:
+        <select [(ngModel)]="selectedNationality" (change)="filterBrand()">
+          <option value="">All</option>
+          <option *ngFor="let nationality of brand | filterPipeButtonProduct:'nationality'" [value]="nationality.nationality">
+            {{ nationality.nationality }}
+          </option>
+        </select>
+      </label>
+      <button (click)="clearFilters()">Clear Filters</button>
+    </div>
+
     <mat-card>
       <mat-card-content>
         <div class="header-row">
@@ -28,7 +41,7 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card *ngFor="let brand of brand | filterPipeBrand: searchText">
+    <mat-card *ngFor="let brand of filteredBrand | filterPipeBrand: searchText">
       <mat-card-content>
         <div class="product-line">
           <span class="brand-brandCode">{{brand.brandCode}}</span>

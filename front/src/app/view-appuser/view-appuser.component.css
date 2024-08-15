@@ -31,7 +31,7 @@
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
-.header-userCode, .header-username, .header-emailAddress, .header-address, .header-countryCode {
+.header-userCode, .header-username, .header-emailAddress, .header-address, .header-countryName {
   flex: 1;
   text-align: left;
 }
@@ -43,7 +43,7 @@
   justify-content: space-between;
   padding: 8px 0;
 }
-.appuser-userCode, .appuser-username, .appuser-emailAddress, .appuser-address, .appuser-countryCode{
+.appuser-userCode, .appuser-username, .appuser-emailAddress, .appuser-address, .appuser-countryName{
   flex: 1;
   font-size: 16px;
 }

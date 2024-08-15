@@ -9,8 +9,10 @@ import {BrandServiceService} from "../service/brand-service.service";
 })
 export class ViewBrandComponent implements OnInit{
   brand: Brand[];
+  filteredBrand: any[] = [];
   @ViewChild('searchbar') searchbar: ElementRef;
   searchText = '';
+  selectedNationality: string = '';
 
   toggleSearch: boolean = false;
   constructor(private brandService: BrandServiceService) {
@@ -18,6 +20,7 @@ export class ViewBrandComponent implements OnInit{
   ngOnInit() {
     this.brandService.findAll().subscribe(data => {
       this.brand = data;
+      this.filteredBrand = data;
     });
   }
   openSearch() {
@@ -27,5 +30,15 @@ export class ViewBrandComponent implements OnInit{
   searchClose() {
     this.searchText = '';
     this.toggleSearch = false;
+  }
+  filterBrand(): void {
+    let filtered = this.brand.filter(brand => {
+      return (!this.selectedNationality || brand.nationality === this.selectedNationality);
+    });
+    this.filteredBrand = filtered;
+  }
+  clearFilters(): void {
+    this.selectedNationality = '';
+    this.filteredBrand = [...this.brand];
   }
 }

@@ -527,3 +527,7 @@ y
 Ifront/src/app/view-download-dialogue/view-download-dialogue.component.css,1\6\16896de82362edcfb8caa7bcbfe37c99377dd8eb
 }
 Mfront/src/app/view-download-dialogue/view-download-dialogue.component.spec.ts,1\1\11f90bbac5ea6f84bb9c778004108e01bc6f12af
+e
+5front/src/app/pipe/filter-pipe-button-product.pipe.ts,4\7\4799ed96b88eb922f251453ca88cbc169461155e
+j
+:front/src/app/pipe/filter-pipe-button-product.pipe.spec.ts,1\b\1bfa43dcf61f5088f7d1f2232b4062731afef16f

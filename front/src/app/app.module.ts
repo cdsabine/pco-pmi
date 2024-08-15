@@ -51,6 +51,7 @@ import {DashboardCOOverTimeService} from "./service/dashboard-co-over-time.servi
 import {BaseChartDirective} from "ng2-charts";
 import {ClientService} from "./service/client.service";
 import {ViewDownloadDialogueComponent} from "./view-download-dialogue/view-download-dialogue.component";
+import {FilterPipeButtonProductPipe} from "./pipe/filter-pipe-button-product.pipe";
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import {ViewDownloadDialogueComponent} from "./view-download-dialogue/view-downl
     FilterPipeBoxPipe,
     FilterPipeBrandPipe,
     FilterPipeTeamPipe,
-    FilterPipeClientorderPipe
+    FilterPipeClientorderPipe,
+    FilterPipeButtonProductPipe
   ],
   imports: [
     BrowserModule,

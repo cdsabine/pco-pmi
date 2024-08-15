@@ -25,6 +25,42 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
+    <div class="filter-buttons">
+      <label>
+        Colour:
+        <select [(ngModel)]="selectedColour" (change)="filterProducts()">
+          <option value="">All</option>
+          <option *ngFor="let colour of product | filterPipeButtonProduct:'colour'" [value]="colour.colour">
+            {{ colour.colour }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Product Condition:
+        <select [(ngModel)]="selectedProductCondition" (change)="filterProducts()">
+          <option value="">All</option>
+          <option *ngFor="let condition of product | filterPipeButtonProduct:'prodCondition'" [value]="condition.prodCondition">
+            {{ condition.prodCondition }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Vendor Code:
+        <select [(ngModel)]="selectedVendorCode" (change)="filterProducts()">
+          <option value="">All</option>
+          <option *ngFor="let vendor of product | filterPipeButtonProduct:'vendorCode'" [value]="vendor.vendorCode">
+            {{ vendor.vendorCode }}
+          </option>
+        </select>
+      </label>
+
+      <button (click)="sortByPrice('asc')">Sort by Price: Low to High</button>
+      <button (click)="sortByPrice('desc')">Sort by Price: High to Low</button>
+      <button (click)="clearFilters()">Clear Filters</button>
+    </div>
+
     <mat-card>
       <mat-card-content>
         <div class="header-row">
@@ -40,7 +76,7 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card *ngFor="let product of product | filterPipeProduct: searchText">
+    <mat-card *ngFor="let product of filteredProducts | filterPipeProduct: searchText">
       <mat-card-content>
         <div class="product-line">
           <span class="product-sku">{{product.sku}}</span>

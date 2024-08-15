@@ -41,4 +41,6 @@ export class ViewBoxComponent implements OnInit{
       data:  box.products
     });
   }
+
+
 }

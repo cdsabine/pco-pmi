@@ -18,6 +18,40 @@
       </mat-toolbar-row>
     </mat-toolbar>
 
+    <div class="filter-buttons">
+      <label>
+        Destination:
+        <select [(ngModel)]="selectedDestination" (change)="filterClientOrder()">
+          <option value="">All</option>
+          <option *ngFor="let destination of clientorder | filterPipeButtonProduct:'client.country.countryName'" [value]="destination.client.country.countryName">
+            {{ destination.client.country.countryName }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Date:
+        <select [(ngModel)]="selectedDate" (change)="filterClientOrder()">
+          <option value="">All</option>
+          <option *ngFor="let date of clientorder | filterPipeButtonProduct:'dateOfOrder'" [value]="date.dateOfOrder">
+            {{ date.dateOfOrder }}
+          </option>
+        </select>
+      </label>
+
+      <label>
+        Shipped:
+        <select [(ngModel)]="selectedShipped" (change)="filterClientOrder()">
+          <option value="">All</option>
+          <option *ngFor="let shipped of clientorder | filterPipeButtonProduct:'shipped'" [value]="shipped.shipped">
+            {{ shipped.shipped }}
+          </option>
+        </select>
+      </label>
+
+      <button (click)="clearFilters()">Clear Filters</button>
+    </div>
+
     <mat-card>
       <mat-card-content>
         <div class="header-row">
@@ -31,7 +65,7 @@
       </mat-card-content>
     </mat-card>
 
-    <mat-card *ngFor="let clientorder of clientorder | filterPipeClientorder: searchText">
+    <mat-card *ngFor="let clientorder of filteredClientOrder | filterPipeClientorder: searchText">
       <mat-card-content>
         <div class="product-line">
           <span class="clientorder-coCode">{{clientorder.clientOrderCode}}</span>
