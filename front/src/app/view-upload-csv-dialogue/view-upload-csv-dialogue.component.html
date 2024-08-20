@@ -1,8 +1,11 @@
-<h1>{{ data.action }}</h1>
+<div class="custom-dialog-container" *ngIf="data.action === 'Upload Products'">
+  <h1>{{ data.action }}</h1>
+  <div class="image-container">
+    <img src="/assets/Images/csvImage.png" alt="Centered Image">
+  </div>
 
-<div *ngIf="data.action === 'Upload Products'">
   <input type="file" (change)="onFileSelected($event)" />
-  <button (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
+  <button mat-raised-button color="primary" (click)="onUpload()" [disabled]="!selectedFile">Upload</button>
 
   <div *ngIf="uploadProgress !== null">
     <p>Uploading: {{ uploadProgress }}%</p>
@@ -13,9 +16,14 @@
   </div>
 </div>
 
-<div *ngIf="data.action === 'Upload Client Order'">
+<div class="custom-dialog-container" *ngIf="data.action === 'Upload Client Order'">
+  <h1>{{ data.action }}</h1>
+  <div class="image-container">
+    <img src="/assets/Images/csvImage.png" alt="Centered Image">
+  </div>
+
   <input type="file" (change)="onFileSelectedClientOrder($event)" />
-  <button (click)="onUploadClientOrder()" [disabled]="!selectedFileClientOrder">Upload</button>
+  <button mat-raised-button color="primary" (click)="onUploadClientOrder()" [disabled]="!selectedFileClientOrder">Upload</button>
 
   <div *ngIf="uploadProgress !== null">
     <p>Uploading: {{ uploadProgress }}%</p>
@@ -26,9 +34,14 @@
   </div>
 </div>
 
-<div *ngIf="data.action === 'Upload App Users'">
+<div class="custom-dialog-container" *ngIf="data.action === 'Upload App Users'">
+  <h1>{{ data.action }}</h1>
+  <div class="image-container">
+    <img src="/assets/Images/csvImage.png" alt="Centered Image">
+  </div>
+
   <input type="file" (change)="onFileSelectedAppUser($event)" />
-  <button (click)="onUploadAppUser()" [disabled]="!selectedFileAppUser">Upload</button>
+  <button mat-raised-button color="primary" (click)="onUploadAppUser()" [disabled]="!selectedFileAppUser">Upload</button>
 
   <div *ngIf="uploadProgress !== null">
     <p>Uploading: {{ uploadProgress }}%</p>
@@ -39,11 +52,13 @@
   </div>
 </div>
 
-<div *ngIf="data.action === 'Initialize Database'">
-  <button (click)="executeInit()">Initialize</button>
+<div class="custom-dialog-container" *ngIf="data.action === 'Initialize Database'">
+  <h1>{{ data.action }}</h1>
+  <button mat-raised-button color="primary" (click)="executeInit()">Initialize</button>
 </div>
-<div *ngIf="data.action === 'Box Movement'">
-  <h1 mat-dialog-title>Move Product Box</h1>
+
+<div class="custom-dialog-container" *ngIf="data.action === 'Box Movement'">
+  <h1>{{ data.action }}</h1>
   <div mat-dialog-content>
     <mat-form-field appearance="fill">
       <mat-label>SKU</mat-label>

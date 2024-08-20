@@ -1,17 +1,28 @@
 <div class="all">
   <div class="menu">
-    <button [routerLink]="''">back</button>
+    <button mat-raised-button color="warn" [routerLink]="''">Back</button>
     <div class="menuSection">
       View Database
     </div>
-    <div class="menuSection">
-      <button [routerLink]="'./appuser'" routerLinkActive="active">View AppUsers</button>
-      <button [routerLink]="'./boxes'" routerLinkActive="active">View Boxes</button>
-      <button [routerLink]="'./brand'" routerLinkActive="active">View Brand</button>
-      <button [routerLink]="'./clientorders'" routerLinkActive="active">View Client Orders</button>
-      <button [routerLink]="'./teams'" routerLinkActive="active">View Teams</button>
+    <div class="menuButtons">
+      <div class="menuButton" [routerLink]="'./appuser'" routerLinkActive="active">
+        View AppUsers
+      </div>
+      <div class="menuButton" [routerLink]="'./boxes'" routerLinkActive="active">
+        View Boxes
+      </div>
+      <div class="menuButton" [routerLink]="'./brand'" routerLinkActive="active">
+        View Brand
+      </div>
+      <div class="menuButton" [routerLink]="'./clientorders'" routerLinkActive="active">
+        View Client Orders
+      </div>
+      <div class="menuButton" [routerLink]="'./teams'" routerLinkActive="active">
+        View Teams
+      </div>
     </div>
   </div>
+
   <div class="lowContainer">
     <mat-toolbar class="search-block mat-elevation-z4" [class.active]="toggleSearch">
       <mat-toolbar-row style="padding: 0 5px;">

@@ -14,7 +14,10 @@ export class UploadCsvComponent {
   openDialog(action: string): void {
     this.logService.addLog(action);
     this.dialog.open(ViewUploadCsvDialogueComponent, {
-      data: { action }
+      data: { action },
+      width: '30vw',
+      maxWidth: '30vw',
+      height: 'auto',
     });
   }
 }

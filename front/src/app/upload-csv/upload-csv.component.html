@@ -1,12 +1,12 @@
 <div class="all">
   <div class="lowContainer">
     <div class="menu">
-      <button [routerLink]="''">back</button>
+      <button mat-raised-button color="warn" [routerLink]="''">Back</button>
       <div class="menuSection">
         Upload CSV
       </div>
       <div class="menuSectionOptions">
-        Upload History
+        <app-log-history></app-log-history>
       </div>
       <button mat-raised-button color="warn" class="init-button" (click)="openDialog('Initialize Database')">
         Initialize Database
@@ -14,19 +14,18 @@
     </div>
 
     <div class="button-container">
-      <button mat-raised-button color="primary" class="upload-button" (click)="openDialog('Upload Products')">
+      <button mat-raised-button class="upload-button1" (click)="openDialog('Upload Products')">
         Upload Products
       </button>
-      <button mat-raised-button color="accent" class="upload-button" (click)="openDialog('Upload Client Order')">
+      <button mat-raised-button class="upload-button2" (click)="openDialog('Upload Client Order')">
         Upload Client Order
       </button>
-      <button mat-raised-button color="accent" class="upload-button" (click)="openDialog('Box Movement')">
+      <button mat-raised-button class="upload-button3" (click)="openDialog('Box Movement')">
         Box Movement
       </button>
-      <button mat-raised-button color="primary" class="upload-button" (click)="openDialog('Upload App Users')">
+      <button mat-raised-button class="upload-button4" (click)="openDialog('Upload App Users')">
         Upload App Users
       </button>
     </div>
-    <app-log-history></app-log-history>
   </div>
 </div>

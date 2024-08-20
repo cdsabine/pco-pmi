@@ -1,20 +1,78 @@
-.button-container {
+.lowContainer{
   display: flex;
-  justify-content: space-around;
+}
+.menu{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: Verdana, sans-serif;
+  color: black;
+}
+.menuSection{
+  font-family: Verdana, sans-serif;
+  color: white;
+  font-size: 18px;
+}
+.menuSectionOptions{
+  overflow-y: auto; /* Scroll when content exceeds max-height */
+  display: block;
+}
+app-log-history {
+  max-height: 73vh;
+  width: 100%;
+  overflow-y: auto;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+  font-family: Verdana, sans-serif;
+  color: black;
+}
+.button-container{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  height: 85vh;
-  padding: 0 5%;
+  padding: 5px;
+  gap: 10px;
+  font-family: Verdana, sans-serif;
+  color: black;
 }
-
-.upload-button {
-  flex: 1;
-  margin: 0 150px;
-  font-size: 24px;
-  height: 90%;
-  width: 50%;
-  transition: transform 0.3s;
+.button-container button {
+  width: 75%;
+  height: 100%;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+  border: 2px solid black;
+  transition: all 0.3s ease;
 }
-
-.upload-button:hover {
-  transform: scale(1.05);
+.init-button{
+  font-family: Verdana, sans-serif;
+  color: white;
+}
+.upload-button1{
+  background-image: url(/assets/Images/uploadImage.png);
+}
+.upload-button2{
+  background-image: url(/assets/Images/uploadImage.png);
+}
+.upload-button3{
+  background-image: url(/assets/Images/uploadImage.png);
+}
+.upload-button4{
+  background-image: url(/assets/Images/uploadImage.png);
+}
+.mat-mdc-raised-button.upload-button1, .mat-mdc-raised-button.upload-button2, .mat-mdc-raised-button.upload-button3, .mat-mdc-raised-button.upload-button4{
+  background-color: lightslategrey;
 }

@@ -1,16 +1,19 @@
 <div class="all">
-  <div class="lowContainer">
-    <div class="menu">
+  <div class="menu">
+    <div class="menuButtons">
       <div class="menuButton" [routerLink]="'/csv'" routerLinkActive="active">
-        Upload CSV
+        Upload
       </div>
       <div class="menuButton" [routerLink]="'/download-db'" routerLinkActive="active">
-        Download Database
+        Download
       </div>
       <div class="menuButton" [routerLink]="'/view-db'" routerLinkActive="active">
-        View Database
+        View
       </div>
     </div>
+  </div>
+
+  <div class="lowContainer">
     <div class="main-container">
       <div class="list-container">
         <h2>Products by Team</h2>
@@ -25,65 +28,56 @@
           </li>
         </ul>
       </div>
-      <div class="charts-container">
-        <!-- Pie Charts -->
-        <div class="piechart-row">
-          <div class="chart pie-chart1">
-            <h2>Product Values</h2>
-            <canvas baseChart
-                    [datasets]="chart3Data"
-                    [labels]="chart3Labels"
-                    [options]="chart3Options"
-                    [legend]="chart3Legend"
-                    [type]="chart3Type">
-            </canvas>
-          </div>
-          <div class="chart pie-chart2">
-            <h2>Team Worth</h2>
-            <canvas baseChart
-                    [datasets]="chart4Data"
-                    [labels]="chart4Labels"
-                    [options]="chart4Options"
-                    [legend]="chart4Legend"
-                    [type]="chart4Type">
-            </canvas>
-          </div>
+      <div class="chart pie-chart1">
+        <h2>Product Values</h2>
+        <canvas baseChart
+                [datasets]="chart3Data"
+                [labels]="chart3Labels"
+                [options]="chart3Options"
+                [legend]="chart3Legend"
+                [type]="chart3Type">
+        </canvas>
       </div>
-      <div class="linechart-row">
-        <div class="chart line-chart1">
-          <h2>Value of orders over time</h2>
-          <canvas baseChart
-                  [datasets]="chart1Data"
-                  [labels]="chart1Labels"
-                  [options]="chart1Options"
-                  [legend]="chart1Legend"
-                  [type]="chart1Type">
-          </canvas>
-        </div>
-        <div class="chart line-chart2">
-          <h2>Quantity of orders over time</h2>
-          <canvas baseChart
-                  [datasets]="chart5Data"
-                  [labels]="chart5Labels"
-                  [options]="chart5Options"
-                  [legend]="chart5Legend"
-                  [type]="chart5Type">
-          </canvas>
-        </div>
+      <div class="chart pie-chart2">
+        <h2>Team Worth</h2>
+        <canvas baseChart
+                [datasets]="chart4Data"
+                [labels]="chart4Labels"
+                [options]="chart4Options"
+                [legend]="chart4Legend"
+                [type]="chart4Type">
+        </canvas>
       </div>
-      <div class="barchart-row">
-        <div class="chart bar-chart">
-          <h2>Orders per Country</h2>
-          <canvas baseChart
-                  [datasets]="chart2Data"
-                  [labels]="chart2Labels"
-                  [options]="chart2Options"
-                  [legend]="chart2Legend"
-                  [type]="chart2Type">
-          </canvas>
-        </div>
+      <div class="chart line-chart1">
+        <h2>Value of orders over time</h2>
+        <canvas baseChart
+                [datasets]="chart1Data"
+                [labels]="chart1Labels"
+                [options]="chart1Options"
+                [legend]="chart1Legend"
+                [type]="chart1Type">
+        </canvas>
+      </div>
+      <div class="chart line-chart2">
+        <h2>Quantity of orders over time</h2>
+        <canvas baseChart
+                [datasets]="chart5Data"
+                [labels]="chart5Labels"
+                [options]="chart5Options"
+                [legend]="chart5Legend"
+                [type]="chart5Type">
+        </canvas>
+      </div>
+      <div class="chart bar-chart">
+        <h2>Orders per Country</h2>
+        <canvas baseChart
+                [datasets]="chart2Data"
+                [labels]="chart2Labels"
+                [options]="chart2Options"
+                [legend]="chart2Legend"
+                [type]="chart2Type">
+        </canvas>
       </div>
     </div>
-  </div>
   </div>
 </div>

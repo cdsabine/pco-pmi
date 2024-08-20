@@ -1,40 +1,85 @@
 /* Main container for the whole dashboard */
 .main-container {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* Left side 1/4 of screen, right side 3/4 */
+  grid-template-areas: "list pie-chart1 pie-chart2 bar-chart"
+    "line-graph1 line-graph1 line-graph2 line-graph2";
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
 }
-
-/* Container for the list */
-.list-container {
-  padding: 20px;
-  overflow-y: auto; /* Allow scrolling if the list is too long */
+.menu{
+  max-height: 100vh;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-
-/* Container for the charts */
-.charts-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three rows for the chart sections */
-  gap: 10px; /* Space between rows */
-  padding: 20px;
-}
-
-/* Each row of charts */
-.piechart-row {
+.menuButtons {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: calc(100vh - 80px);
+  align-items: center;
 }
-.linechart-row {
+.menuButton {
+  height: 100%;
+  width: 90%;
+  flex: 1;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #088F8F;
+  color: white;
+  text-align: center;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 18px;
 }
-.barchart-row {
-  display: flex;
-  justify-content: space-between;
+.menuButton:hover {
+  background-color: #055f5f;
+}
+.active {
+  background-color: #055f5f;
 }
 
-/* Individual charts */
-.chart {
-  flex: 1;
-  margin: 0 10px; /* Spacing between charts */
+.list-container {
+  grid-area: list;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.pie-chart1 {
+  grid-area: pie-chart1;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.pie-chart2 {
+  grid-area: pie-chart2;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.line-chart1 {
+  grid-area: line-graph1;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.line-chart2 {
+  grid-area: line-graph2;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.bar-chart {
+  grid-area: bar-chart;
+  background-color: #ffffff;
+  padding: 20px;
 }

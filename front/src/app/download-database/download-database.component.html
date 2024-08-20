@@ -1,29 +1,28 @@
 <div class="all">
   <div class="lowContainer">
     <div class="menu">
-      <button [routerLink]="''">back</button>
+      <button mat-raised-button color="warn" [routerLink]="''">Back</button>
       <div class="menuSection">
-        Upload CSV
+        Download Data
       </div>
       <div class="menuSectionOptions">
-        Upload History
+        <app-log-history></app-log-history>
       </div>
     </div>
 
     <div class="button-container">
-      <button mat-raised-button color="primary" class="download-button" (click)="openDialog('Download CO')">
+      <button mat-raised-button class="download-button1" (click)="openDialog('Download CO')">
         Download Client Orders
       </button>
-      <button mat-raised-button color="accent" class="download-button" (click)="openDialog('Download Box')">
+      <button mat-raised-button class="download-button2" (click)="openDialog('Download Box')">
         Download Box Products
       </button>
-      <button mat-raised-button color="warn" class="download-button" (click)="openDialog('Download All')">
+      <button mat-raised-button class="download-button3" (click)="openDialog('Download All')">
         Download All Products
       </button>
-      <button mat-raised-button color="accent" class="download-button" (click)="openDialog('Download Team')">
+      <button mat-raised-button class="download-button4" (click)="openDialog('Download Team')">
         Download Team Products
       </button>
     </div>
-    <app-log-history></app-log-history>
   </div>
 </div>
