@@ -62,16 +62,16 @@ app-log-history {
   color: white;
 }
 .download-button1{
-  background-image: url(/assets/Images/downloadImage.png);
+  background-image: url(/assets/Images/coImage.png);
 }
 .download-button2{
-  background-image: url(/assets/Images/downloadImage.png);
+  background-image: url(/assets/Images/boxImage.png);
 }
 .download-button3{
-  background-image: url(/assets/Images/downloadImage.png);
+  background-image: url(/assets/Images/productImage.png);
 }
 .download-button4{
-  background-image: url(/assets/Images/downloadImage.png);
+  background-image: url(/assets/Images/teamImage.png);
 }
 .mat-mdc-raised-button.download-button1, .mat-mdc-raised-button.download-button2, .mat-mdc-raised-button.download-button3, .mat-mdc-raised-button.download-button4{
   background-color: lightslategrey;
