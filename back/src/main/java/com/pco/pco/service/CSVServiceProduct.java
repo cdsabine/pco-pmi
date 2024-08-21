@@ -28,6 +28,7 @@ public class CSVServiceProduct {
                 pc.decideCoC(aux, -1L);
                 pc.decideBox(aux, aux.getSKU());
                 pc.decideColour(aux, aux.getTitle());
+                productRepository.save(aux);
             }
             productRepository.saveAll(products);
         } catch (IOException e) {

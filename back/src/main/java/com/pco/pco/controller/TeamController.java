@@ -25,14 +25,17 @@ public class TeamController {
     Map<String, String> teamCombos = new HashMap<>() {
         {
             put("Cycling Australia", "Australia");
+            put("Australian National Team", "Australia");
             put("FDJ", "France");
             put("Bike Exchange", "England");
             put("Education First", "America");
             put("Novo Nordisk", "Norway");
             put("Ineos Grenadiers", "England");
             put("Trek Segafredo", "America");
+            put("Trek Lidl", "America");
             put("Israel Premier Tech", "Israel");
             put("Bora Hansgrohe", "Germany");
+            put("Jumbo Visma", "Italy");
         }
     };
 

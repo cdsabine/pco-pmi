@@ -1,8 +1,10 @@
 
 e
-java:S1192"HDefine a constant instead of duplicating this literal "America" 3 times.(μΩυ8άδε’2
+java:S1192"HDefine a constant instead of duplicating this literal "America" 6 times.(μΩυ8άδε’2
+h
+java:S1192"FDefine a constant instead of duplicating this literal "Italy" 3 times.(™―Ε²ϊÿÿÿÿ8ώΝΰ―—2
 l
-java:S3655@"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–ύt8«άδε’2
+java:S3655F"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–ύt8«άδε’2
 ‡
 java:S6833"eReplace the "@Controller" annotation by "@RestController" and remove all "@ResponseBody" annotations.(ν΅ρωÿÿÿÿ8«άδε’2
 _
