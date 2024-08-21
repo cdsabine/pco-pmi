@@ -2,13 +2,13 @@
   <div class="menu">
     <div class="menuButtons">
       <div class="menuButton" [routerLink]="'/csv'" routerLinkActive="active">
-        Upload
+        Upload Data
       </div>
       <div class="menuButton" [routerLink]="'/download-db'" routerLinkActive="active">
-        Download
+        Download Data
       </div>
       <div class="menuButton" [routerLink]="'/view-db'" routerLinkActive="active">
-        View
+        View Database
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
         </canvas>
       </div>
       <div class="chart line-chart1">
-        <h2>Value of orders over time</h2>
+        <h2>Value of Orders Over Time</h2>
         <canvas baseChart
                 [datasets]="chart1Data"
                 [labels]="chart1Labels"
@@ -59,7 +59,7 @@
         </canvas>
       </div>
       <div class="chart line-chart2">
-        <h2>Quantity of orders over time</h2>
+        <h2>Quantity of Orders Over Time</h2>
         <canvas baseChart
                 [datasets]="chart5Data"
                 [labels]="chart5Labels"

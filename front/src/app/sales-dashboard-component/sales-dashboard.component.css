@@ -39,6 +39,7 @@
   margin: 5px 0;
   border-radius: 5px;
   font-size: 18px;
+  font-weight: bold;
 }
 .menuButton:hover {
   background-color: #055f5f;

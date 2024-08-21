@@ -53,6 +53,7 @@ app-log-history {
   color: white;
   padding: 10px;
   font-weight: bold;
+  font-size: 24px;
   font-family: Verdana, sans-serif;
   border: 2px solid black;
   transition: all 0.3s ease;
