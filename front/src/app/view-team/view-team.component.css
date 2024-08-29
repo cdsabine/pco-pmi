@@ -41,7 +41,7 @@
   text-align: left;
 }
 .product-card {
-  margin-bottom: 16px; /* Adjust this value to control the space between items */
+  margin-bottom: 16px;
 }
 .product-line{
   display: flex;
